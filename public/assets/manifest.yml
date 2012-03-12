@@ -7,6 +7,6 @@ cc_stamp_logo_bw.png: cc_stamp_logo_bw-b343615ca7308964c87f4acd7b32cd76.png
 favicon.ico: favicon-a56e9086795cfae7d2671a15137ca89a.ico
 glyphicons-halflings-white.png: glyphicons-halflings-white-4fbb6a0b9b4e61912f486ac494a858f1.png
 glyphicons-halflings.png: glyphicons-halflings-2ed0cba6eca0f44737ab78f1e58bc11e.png
-rails.png: rails-782b548cc1ba7f898cdad2d9eb8420d2.png
-application.js: application-8939368ef257e0c8ee821241ab39d3da.js
-application.css: application-43b8d2ced331e85f82f9c7bbe7c5db04.css
+stampsmall.png: stampsmall-abbdbd899960a897c7c4c349cdcda73e.png
+application.js: application-8262657a73d367fa55ca275506aa7db8.js
+application.css: application-23d49d4054fb235f33ab2b5472eb024d.css
