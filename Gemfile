@@ -10,6 +10,12 @@ gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+# gem 'cosmui', :git => 'https://levent@github.com/levent/cosmui.git', :branch => 'curators'
+group :development do
+  gem 'cosmui', :path => '/Users/levent/projects/cosmui'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
