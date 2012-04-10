@@ -2,10 +2,7 @@
   <div class="three columns">
     <h1><%= link_to "Curators Coffee" %></h1>
     <address class="vcard">
-      <p><i class="icon icon-map-view"></i> <strong><span class="adr">9a Cullum St London EC3M 7JJ</span></strong><br>
-      <i class="icon icon-success"></i> <strong>Mon-Fri 7:30am-5:00pm</strong></p>
-      <p><%= image_tag 'latte_art.jpg', :class => 'content' %></p>
-      <p>
+      <p class="lead">
       <i class="icon icon-twitter"></i> <a href="http://twitter.com/Curators_Coffee">@Curators_Coffee</a><br>
       <i class="icon icon-user"></i> <a class="url" href="https://www.facebook.com/curatorscoffee">facebook.com/curatorscoffee</a><br>
       <i class="icon icon-contact"></i> <a href="mailto:contact@curatorscoffee.com">contact@curatorscoffee.com</a></p>
@@ -16,37 +13,66 @@
     <article class="box inset">
       <div class="content">
         <header>
-          <h3>In a burst of colour Curators Coffee Studio recently opened it's doors in the City of London. Devoted to specialty coffee, this new cafe has been created by a collection of people who all love great tasting coffee.  Unique design is central to the Curators Coffee ethos and their innovative, fresh approach provides a stark contrast to the usual environment of other city cafes.  Combined with their great service, it's an uplifting coffee experience.</h3>
+          <h3>In a burst of colour Curators Coffee Studio recently opened it's doors in the City of London. Devoted to specialty coffee, this new cafe has been created by a collection of people who all love great tasting coffee. Unique design is central to the Curators Coffee ethos and their innovative, fresh approach provides a stark contrast to the usual environment of other city cafes. Combined with their great service, it's an uplifting coffee experience.</h3>
         </header>
       </div>
     </article>
-    <img src="http://maps.googleapis.com/maps/api/staticmap?center=51.512109,-0.082581&markers=color:0x8EBFC0%7Clabel:S%7C51.512109,-0.082581&zoom=15&size=640x320&sensor=false&scale=2">
+    <div id="map" style="width: 837px; height: 418px"></div>
   </div>
 </div>
 
-<article class="bordered-top">
+<article class="bordered-top info">
   <h2 class="title row">Our Coffee</h2>
   <div class="row">
-    <h3 class="three columns">Ross</h3>
-    <%= image_tag "ross/luddbrown.jpg", :class => "three columns" %>
-    <p class="six columns">Friendly neighbourhood coffee shop. Featured in Time Out as one of London's best cafes. @squaremile coffee. 7.30-6 Mon to Fri, 9-5 Sat, 10-4 Sun.</p>
+    <%= image_tag "latte_art.jpg", :class => "four columns" %>
+    <div class="eight columns">
+      <p>We take great pride in preparing our coffee and have the pleasure of working with local London roasteries who support direct trade methods of purchasing coffee, resulting in a  range of high quality of coffees on offer, all roasted to perfection using delicate roasting profiles.</p>
+
+      <p>Our house espresso is the Rogue from <a href="http://www.unionroasted.com/">Union Hand-Roasted Coffees</a>. Developed with Andrew Tolley of Taylor St Baristas, the components of Rogue change on a seasonal basis which ensure a great tasting product at all times of the year.</p>
+
+      <p>Our guest espresso, decaf and filter coffee is provided by <a href="http://shop.squaremilecoffee.com/">Square Mile Coffee Roasters</a>. What we offer in store will constantly change to showcase their stunning range of coffees.</p>
+
+      <p>For more details of  our baristas for details of what is currently being featured in store.</p>
+    </div>
   </div>
 </article>
 
-<article class="bordered-top">
+<article class="bordered-top info">
   <h2 class="title row">Our Tea</h2>
   <div class="row">
-    <%= image_tag "ross/luddbrown.jpg", :class => "three columns" %>
-    <h3 class="two columns">Ross</h3>
-    <p class="seven columns">Friendly neighbourhood coffee shop. Featured in Time Out as one of London's best cafes. @squaremile coffee. 7.30-6 Mon to Fri, 9-5 Sat, 10-4 Sun.</p>
+    <%= image_tag "tea.jpg", :class => "four columns" %>
+    <div class="eight columns">
+      <p>Our teas are supplied by tea traders <a href="http://www.lalaniandco.com/">Lalani &amp; Co</a> who spend time every year visiting tea farms around the world to source only the highest quality teas. We brew our teas in homemade <a href="http://en.wikipedia.org/wiki/Gaiwan">Gaiwans</a> using exact recipes to ensure we get the best out of the leaves.</p>
+
+      <p>We also make a fresh mint infusion made from our mint garden grown in store. We have a range of mint including Applemint and Black Peppermint so ask our staff what they can offer you.</p>
+    </div>
   </div>
 </article>
 
-<article class="bordered-top">
+<article class="bordered-top info">
   <h2 class="title row">Our Food</h2>
   <div class="row">
-    <h3 class="three columns">Ross</h3>
+    <%= image_tag "food2.jpg", :class => "four columns" %>
+    <div class="eight columns">
+      <p>Our food menu is designed around the concept of having simple options made from good quality ingredients.</p>
+
+      <p>Our Pastries are supplied by <a href="http://www.yeastbakery.com/">Yeast Bakery</a> who are uncompromising in their pursuit of creating the perfect croissant.</p>
+
+      <p>The remainder of our food which includes delicious sweet and savoury muffins, decadent brownies and custard tarts, classic tasty sandwiches made on a range of breads and fresh seasonal salads, come from <a href="http://twitter.com/#!/brownsofse4">Browns of Brockley</a>.</p>
+
+      <p>For more information on our current food offering and enquiries for office catering please email <a href="mailto:food@curatorscoffee.com">food@curatorscoffee.com</a>.</p>
+    </div>
+
+  </div>
+</article>
+
+<article class="bordered-top info">
+  <h2 class="title row">Design</h2>
+  <div class="row">
     <%= image_tag "ross/luddbrown.jpg", :class => "three columns" %>
-    <p class="six columns">Friendly neighbourhood coffee shop. Featured in Time Out as one of London's best cafes. @squaremile coffee. 7.30-6 Mon to Fri, 9-5 Sat, 10-4 Sun.</p>
+    <div class="nine columns">
+      <p>The concept of Curators Coffee developed from our attempts to visualise the art of coffee and our desire to create a gallery space for our craft. A collaboration between talented furniture builder Jason, of madebyjason and designer extraordinaire Jen Archer led to Curators Coffee Studio, a space of free thought, where things are collected and recreated or reimagined. To reflect this we’ve used a mix of recycled, new and artisan materials to bring this to life.</p>
+    </div>
+
   </div>
 </article>
