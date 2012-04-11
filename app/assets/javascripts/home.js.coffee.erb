@@ -1,7 +1,11 @@
 url = "http://a.tiles.mapbox.com/v3/lebreeze.map-yq4ttdwa.jsonp"
 centre = new L.LatLng(51.512109, -0.082581)
 map = new L.Map("map",
-scrollWheelZoom : false
+  scrollWheelZoom : false
+  dragging : false
+  zoomControl : false
+  doubleClickZoom : false
+  closePopupOnClick : false
 
 ).setView(centre, 17)
 wax.tilejson url, (tilejson) ->
@@ -26,9 +30,17 @@ popup.setContent(popupContent)
 
 map.openPopup(popup)
 
-$ ->
-  $(".jcarousel").jcarousel(
-  ).jcarouselAutoscroll(
-    interval : 2000
-  )
 
+$ ->
+  $("#slides").slides
+    preload: true
+    preloadImage: "<%= asset_path 'loading.gif' %>"
+    play: 5000
+    pause: 2500
+    hoverPause: true
+    generatePagination: false
+    effect: 'slide, fade'
+    crossfade: true
+    slideSpeed: 350
+    fadeSpeed: 500
+    randomize : true

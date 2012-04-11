@@ -1,0 +1,9 @@
+.slides_container {
+  width:100%;
+  height:471px;
+}
+.slides_container div {
+  width:100%;
+  height:471px;
+  display:block;
+}
