@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require wax.leaf
+//= require jquery.jcarousel
+//= require jquery.jcarousel.autoscroll
