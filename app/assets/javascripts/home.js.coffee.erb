@@ -11,24 +11,46 @@ map = new L.Map("map",
 wax.tilejson url, (tilejson) ->
   map.addLayer new wax.leaf.connector(tilejson)
 
-popupContent = '<div class="row"><div class="five columns"><img style="width:110px;height:84px" alt="Curators Coffee Studio logo" src="<%= asset_path 'cc_studio_logo_black.png' %>"></div>'
+geojsonFeature =
+  type : "Feature"
+  properties :
+    name : "Curators Coffee Studio"
+    amenity : "Specialty coffee shop"
+  geometry :
+    type : "Point"
+    coordinates : [-0.082581, 51.512109]
 
-popupContent += '<div class="seven columns">'
-popupContent += '<h3>Curators Coffee Studio</h3>'
-popupContent += '<strong>9a Cullum St<br>London EC3M 7JJ</strong><br><br>'
-popupContent += 'Mon-Fri 7:30am-5:00pm'
-popupContent += '</div></div>'
+anotherGeojsonLayer = new L.GeoJSON(geojsonFeature,
+  pointToLayer: (latlng) ->
+    new L.Marker(latlng,
+      icon: new L.DivIcon()
+    )
+  )
 
-popup = new L.Popup(
-  minWidth : 390
-  maxWidth : 500
-  closeButton : false
-)
 
-popup.setLatLng(centre)
-popup.setContent(popupContent)
 
-map.openPopup(popup)
+map.addLayer(anotherGeojsonLayer)
+
+
+
+# popupContent = '<div class="row"><div class="five columns"><img style="width:110px;height:84px" alt="Curators Coffee Studio logo" src="<%= asset_path 'cc_studio_logo_black.png' %>"></div>'
+# 
+# popupContent += '<div class="seven columns">'
+# popupContent += '<h3>Curators Coffee Studio</h3>'
+# popupContent += '<strong>9a Cullum St<br>London EC3M 7JJ</strong><br><br>'
+# popupContent += 'Mon-Fri 7:30am-5:00pm'
+# popupContent += '</div></div>'
+
+# popup = new L.Popup(
+#   minWidth : 390
+#   maxWidth : 500
+#   closeButton : false
+# )
+# 
+# popup.setLatLng(centre)
+# popup.setContent(popupContent)
+# 
+# map.openPopup(popup)
 
 
 $ ->

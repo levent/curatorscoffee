@@ -6,6 +6,7 @@
 #
 
 *.swp
+*.swo
 .gem
 
 # Ignore bundler config

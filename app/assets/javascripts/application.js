@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require leaflet-src
 //= require wax.leaf
 //= require slides.jquery

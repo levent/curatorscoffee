@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="three columns">
+  <div class="four columns">
     <h1><%= link_to "Curators Coffee" %></h1>
     <address class="vcard">
       <p class="lead">
@@ -8,8 +8,13 @@
       <i class="icon icon-contact"></i> <a href="mailto:contact@curatorscoffee.com">contact@curatorscoffee.com</a></p>
       </p>
     </address>
+    <article class="box inset">
+      <div class="content">
+        <a href="http://maps.google.co.uk/maps?q=curators+coffee&hl=en&ll=51.512108,-0.082591&spn=0.016279,0.036736&sll=53.800651,-4.064941&sspn=31.939111,75.234375&hq=curators+coffee&t=m&z=16&iwloc=A"><div id="map" style="width: 100%; height: 300px"></div></a>
+      </div>
+    </article>
   </div>
-  <div class="nine columns">
+  <div class="eight columns">
     <article>
       <section class="box inset">
         <div class="content">
@@ -21,11 +26,6 @@
       <section class="box">
         <div class="content">
           <%= render :partial => 'slides' %>
-        </div>
-      </section>
-      <section class="box">
-        <div class="content">
-          <a href="http://maps.google.co.uk/maps?q=curators+coffee&hl=en&ll=51.512108,-0.082591&spn=0.016279,0.036736&sll=53.800651,-4.064941&sspn=31.939111,75.234375&hq=curators+coffee&t=m&z=16&iwloc=A" class="dark"><div id="map" style="width: 100%; height: 400px"></div></a>
         </div>
       </section>
     </article>
