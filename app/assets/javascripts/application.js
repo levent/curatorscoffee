@@ -15,3 +15,4 @@
 //= require leaflet-src
 //= require wax.leaf
 //= require slides.jquery
+//= require libs/modernizr-2.0.6.min.js

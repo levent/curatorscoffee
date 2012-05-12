@@ -44,6 +44,18 @@
   <body>
 
     <div class="container">
+
+      <header role="banner" class="main-header grid-row">
+        <nav class="content main-header-content grid-12 clearfix">
+          <ul role="navigation" class="navigation unstyled clearfix">
+            <li><%= link_to "Our Coffee", "#coffee" %></li>
+            <li><%= link_to "Our Tea", "#tea" %></li>
+            <li><%= link_to "Our Food", "#food" %></li>
+            <li><%= link_to "Design", "#design" %></li>
+          </ul>
+        </nav>
+      </header>
+
       <div id="main" class="grid-row curatorscoffee">
         <%= yield %>
       </div>
