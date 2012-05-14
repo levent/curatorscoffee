@@ -62,5 +62,7 @@ module CuratorscoffeeCom
     config.assets.version = '1.0'
 
     config.assets.precompile += %w( leaflet.ie.css footer.js )
+
+    config.cache_store = :dalli_store
   end
 end
