@@ -1,0 +1,169 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   TRIGGERS
+ 
+*/
+
+/* ----------------------------------------
+   TRIGGER LIST
+*/
+
+table.trigger-list {    
+  width: 75%;
+  margin-left: 12.5%;
+  
+  td {
+    white-space: nowrap;
+    border: none;
+    vertical-align: top;
+    
+    &.trigger-content {
+      white-space: normal;
+    }
+  }
+  
+  tr {    
+    & + tr {
+      border-top: 1px solid $borderGray;
+    }
+  
+    &:hover {
+      .trigger-actions {
+        @include opacity(100);
+      }
+    }  
+  }
+  
+  tr + .trigger-section {
+    td {
+      padding-top: em(15);
+    }
+  
+    .trigger-text-aid,
+    .trigger-content {
+      padding-top: em(22);
+    }
+  }
+  
+  .trigger-type {
+    width: em(150,18);
+    padding-left: 0;
+    @include rem ('font-size',18);
+    font-weight: bold;
+    
+    .icon:before {
+      font-size: 3em;
+      margin-right: .2em;
+      color: $grayLighter;
+      text-shadow: 0 -1px 0 darken($grayLight,5);
+    }
+  }
+  
+  .trigger-text-aid {
+    width: em(120);
+  }
+  
+  .trigger-text-aid,
+  .trigger-content {
+    padding-top: em(13);
+  }
+    
+  .trigger-condition + .trigger-text-aid {
+    width: em(50);
+    text-align: right;
+  }
+  
+  .trigger-condition {
+    position: relative;
+    @include rem ('font-size',16);
+    font-weight: bold;
+    color: $primary;
+  }
+  
+  .trigger-content {
+    color: $gray;
+    font-style: italic;
+  }
+  
+  .trigger-actions {
+    position: absolute;
+    top: - em(14);
+    right: - em(9);
+    padding: em(6);
+    background: white;
+    border: 1px solid $borderGray;
+    white-space: nowrap;
+    @include opacity(0);
+    @include transition(opacity .2s ease-out);
+    @include box-shadow( -2px 0 2px rgba(0,0,0,.05) );
+    @include border-radius( 10px 0 0 10px );
+  }
+    
+  .icon-replace {
+    text-indent: -9999px;
+    width: em(18);
+    padding: em(5);
+    color: $gray;
+    
+    &:before,
+    .icon-fallback {
+      text-indent: 0;
+    }
+    
+    &:hover {
+      color: $base;
+    }
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .ie9 & { 
+    .trigger-type {      
+      .icon:before {
+        font-size: .6em;
+      }
+    }
+  }
+  
+  .oldie & { 
+    .trigger-actions {
+      display: none;
+    }
+  
+    tr:hover {
+      .trigger-actions {
+        display: block;
+      }
+    }
+  }
+  
+  .ie7 & {
+    a.icon-replace {
+      padding: 0 3px;
+      text-indent: 0;
+      width: auto;
+      
+      .icon-fallback {
+        display: none;                
+      }
+    }
+  }
+}
+
+/* ----------------------------------------
+   ADD TRIGGER
+*/
+
+#addTrigger { 
+  #trigger_new_iframe {
+    background: white asset-url('spinner-on-white.gif', image) no-repeat center center;
+  }
+  
+  .ie7 & {
+    #trigger_trigger_type {
+      width: 100px;
+    }
+  }
+}

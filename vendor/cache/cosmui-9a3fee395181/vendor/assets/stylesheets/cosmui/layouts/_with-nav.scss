@@ -1,0 +1,102 @@
+/* 
+ *
+ * With-nav.scss 
+ *
+*/
+
+.box-navigation {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: em(172);
+  padding: em(18) em(36) em(18) em(18);
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  
+  .alt-navigation,
+  .box-navigation-helper {
+    display: none;
+  }
+  
+  li  {
+    position: relative;
+    display: block;
+    color: $grayLighter;
+    line-height: em(18);
+    @include transition(color .2s ease-out);
+    
+    &:hover {
+      color: $primary;
+    }
+    
+    &:before {
+      position: absolute;
+      top: em(4,32);
+      left: 0;
+      @include rem ('font-size',32);
+    }
+    
+    a {
+      padding: em(9,14) 0 em(9,14) em(36,14);
+      display: block;
+      @include rem ('font-size',14);
+      font-weight: bold;
+      line-height: em(18,14);
+      color: $base;
+      
+      &:hover {
+        color: $primary
+      }
+    }
+    
+    &.selected {
+      color: $primary;
+      a {
+        color: $base;
+      }      
+      
+      ul {
+        display: block;
+        padding-bottom: em(9);
+        
+        a {
+          padding: em(3,12) 0 em(3,12) em(36,12);
+          line-height: em(18,12);
+          @include rem ('font-size',12);
+          color: $gray;
+          border-top: none;
+          
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  
+  li + li a {
+    border-top: 1px solid lighten($borderGray,5);    
+  }
+  
+  & + .box-content {
+    padding-left: em(226);
+    min-height: em(300);
+  }
+  
+  ul ul { display: none; }
+  
+  .ie7 & {
+    .icon-fallback {
+      position: absolute;
+      top: - em(6,32);
+      left: 0;
+      @include rem ('font-size',32);
+    }
+  }
+
+}

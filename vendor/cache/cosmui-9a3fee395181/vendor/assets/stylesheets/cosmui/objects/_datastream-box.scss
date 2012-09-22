@@ -1,0 +1,237 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   DATASTREAM BOX
+ 
+*/
+
+/* ----------------------------------------
+   TITLE
+*/
+    
+.datastream-box-title {
+  font-weight: bold;
+  float: left;
+}
+
+/* ----------------------------------------
+   CONTENT
+*/
+
+.datastream-box-content {
+  position: relative;  
+  @include clearfix();
+}
+
+/* ----------------------------------------
+   GRAPH TABLE
+*/
+
+.datastream-table-container {
+  @include rem ('margin-left', -18);
+}
+
+.datastream-table {
+  margin: 0;
+  
+  td {
+    border: none;
+  }
+  
+  .ie7 & {
+    width: 96%;
+  }
+}
+
+.datastream-graph {
+  position: relative;
+  width: 100%;
+  padding: 0 0 em(6) 0;
+  
+  tr:last-child & {
+    padding-bottom: 0;
+  }
+}
+      
+.datastream-graph-container {
+  position: relative;
+  display: block;
+  height: em(155); 
+}
+    
+.datastream-graph-empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: em(155);
+  color: $grayLight;
+  text-align: center;
+  
+  p {
+    padding-left: em(18);
+    padding-right: em(18);
+  }
+}
+  
+.datastream-graph-empty-heading {
+  @include rem ('font-size',18);
+  line-height: 1em;
+  padding: em(47,18) 1em 1em;
+  margin-bottom: 0;
+  
+  &:before {
+    color: $grayLighter;
+  }
+  
+  &:last-child {
+    padding-top: em(62,18);
+  }
+}
+   
+/* ----------------------------------------
+   GRAPH CURRENT VALUE
+*/
+
+.datastream-graph-current-value {
+  position: relative;
+  display: block;
+  @include rem ('font-size',13);
+  padding: em(18);
+  padding-top: em(12);
+  margin: 0;
+  margin-left: em(-5);
+  font-weight: bold;
+  text-align: center;
+  height: em(99);
+  max-width: 300px;
+  background: $primary asset-url('spinner-on-orange.gif', image) no-repeat center center;
+  color: white;
+  white-space: nowrap;  
+  @include border-radius(em(5));
+      
+  &:last-child { margin-bottom: 0;}
+  
+  &.loaded {
+    background: $primary;
+  }
+  
+  .ie7 & {
+    padding: 0;
+    background: transparent;
+    
+    .innerCell {  
+      background: $primary asset-url('spinner-on-orange.gif', image) no-repeat center center;
+      left: -4px; 
+      padding: em(9) em(10);
+    }
+    
+    &.loaded {
+      .innerCell {
+        background: $primary;
+      }
+    }
+  }
+}
+      
+.datastream-graph-value {
+  display: inline-block;
+  max-width: 300px;
+  overflow: hidden;
+  margin-bottom: 0;
+  @include rem ('font-size',60);
+  @include rem ('line-height',64);
+  font-weight: bold;
+  @include opacity(0);
+  $transition: color .2s ease-out;
+  @include transition ($transition);
+  
+  &.editable {
+    &:hover {
+      color: lighten($primary,40);
+      cursor: pointer;
+    }
+  }
+}
+
+.datastream-graph-unit {
+  opacity: 0;
+  display: block;
+  margin-left: 0;
+  max-width: 300px;
+  overflow: hidden;
+  @include rem ('font-size',20);
+  line-height: 1em;
+  white-space: nowrap;
+}
+
+.datastream-graph-aid { // currently
+  display: block;
+  margin-bottom: em(5,18);
+  @include rem ('font-size',18);
+  @include rem ('line-height',20);
+  font-style: normal;
+  font-weight: normal;
+}
+   
+/* ----------------------------------------
+   TAGS
+*/
+  
+.datastream-box-tags {
+  max-width: 45%;
+  margin-left: 1em;
+}
+  
+.ie7 .datastream-box-tags {
+  float: left;
+}
+   
+/* ----------------------------------------
+   TRIGGER DRAWER
+*/
+
+.trigger-drawer-title {
+  color: $grayLight;
+}
+  
+/* ----------------------------------------
+   NO JS
+*/
+  
+.no-js .datastream-graph-value,
+.no-js .datastream-graph-unit {
+  opacity: 1;
+}
+  
+/* ----------------------------------------
+   DATASTREAM EDIT VALUE
+*/
+
+form.datastream-edit-value {
+  max-width: none;
+  
+  label {
+    padding-top: 0;
+  }
+  
+  .field {
+    @include clearfix();
+    width: em(215);
+    margin: 0;
+  }
+  
+  input,
+  button {
+    float: left;
+  }
+  
+  [type="text"] {
+    width: em(150);
+    @include border-radius (em(4) 0 0 em(4));
+  }
+  
+  [type="submit"] {
+    @include border-radius (0 em(4) em(4) 0);
+  }
+}

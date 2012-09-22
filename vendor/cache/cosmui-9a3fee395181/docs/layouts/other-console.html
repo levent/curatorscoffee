@@ -1,0 +1,506 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Pete Correia's Console - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="../favicon.ico" rel="shortcut icon">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../../vendor/assets/stylesheets/compiled/docs-cosmui.css">
+  <!--! end of stylesheets -->
+  
+  <!-- head scripts -->
+  <script src="../../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+</head>
+<body>
+
+  <!-- #container -->
+  <div class="container container-connected">
+
+    <!-- header -->
+    <header role="banner" class="main-header grid-row">
+      <nav class="content main-header-content grid-9 clearfix">
+        <hgroup class="branding">
+          <h1><a href="/docs/">Cosm</a></h1>
+          <h2>Connect to your world</h2>
+        </hgroup>
+        <ul role="navigation" class="navigation unstyled clearfix">
+          <li><a href="#" title="Discover popular feeds, featured projects and more. Explore Cosm.">Explore</a></li>
+          <li><a href="#" title="Spruce up you knowledge and check the API documentation.">Support/API</a></li>
+          <li><a href="#" title="The Cosm official blog.">Blog</a></li>
+        </ul>
+        <form role="search" class="search" data-cosmui="searchbox">
+          <input type="text" class="input-medium leveled search-query" placeholder="Search">
+          <button type="submit" class="button icon icon-only icon-search ir">Go</button>
+        </form>
+      </nav>
+
+      <aside class="sidebar main-header-sidebar grid-3" role="complementary">
+        <article role="navigation" class="user-menu box"> <!-- user login box -->
+          <header class="user-menu-header box-header">
+            <a class="user-menu-button dark" href="#" title="Go to my profile" data-cosmui="toggler" data-target="next">
+              <img src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=24" alt="The user profile picture.">
+              petecorreia
+            </a>
+            <nav class="user-menu-links closed"> <!-- user login links -->
+              <ul class="unstyled">
+                <li><a href="#" title="Go to my Console" class="dark icon icon-user">Console</a></li>
+                <li><a href="#" title="Manage my Apps" class="dark icon icon-apps">Apps</a></li>
+                <li><a href="#" title="Manage and debug my Keys" class="dark icon icon-keys">Keys</a></li>
+                <li><a href="#" title="Edit my Settings" class="dark icon icon-settings">Settings</a></li>
+                <li><a href="#" title="Debug my Feeds" class="dark icon icon-debug">Debug</a></li>
+                <li><a href="#" title="Logout of Cosm" class="dark icon icon-logout">Logout</a></li>
+              </ul>            
+            </nav> <!--!  end of user login links -->
+          </header>
+          <div class="box-content user-menu-content">
+            <button class="user-notifications-button icon icon-only icon-activity" title="View your activity" data-badge="3" data-cosmui="dropdown" data-target="next"></button>
+            <div class="user-notifications activity dropdown-menu aligned-right">          
+              <h5 class="user-notifications-header dropdown-menu-header">Notifications</h5> 
+              <ul class="user-notifications-list unstyled">
+                <li class="comment icon icon-comments">
+                  <a class="dark" href="#" title="Go to comment">
+                    Bob Anderson left a comment on a My Feed.
+                    <time class="timeago" datetime="2012-02-15T09:24:17Z">Feb 15 at 09:24</time>
+                  </a>
+                </li>
+                <li class="trigger icon icon-trigger">
+                  <a class="dark" href="#" title="View trigger">
+                    Datastream1 at My Feed is now &lt;100 &deg;F
+                    <time class="timeago" datetime="2012-02-15T03:47:17Z">Feb 15 at 03:47</time>
+                  </a>
+                </li>
+                <li class="people icon icon-followers">
+                  <a class="dark" href="#" title="View followers">
+                    Adam West is now following My Feed.
+                    <time class="timeago" datetime="2012-02-14T16:03:17Z">Feb 14 at 16:03</time>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article> <!--! end of user login box -->
+      </aside>
+    </header> <!--! end of header -->
+
+    <!-- #main -->
+    <div id="main" class="grid-row">
+      <section role="main" class="content main-content grid-9">
+
+        <!-- page header -->
+        <header class="page-header">
+
+          <h2 class="page-header-title">Pete Correia's Console</h2>
+          
+          <div class="actions">
+            <div class="view-selector button-group">
+              <a href="#" class="button button-inset icon icon-only icon-list-view"></a><a href="#" class="button button-leveled icon icon-only icon-map-view"></a>
+            </div>
+            
+            <button class="settings button button-leveled button-dropdown icon icon-only icon-settings dropdown-toggle" data-cosmui="dropdown" data-target="#dropdown-settings"></button> 
+            <div class="dropdown-menu" id="dropdown-settings">          
+              <h5 class="dropdown-menu-header">Sort By</h5> 
+              <ul class="inputs-list no-borders">
+                <li>
+                  <label>
+                    <input type="radio" name="searchFilters" value="feeds" checked="checked">
+                    <span>Recently Added</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="searchFilters" value="support">
+                    <span>Recent Activity</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="searchFilters" value="blog">
+                    <span>Alphabetical</span>
+                  </label>
+                </li>
+              </ul>         
+              
+              <h5 class="header">View</h5> 
+              <ul class="inputs-list no-borders">
+                <li>
+                  <label>
+                    <input type="checkbox" name="searchFilters" value="feeds" checked="checked">
+                    <span>My Feeds</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="searchFilters" value="support" checked="checked">
+                    <span>Feeds I'm Following</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="searchFilters" value="blog" checked="checked">
+                    <span>Users</span>
+                  </label>
+                </li>
+              </ul>
+            </div> 
+            
+            <button class="button button-secondary icon icon-follow">Follow</button>
+          </div> 
+          
+        </header> <!--! end of page header -->
+        
+        <!-- console summaries -->
+        
+        <article class="feed-summary box"> <!-- feed summary -->
+          <header class="feed-summary-header box-header">
+            <h3 class="feed-summary-title box-header-title">
+              <span class="icon icon-feed-default" data-cosmui="tooltip" data-gravity="sw" title="Stale: this feed has not been updated in the last 15 minutes."></span>
+              <a class="dark" href="#">A Feed</a>
+            </h3>          
+            <div class="actions">
+              <select class="graph-duration" data-cosmui="range">
+                <option value="300">5 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="3600">1 hour</option>
+                <option value="10800">3 hours</option>
+                <option value="86400" selected="selected">1 day</option>
+                <option value="604800" >1 week</option>
+                <option value="2592000">30 days</option>
+                <option value="7776000">3 months</option>
+                <option value="15552000">6 months</option>
+                <option value="31536000">1 year</option>
+              </select>      
+                
+              <a class="circle circle-mini circle-blue" href="#" title="Follow this feed">
+                <span class="circle-inner iconified">E</span>
+              </a> 
+            </div> 
+          </header>
+          
+          <div class="feed-summary-content box-content">
+          
+            <span class="feed-summary-icon feed-icon with-pointer"></span>
+            <a href="#" class="feed-summary-map map">
+              <img class="feed-summary-map-image map-image" src="http://maps.googleapis.com/maps/api/staticmap?center=London,UK&zoom=7&size=225x225&maptype=roadmap&sensor=false&style=feature:road%7Celement:all%7Chue:0xfe6204%7Csaturation:100%7Clightness:20&style=feature:landscape%7Celement:all%7Clightness:100" alt="Feed location on a map">
+              <span class="feed-summary-map-center map-center"></span>
+            </a>
+            
+            <article class="feed-summary-datastreams">
+              <table class="feed-datastream-table">
+                <tbody>
+                  <tr>
+                    <td class="feed-datastream-graph">
+                      <div class="innerCell">
+                        <div class="feed-datastream-graph-container"></div>
+                        <span class="feed-datastream-id">Datastream ID</span>
+                      </div>
+                    </td>
+                    <td class="feed-datastream-current-value"><span class="feed-datastream-value">137</span><span class="feed-datastream-unit">mph</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feed-datastream-graph">
+                      <div class="innerCell">
+                        <div class="feed-datastream-graph-container"></div>
+                        <span class="feed-datastream-id">Datastream ID</span>
+                      </div>
+                    </td>
+                    <td class="feed-datastream-current-value"><span class="feed-datastream-value">889029283282323020382032</span><span class="feed-datastream-unit">followers_to_friends_ratio</span></td>                  
+                  </tr>
+                  <tr>
+                    <td class="feed-datastream-graph">
+                      <div class="innerCell">
+                        <div class="feed-datastream-graph-container"></div>
+                        <span class="feed-datastream-id">Datastream ID</span>
+                      </div>
+                    </td>
+                    <td class="feed-datastream-current-value"><span class="feed-datastream-value">sensing all the crap out of my house you know</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </article> <!--! end of feed summary -->
+        
+        <article class="feed-summary box"> <!-- feed summary -->
+          <header class="feed-summary-header box-header">
+            <h3 class="feed-summary-title box-header-title">
+              <span class="icon icon-feed-default icon-green" data-cosmui="tooltip" data-gravity="sw" title="Live: this feed was updated in the last 15 minutes."></span>
+              <a class="dark" href="#">A Feed</a>
+            </h3>   
+            <div class="actions">
+              <select class="graph-duration" data-cosmui="range">
+                <option value="300">5 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="3600">1 hour</option>
+                <option value="10800">3 hours</option>
+                <option value="86400" selected="selected">1 day</option>
+                <option value="604800" >1 week</option>
+                <option value="2592000">30 days</option>
+                <option value="7776000">3 months</option>
+                <option value="15552000">6 months</option>
+                <option value="31536000">1 year</option>
+              </select>        
+                
+              <a class="circle circle-mini circle-blue" href="#" title="Follow this feed">
+                <span class="circle-inner iconified">E</span>
+              </a> 
+            </div> 
+          </header>
+          
+          <div class="feed-summary-content box-content">
+            <span class="feed-summary-icon feed-icon with-pointer"></span>
+            <a href="#" class="feed-summary-map map">
+              <img class="feed-summary-map-image map-image" src="http://maps.googleapis.com/maps/api/staticmap?center=Paris,France&zoom=7&size=225x225&maptype=roadmap&sensor=false&style=feature:road%7Celement:all%7Chue:0xfe6204%7Csaturation:100%7Clightness:20&style=feature:landscape%7Celement:all%7Clightness:100" alt="Feed location on a map">
+              <span class="feed-summary-map-center map-center"></span>
+            </a>
+            <article class="feed-summary-datastreams feed-summary-two-datastreams">
+              <table class="feed-datastream-table">
+                <tbody>
+                  <tr>
+                    <td class="feed-datastream-graph">
+                      <div class="innerCell">
+                        <div class="feed-datastream-graph-container"></div>
+                        <span class="feed-datastream-id">Datastream ID</span>
+                      </div>
+                    </td>
+                    <td class="feed-datastream-current-value"><span class="feed-datastream-value">137</span><span class="feed-datastream-unit">mph</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feed-datastream-graph">
+                      <div class="innerCell">
+                        <div class="feed-datastream-graph-container"></div>
+                        <span class="feed-datastream-id">Datastream ID</span>
+                      </div>
+                    </td>
+                    <td class="feed-datastream-current-value"><span class="feed-datastream-value">88902</span><span class="feed-datastream-unit">kW</span></td>                  
+                  </tr>
+                </tbody>
+              </table>
+              
+            </article>
+          </div>
+        </article> <!--! end of feed summary -->
+        
+        <article class="feed-summary box"> <!-- feed summary -->
+          <header class="feed-summary-header box-header">
+            <h3 class="feed-summary-title box-header-title">
+              <span class="icon icon-feed-default" data-cosmui="tooltip" data-gravity="sw" title="Stale: this feed has not been updated in the last 15 minutes."></span>
+              <a class="dark" href="#">A Feed</a>
+            </h3>          
+            <div class="actions">
+              <select class="graph-duration" data-cosmui="range">
+                <option value="300">5 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="3600">1 hour</option>
+                <option value="10800">3 hours</option>
+                <option value="86400" selected="selected">1 day</option>
+                <option value="604800" >1 week</option>
+                <option value="2592000">30 days</option>
+                <option value="7776000">3 months</option>
+                <option value="15552000">6 months</option>
+                <option value="31536000">1 year</option>
+              </select>    
+                
+              <a class="circle circle-mini" href="#" title="Unfollow this feed">
+                <span class="circle-inner iconified">E</span>
+              </a> 
+            </div> 
+          </header>
+          
+          <div class="feed-summary-content box-content">
+            <span class="feed-summary-icon feed-icon with-pointer"></span>
+            <a href="#" class="feed-summary-map map">
+              <img class="feed-summary-map-image map-image" src="http://maps.googleapis.com/maps/api/staticmap?center=3 Scrutton Street,London, Uk&&size=225x225&maptype=roadmap&sensor=false&style=feature:road%7Celement:all%7Chue:0xfe6204%7Csaturation:100%7Clightness:20&style=feature:landscape%7Celement:all%7Clightness:100" alt="Feed location on a map">
+              <span class="feed-summary-map-center map-center"></span>
+            </a>
+            <article class="feed-summary-datastreams feed-summary-one-datastream">
+              <table class="feed-datastream-table">
+                <tbody>
+                  <tr>
+                    <td class="feed-datastream-graph">
+                      <div class="innerCell">
+                        <div class="feed-datastream-graph-container"></div>
+                        <span class="feed-datastream-id">Datastream ID</span>
+                      </div>
+                    </td>
+                    <td class="feed-datastream-current-value"><span class="feed-datastream-value">137</span><span class="feed-datastream-unit">mph</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </article> <!--! end of feed summary -->
+        
+        <article class="feed-summary box"> <!-- feed summary -->
+          <header class="feed-summary-header box-header">
+            <h3 class="feed-summary-title box-header-title">
+              <span class="icon icon-feed-default" data-cosmui="tooltip" data-gravity="sw" title="Stale: this feed has not been updated in the last 15 minutes."></span>
+              <a class="dark" href="#">A Feed</a>
+            </h3>          
+            <div class="actions">
+                
+              <a class="circle circle-mini" href="#" title="Unfollow this feed">
+                <span class="circle-inner iconified">E</span>
+              </a>  
+            </div> 
+          </header>
+          
+          <div class="feed-summary-content box-content">
+            <span class="feed-summary-icon feed-icon"></span>
+            <div class="feed-summary-map feed-summary-map-empty">
+            </div>
+            <mark class="feed-summary-datastreams feed-summary-datastreams-empty">There are no datastreams yet for this feed.</mark>
+          </div>
+        </article> <!--! end of feed summary -->
+        
+        <article class="user-summary box"> <!-- user summary -->
+          <header class="user-summary-header box-header">
+            <h4 class="user-summary-title box-header-title icon icon-user">
+              <a class="dark" href="#">Pete Correia</a>
+            </h4> 
+                      
+            <div class="actions visible">
+              <ul class="stats-icons">
+                <li><button class="icon icon-only icon-feed-default" title="Go to comments" data-badge="25"></button></li>
+                <li><button class="icon icon-only icon-followers" title="View followers" data-badge="63"></button></li>
+                <li><button class="icon icon-only icon-comments" title="Go to comments" data-badge="2"></button></li>
+              </ul>      
+              <a class="circle circle-mini circle-blue" href="#" title="Follow this feed">
+                <span class="circle-inner iconified">E</span>
+              </a>    
+            </div> 
+          </header>
+        </article> <!--! end of user summary -->
+        
+        <article class="user-summary box"> <!-- user summary -->
+          <header class="user-summary-header box-header">
+            <h4 class="user-summary-title box-header-title">
+              <a class="user-summary-link-avatar dark" href="#">
+                <img src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=30" alt="User avatar">
+                Petevatar Correia
+              </a>
+            </h4> 
+                      
+            <div class="actions visible">
+              <ul class="stats-icons">
+                <li><button class="icon icon-only icon-feed-default" title="Go to comments" data-badge="25"></button></li>
+                <li><button class="icon icon-only icon-followers" title="View followers" data-badge="63"></button></li>
+                <li><button class="icon icon-only icon-comments" title="Go to comments" data-badge="2"></button></li>
+              </ul>      
+              <a class="circle circle-mini" href="#" title="Unfollow this feed">
+                <span class="circle-inner iconified">E</span>
+              </a>    
+            </div> 
+          </header>
+        </article> <!--! end of user summary -->
+
+        
+        <!--! end of console summaries -->
+      
+      </section>
+        
+      <!-- sidebar -->
+      <aside class="sidebar main-sidebar grid-3" role="complementary">
+      
+        <article class="user-info box">
+          <div class="box-content">                     
+            <a class="circle circle-mini circle-blue" href="#" title="Follow Pete Correia">
+              <span class="circle-inner iconified">E</span>
+            </a>
+            <h3 class="visuallyhidden">User Info</h3>
+            <address class="vcard">
+              <p class="photo"><img src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=55" alt="User avatar"></p>
+              <p class="nickname">petecorreia</p>
+              <p class="fn n">Pete Correia</p>
+              <p class="org">Pachube</p>
+              <p class="url"><a href="http://petecorreia.com" title="Visit Pete Correia's website">http://petecorreia.com</a></p>
+            </address>
+            
+            <p class="about">User Interface Designer / Developer at Pachube, photography and guitar lover.</p>
+            
+            <footer>
+              <ul class="unstyled no-margin">
+                <li>
+                  <h5 class="icon icon-followers">Followers</h5>
+                  <p>167</p>
+                </li>
+                <li>
+                  <h5 class="icon icon-comments">Comments</h5>
+                  <p>28</p>
+                </li>
+                <li>
+                  <h5 class="icon icon-feed-default">Feeds</h5>
+                  <p>3</p>
+                </li>
+              </ul>
+            </footer>
+          </div>
+        </article>
+      
+      </aside> <!--! end of sidebar -->
+      
+    </div> <!--! end of #main -->
+    
+    <!-- footer -->
+    <footer class="main-footer grid-row" role="contentinfo">
+      <p class="copyright no-margin">
+        &copy; 2012 Cosm, a <span class="ir">LogMeIn</span> company
+      </p>
+      <nav>
+        <ul class="unstyled no-margin clearfix">
+          <li>
+            <a href="#" title="Go to About Us">About Us</a>
+          </li>
+          <li>
+            <a href="#" title="Go to How it works">How it works</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Press">Press</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Terms of Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer> <!--! end of footer -->
+
+  </div> <!--! end of #container -->
+
+  <!-- scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.modal.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.steps.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.range.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  <!--! end of scripts-->
+  
+</body>
+</html>

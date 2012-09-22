@@ -1,0 +1,147 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   COMMENTS BOX
+ 
+*/
+
+.comments-box-header-title {
+  @include rem ('font-size',16);
+  font-weight: bold;
+}
+  
+.comments-box-highlight {
+  background: none;
+  color: $gray;      
+}
+  
+.number-of-comments {
+  color: $grayLight;
+}
+
+/* ----------------------------------------
+   COMMENTER BOX
+*/
+    
+.commenter-box {
+  padding: em(20);
+  border: 1px solid darken($drawerBackground,5);
+  background: $drawerBackground;
+  @include clearfix();
+  
+  &.floating {
+    position: fixed;
+    top: 0;
+  }
+}
+  
+.commenter-button {
+  float: right;
+}
+  
+.commenter-body {
+  max-width: 96%;
+  width: em(462);
+  padding: em(9);
+  margin-bottom: em(18);
+}
+
+/* ----------------------------------------
+   COMMENT
+*/
+  
+.comment {
+  &:last-child {
+    padding-bottom: em(18);
+  }
+}
+
+.comment-user {
+  float: left;
+}
+
+.comment-user-name-link {
+  margin-left: 0;
+}
+
+.comment-user-name {
+  padding-bottom: 0;
+  line-height: em(24,16);
+  color: $base;
+}
+
+.comment-body {
+  margin-left: em(34);
+}
+
+.comment-date {
+  display: block;
+  @include rem ('font-size',12);
+  font-weight: bold;
+  color: $grayLight;
+  margin-bottom: em(3,12);
+  margin-left: em(34,12);
+}
+
+.oldie .comment {
+  .comment-user {
+    white-space: nowrap;
+  }
+    
+  .comment-user-avatar {
+    float: none;
+    display: inline-block;
+  }
+  
+  .comment-user-name {
+    float: none;
+    display: inline-block;
+  }
+}
+
+.ie7 .comment {
+  .comment-user {
+    white-space: nowrap;
+  }
+    
+  .comment-user-avatar {
+    float: left;
+  }
+  
+  .comment-user-name {
+    float: left;
+  }
+}
+
+/* ----------------------------------------
+   DELETED COMMENT
+*/
+
+.comment-deleted {
+  .comment-user {
+    margin-bottom: 0 !important;
+  }
+  
+  a.comment-user-name-link,
+  .comment-user-name {
+    @include rem ('font-size',13);
+    color: $grayLight;
+  }
+  
+  .comment-user-avatar {
+    display: none;
+  }
+  
+  .comment-date,
+  .comment-body {
+    color: $grayLight;
+  }
+  
+  .comment-date {
+    @include rem ('font-size',11);
+    font-weight: normal;
+  }
+  
+  .comment-body {
+    @include rem ('font-size',12);
+  }
+}

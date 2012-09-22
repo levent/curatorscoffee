@@ -1,0 +1,126 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   SIGN UP
+ 
+*/
+
+.sign-up {
+  position: relative;
+  margin-bottom: em(36);
+  text-align: center;
+  z-index: 5;
+    
+  &:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: em(82);
+    left: -9.9%;
+    width: 50%;
+    border: none;
+    border-top: 1px solid $borderGray;
+    z-index: 2;
+  }
+
+  .circle {
+    display: inline-block;
+    z-index: 5;
+    @include rem ('margin-left',20);
+  }
+  
+  form {
+    @extend .dropdown-menu;
+    
+    position: relative;
+    width: 100%;
+    padding: em(18) 0;
+    max-width: none;
+    @include rem ('font-size',13);
+    top: - em(32);
+    text-align: left;
+    z-index: 4;
+    
+    &:before {
+      top: - em(30);
+      left: 50%;
+      height: em(30);
+      border: none;
+      border-left: 1px solid $borderGray;
+      border-right: 1px solid lighten($grayLighter,15);
+    }
+    
+    &:after { display: none; }
+    
+    .field {
+      position: relative;
+      padding: 0 em(18);
+      margin-bottom: em(10);
+    }
+    
+    .field input {
+      max-width: 93%;
+      width: em(194);
+      padding: em(6);
+    }
+    
+    .help {
+      margin-top: em(5);
+    }
+    
+    .actions {
+      border: none;
+      margin: 0 !important;
+      padding: 0;
+      text-align: center;
+      
+      .button {
+        float: none;
+        margin: 0;
+        padding-left: em(40);
+        padding-right: em(40);
+      }
+    }
+    
+    .input {
+      position: relative;
+    }
+  }
+  
+  .box {
+    max-width: 245px;
+    
+    .box-header:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: - em(32);
+      left: 50%;
+      width: 0;
+      height: em(32);
+      border: none;
+      border-left: 1px solid $borderGray;
+      border-right: 1px solid lighten($grayLighter,15);
+    }
+  }
+
+  
+  /* ----------------------------------------
+     ON LINE (HOMEPAGE)
+  */
+  
+  &.on-line {
+    left: -60%;
+  
+    &:before {
+      display: none;
+    }
+    
+    form {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  
+}
+  

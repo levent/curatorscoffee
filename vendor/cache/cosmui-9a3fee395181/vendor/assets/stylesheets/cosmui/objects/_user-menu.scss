@@ -1,0 +1,281 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   USER MENU
+ 
+*/
+
+
+  
+.user-menu {
+  margin-top: em(25);
+  width: 100%;
+  
+  .box-content {
+    position: absolute;
+    top: em(8);
+    right: 0;
+    padding: 0 em(10);
+    line-height: em(24);
+    height: em(24);
+    background: white;
+    @include border-radius(0);
+    
+    & > .icon { 
+      background: transparent; 
+      padding-right: em(4);
+      &:hover,
+      &.active { color: $primary; }
+      
+      &:after {
+        background-color: $primary;
+      }
+    }
+  }
+  
+  nav {
+    padding-top: em(10);
+    
+    ul {
+      margin: 0;
+      @include clearfix();
+    }
+    
+    li {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      padding: em(1,14) 0;
+      
+      &:nth-child(odd) {
+        clear: left;
+      }
+    }
+    
+    a {
+      display: block;
+      
+      &:before {
+        color: $grayLighter;
+        width: .8em;
+        text-align: center;
+      }
+      
+      &:hover:before {
+        color: $primary;
+      }
+    }
+  }
+  
+  &.user-menu-login {
+  
+    .user-menu-header {
+      padding: em(5);
+    }
+    
+    input {
+      width: 38%;
+    
+      & + input {
+        margin-left: em(5);
+      }
+    
+    }
+      
+    .icon-only {
+      position: absolute;
+      top: em(11,14);
+      right: 3%;
+      height: em(18,14);
+      width: em(18,14);
+      line-height: 1em;
+      background-color: $grayLighter;
+      color: $base;
+      @include transition('color .2s ease-out, background-color .2s ease-out');        
+      @include border-radius(em(10,14));
+      
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        background-color: $background;
+        color: $primary;
+      }
+      
+      &:before {
+        position: relative;
+        top: - .22em;
+        left: .1em;
+        background-color: transparent;
+        color: inherit;
+        font-size: 1.3em;
+      }
+    }
+    
+    .user-menu-helpers {
+      position: absolute;
+      top: - em(22);
+      right: 0;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li + li {
+      padding-left: em(7);
+      margin-left: em(7);
+      border-left: 1px solid $grayLighter;
+    }
+    
+    a {
+      @include rem ('font-size',11);
+    }
+    
+    a.forgot-password {
+      color: lighten($gray,10);
+      
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+    
+    .error {
+      color: $errorText;
+    }
+    
+    p {
+      padding-top: em(5);
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ----------------------------------------
+   USER MENU HEADER
+*/
+  
+.user-menu .user-menu-header {
+  @include rem ('font-size',14);
+  padding: em(8,14) em(10,14); 
+  @include border-radius (5px);   
+  line-height: em(24,14);
+      
+  img {
+    float: left;
+    width: em(24,14);
+    height: em(24,14);
+    padding-right: em(10,14);
+  }
+  
+  & > a {  
+    position: relative;
+    padding-right: 1.25em;
+    &:after {
+      content: "/";
+      display: block;
+      position: absolute;
+      top: -.35em;
+      right: 0;
+      font-family: $iconfont;
+      font-size: 1.5em;
+      color: $grayLight;
+    }
+    
+    &.active,
+    &:active {
+      &:after {
+        color: $gray;
+      }
+    }
+    
+    &:hover:after {
+      color: $primary;
+    }
+    
+    &.active:after {
+      content: "-";          
+    }
+  }
+}
+  
+/* ----------------------------------------
+   IE ADJUSTMENTS
+*/
+
+.ie9 .user-menu {
+  &.user-menu-login {
+    .icon-only {
+      &:before {
+        top: - .17em;
+        font-size: 55%;          
+      }
+    }
+  }      
+}
+
+.ie7 .user-menu {
+  left: 3px;
+  
+  .user-menu-button {
+    position: relative;
+    top: -5px;
+    padding-left: 30px;
+    padding-right: 20px;
+    height: 18px;
+    line-height: 18px;
+    
+    img {
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+    
+    .icon-fallback {
+      position: absolute;
+      top: 2px;
+      right: 0;
+    }
+  }
+  
+  .icon-arrow-right.icon-fallback {
+    top: -10px;
+  }
+  
+  nav {
+    position: relative;
+    zoom: 1;
+    
+    li {
+      @include rem ('font-size',13);
+      
+      a {
+        position: relative;
+        padding-left: 22px;
+        line-height: 18px;
+        height: 18px;
+        
+        .icon-fallback {
+          position: absolute;
+          top: -8px;
+          left: 0;
+          color: $grayLighter;
+          @include rem ('font-size',22);
+        }
+      }
+    }
+  }
+    
+  .box-content {
+    & > .icon {
+      background: inherit; 
+      padding: 0; 
+      width: 30px;         
+    }
+    
+    .icon-fallback {
+      z-index: 99;
+    }
+  }
+}

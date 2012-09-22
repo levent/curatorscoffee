@@ -1,0 +1,335 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Feed Page - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="../favicon.ico" rel="shortcut icon">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../../vendor/assets/stylesheets/compiled/docs-cosmui.css">
+  <!--! end of stylesheets -->
+  
+  <!-- head scripts -->
+  <script src="../../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+</head>
+<body>
+
+  <!-- #container -->
+  <div class="container">
+
+    <!-- header -->
+    <header role="banner" class="main-header grid-row">
+      <nav class="content main-header-content grid-9 clearfix">
+        <hgroup class="branding">
+          <h1><a href="#">Cosm</a></h1>
+          <h2>Connect to your world</h2>
+        </hgroup>
+        <ul role="navigation" class="navigation unstyled clearfix">
+          <li><a href="#" title="Discover popular feeds, featured projects and more. Explore Cosm.">Explore</a></li>
+          <li><a href="#" title="Spruce up you knowledge and check the API documentation.">Support/API</a></li>
+          <li><a href="#" title="The Cosm official blog.">Blog</a></li>
+        </ul>
+        <form role="search" class="search" data-cosmui="searchbox">
+          <input type="text" class="input-medium leveled search-query" placeholder="Search">
+          <button type="submit" class="button icon icon-only icon-search ir">Search</button>
+        </form>
+      </nav>
+
+      <aside class="sidebar main-header-sidebar grid-3" role="complementary">
+        <article role="navigation" class="user-menu box">
+          <header class="user-menu-header box-header">
+            <a class="user-menu-button dark" href="#" title="Go to my profile" data-cosmui="toggler" data-target="next">
+              <img src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=24" alt="The user profile picture.">
+              petecorreia
+            </a>
+            <nav class="user-menu-links closed"> <!-- user login links -->
+              <ul class="unstyled">
+                <li><a href="#" title="Go to my Console" class="dark icon icon-user">Console</a></li>
+                <li><a href="#" title="Manage my Apps" class="dark icon icon-apps">Apps</a></li>
+                <li><a href="#" title="Manage and debug my Keys" class="dark icon icon-keys">Keys</a></li>
+                <li><a href="#" title="Edit my Settings" class="dark icon icon-settings">Settings</a></li>
+                <li><a href="#" title="Debug my Feeds" class="dark icon icon-debug">Debug</a></li>
+                <li><a href="#" title="Logout of Cosm" class="dark icon icon-logout">Logout</a></li>
+              </ul>            
+            </nav> <!--!  end of user login links -->
+          </header>
+          <div class="box-content user-menu-content">
+            <button class="user-notifications-button icon icon-only icon-activity" title="View your activity" data-cosmui="dropdown" data-target="next"></button> 
+            <div class="user-notifications activity dropdown-menu aligned-right">          
+              <h5 class="user-notifications-header dropdown-menu-header">Notifications</h5> 
+              <ul class="user-notifications-list unstyled">
+                <li class="comment icon icon-comments">
+                  <a class="dark" href="#" title="Go to comment">
+                    Bob Anderson left a comment on a My Feed.
+                    <time class="timeago" datetime="2012-02-15T09:24:17Z">Feb 15 at 09:24</time>
+                  </a>
+                </li>
+                <li class="trigger icon icon-trigger">
+                  <a class="dark" href="#" title="View trigger">
+                    Datastream1 at My Feed is now &lt;100 &deg;F
+                    <time class="timeago" datetime="2012-02-15T03:47:17Z">Feb 15 at 03:47</time>
+                  </a>
+                </li>
+                <li class="people icon icon-followers">
+                  <a class="dark" href="#" title="View followers">
+                    Adam West is now following My Feed.
+                    <time class="timeago" datetime="2012-02-14T16:03:17Z">Feb 14 at 16:03</time>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </aside>
+    </header> <!--! end of header -->
+
+    <!-- #main -->
+    <div id="main" class="grid-row">
+      <section role="main" class="content main-content main-content-full-width grid-12">
+
+        <!-- page header -->
+        <header class="page-header">
+
+          <h2 class="page-header-title">My Feed Page</h2>
+          
+          <div class="actions">
+            <div class="view-selector button-group">
+              <button class="button button-inset icon icon-only icon-list-view"></button><button class="button button-leveled icon icon-only icon-map-view"></button><button class="button button-leveled icon icon-only icon-fullscreen"></button>
+            </div>
+            
+            <button class="settings button button-leveled button-dropdown icon icon-only icon-settings dropdown-toggle" data-cosmui="dropdown" data-target="#dropdown-settings"></button> 
+            <div class="dropdown-menu aligned-right" id="dropdown-settings">  
+              <ul class="unstyled">
+                <li><a class="icon icon-edit" href="#" title="Edit this feed">Edit</a></li>
+                <li><a class="icon icon-twitter" href="#" title="Tweet this feed">Tweet</a></li>
+              </ul>        
+            </div>
+            
+            <button class="button button-secondary icon icon-follow">Follow</button> 
+          </div> 
+          
+        </header> <!--! end of page header -->
+        
+        <article class="datastream-box box" id="datastreamID-2"> <!-- datastream box -->
+          <header class="datastream-box-header box-header">
+            <h3 class="datastream-box-title box-header-title">Datastream_no_datapoints</h3>       
+
+            <div class="actions">          
+              <select class="graph-duration" data-cosmui="range">
+                <option value="300">5 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="3600">1 hour</option>
+                <option value="10800">3 hours</option>
+                <option value="86400" selected="selected">1 day</option>
+                <option value="604800" >1 week</option>
+                <option value="2592000">30 days</option>
+                <option value="7776000">3 months</option>
+                <option value="15552000">6 months</option>
+                <option value="31536000">1 year</option>
+              </select>              
+                            
+              <a href="#" class="icon icon-expand" data-target="#datastreamID-2 .drawer" data-cosmui="toggler">show triggers</a>
+              
+              <button class="button button-small button-leveled button-dropdown icon icon-only icon-settings dropdown-toggle" data-cosmui="dropdown" data-target="next"></button> 
+              <div class="dropdown-menu aligned-right">       
+                <ul class="unstyled">
+                  <li><a class="icon icon-grid" href="#" title="Display an grid to help visualize the graph">Show Grid</a></li>
+                  <li><a class="icon icon-graph-builder" data-cosmui="modal" href="#graphBuilder" title="Build your embedable graph">Graph Builder</a></li>
+                </ul>
+              </div> 
+            </div> 
+          </header>
+          
+          <div class="datastream-box-content box-content">
+            <div class="datastream-table-container">
+              <table class="datastream-table">
+                <tbody>
+                  <tr>
+                    <td class="datastream-graph">
+                      <div class="innerCell">
+                        <div class="datastream-graph-empty">
+                          <p class="datastream-graph-empty-heading icon icon-info">This datastream has no datapoints yet.</p> 
+                          <p>You can <strong>add one manually</strong> by clicking on the orange box on the right.</p>
+                        </div>
+                        <div class="datastream-graph-container"></div>
+                      </div>
+                    </td>
+                    <td class="datastream-graph-current-value">
+                      <em class="datastream-graph-aid invisible">Currently</em>
+                      <p class="datastream-graph-value editable" data-cosmui="tooltip" title="Click to edit">--</p>
+                      <span class="datastream-graph-unit">watts</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <form class="datastream-edit-value compact stacked dropdown-menu dropdown-menu-south">
+              <div class="field help-block">
+                <label for="graph-edit-value2">Update value</label>
+                <div class="input">
+                  <input class="medium" id="graph-edit-value2" name="graph-edit-value1" size="30" type="text" placeholder="Insert new value here">
+                  <input type="submit" class="button button-primary no-margin" value="Save">
+                </div>
+              </div>
+            </form>
+            
+            <footer class="trigger-drawer drawer closed">
+              <mark>There are no triggers yet for this datastream. <button class="button button-secondary button-small icon icon-plus no-margin">Trigger</button></mark>
+            </footer>
+          </div>
+        </article> <!--! end of datastream box -->
+        
+        <!-- feed metadata -->
+        
+        <div class="feed-metadata">
+        
+          <section> <!-- feed map -->
+            <div class="box">
+              <div class="box-content">
+                <div class="no-map">No location available.</div>
+              </div>
+            </div>
+          </section>
+          
+          <section> <!-- feed info -->
+            <div class="box">
+              <div class="box-content">
+                <footer class="feed-information">
+                  <h5 class="icon icon-http-post">Feed Formats</h5>
+                  <ul class="feed-formats bordered-bottom unstyled">
+                    <li><a class="dark" href="#" title="View this feed's JSON">JSON</a></li>
+                    <li><a class="dark" href="#" title="View this feed's XML">XML</a></li>
+                    <li><a class="dark" href="#" title="View this feed's CSV">CSV</a></li>
+                  </ul> 
+                  
+                  <h5 class="icon icon-tags">Tags</h5>             
+                  <ul id="unique-id3" class="tags bordered-bottom">
+                    <li class="title"><a href="#">No tags yet.</a></li>
+                  </ul> 
+                  
+                  <h5 class="icon icon-followers">Followers</h5>
+                  <p class="follower-count">0</p>
+                </footer>
+                
+                <address class="vcard">
+                  <p class="feed-info feed-id">Feed ID: <span class="feed-info-value">12289</span></p>
+                  <p class="feed-info">Creator: <a class="feed-info-value fn n" href="#" title="Go to this feed's creator console">Pete Correia</a></p>
+                  <p class="feed-info">Created: <time class="feed-info-value" datetime="2012-02-15T09:24:17Z">Feb 15 at 09:24</time></p>
+                </address>
+                
+              </div>
+            </div>
+          </section> <!--! end of feed info -->
+          
+        </div>
+        
+        <!--! end of feed metadata -->
+        
+        <!-- feed comments -->
+        
+        <div class="comments-box box">
+          
+          <header class="box-header">
+            <h3 class="comments-box-header-title box-header-title">Comments <span class="number-of-comments">(0)</span></h3>
+          </header>
+          
+          <div class="box-content">
+            <div class="grid-row">
+              <form class="grid-6"> <!-- comment form -->
+              
+                <!-- visitor not logged in -->
+                <mark class="comments-box-highlight hidden">You must be logged in to comment.</mark>
+                
+                <div class="commenter-box">
+                  <p class="commenter-user user">
+                    <img class="user-avatar" src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=24" alt="My profile picture.">
+                    <a class="user-name-link dark" href="#" title="Go to my profile">petecorreia</a>
+                  </p>
+                  
+                  <textarea name="comment-body" class="commenter-body" placeholder="Leave a comment" rows="5"></textarea>
+                  
+                  <button class="commenter-button button button-primary no-margin" type="submit">Post Comment</button>
+                </div>
+              
+              </form> <!--! end of comment form -->
+              
+              <div class="comments-list list grid-6">
+              
+                <mark class="comments-box-highlight">No comments yet. Be the first to <strong>leave a comment</strong>.</mark>
+                
+              </div>
+            </div>          
+          </div>
+        
+        </div>
+        
+        <!--! end of feed comments -->
+                        
+        <!--! end of main content -->
+      
+      </section>
+      
+    </div> <!--! end of #main -->
+    
+    <!-- footer -->
+    <footer class="main-footer grid-row" role="contentinfo">
+      <p class="copyright no-margin">
+        &copy; 2012 Cosm, a <span class="ir">LogMeIn</span> company
+      </p>
+      <nav>
+        <ul class="unstyled no-margin clearfix">
+          <li>
+            <a href="#" title="Go to About Us">About Us</a>
+          </li>
+          <li>
+            <a href="#" title="Go to How it works">How it works</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Press">Press</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Terms of Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer> <!--! end of footer -->
+
+  </div> <!--! end of #container -->
+
+  <!-- scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.range.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  <!--! end of scripts-->
+  
+</body>
+</html>

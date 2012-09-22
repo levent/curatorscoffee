@@ -1,0 +1,83 @@
+<form class="form-steps accordion stacked" id="form-steps" data-children="#form-steps .accordion-content">
+
+  <!-- REPLACEMENT HEADER -->
+  <header class="box-header form-steps-header">
+    <a class="close">&times;</a>
+    <h3 class="box-header-title twitter">Configure your <strong>Twitter Stats</strong>.</h3>
+  </header>
+  
+  <!-- STEP 1 -->
+  <section>
+    <a class="accordion-header" href="#" data-cosmui="toggler" data-target="next" data-parent="#form-steps">Step 1 - Title</a>
+    
+    <div class="accordion-content always-open">
+                        
+      <div class="field">
+        <label for="generic-username">Give your Device a title.</label>
+        <div class="input">
+          <input id="generic-username" name="username" size="50" type="text" placeholder="petecorreia's Device">
+        </div>
+      </div>
+      
+      <div class="actions">
+        <a class="button" data-step="next" href="#">Next</a>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- STEP 2 -->
+  <section>
+    <span class="accordion-header disabled">Step 2 - Tags</span>
+    <div class="accordion-content closed">
+                        
+      <div class="field">
+        <label for="generic-tags">Use comma separated tags to describe your Device.</label>
+        <div class="input">
+          <textarea id="generic-tags" name="tags" rows="3" placeholder="e.g. energy, air quality, project:name=my_project"></textarea>
+        </div>
+      </div>
+      
+      <div class="actions">
+        <a class="button" data-step="next" href="#">Next</a>
+      </div>                  
+    
+    </div>
+  </section>
+  
+  <!-- STEP 3 -->
+  <section>
+    <span class="accordion-header disabled">Step 3 - Configure</span>
+    <div class="accordion-content closed">
+    
+      <ol class="configure">
+        <li>
+          <p>Cosm Library</p>
+          <p>
+            <a href="#" target="_blank" title="Open the Ruby library">Ruby</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the PHP library">PHP</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the Java library">Java</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the Python library">Python</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the Raw HTTP Request library">Raw HTTP Request</a>
+          </p>
+        </li>
+        <li>
+          <p>Preconfigured Code</p>
+          <p>
+            <a href="#" target="_blank" title="Open the Ruby preconfigured code">Ruby</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the PHP preconfigured code">PHP</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the Java preconfigured code">Java</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the Python preconfigured code">Python</a>,&nbsp;
+            <a href="#" target="_blank" title="Open the Raw HTTP Request preconfigured code">Raw HTTP Request</a>
+          </p>
+        </li>
+      </ol>
+      
+      <div class="actions">
+        <button class="button button-secondary" type="submit">Finish</button>
+      </div>
+      
+    </div>
+  </section>
+  
+</form>

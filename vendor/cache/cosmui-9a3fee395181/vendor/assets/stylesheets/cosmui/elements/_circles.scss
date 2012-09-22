@@ -1,0 +1,277 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   CIRCLES
+   
+
+   Circles are kinda object-oriented, you need to set the circle class, a size class and a skin class
+ 
+   class="circle [circle-medium, circle-large] [circle-orange, circle-blue]" --- not setting size and skin will fallback to small & gray
+
+*/
+
+.circle,
+a.circle {
+  
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  margin: 0;
+  
+  /* ----------------------------------------
+     DEFAULT
+  */
+  
+  width: em(47);
+  height: em(45);
+  @include rem ('font-size',13);
+  line-height: em(45);
+  
+  background: transparent asset-url('circle-small-gray.png', image) no-repeat center center;
+  color: $gray;
+  
+  .circle-inner {     
+    $transition: color .2s ease-out;
+    @include transition($transition);
+    
+    &.iconified {
+      display: block;
+      @include rem ('font-size',32);
+      font-weight: normal;
+      line-height: em(34,32);
+    }
+  }
+  
+  &:hover,
+  &:focus {
+    .circle-inner {
+      color: white;
+    }
+  } //{
+  
+  /* ----------------------------------------
+     SIZES
+  */
+  
+  /* MINI --- */
+  
+  &.circle-mini {  
+    width: em(26,11);
+    height: em(26,11);
+    @include rem ('font-size',11);
+    line-height: em(26,11);
+  
+    background-image: asset-url('circle-mini-gray.png', image);  
+  
+    .circle-inner {   
+      &.iconified {
+        display: block;
+        @include rem ('font-size',22);
+        font-weight: normal;
+        line-height: em(16,22);
+      }
+    } 
+  }
+  
+  /* MEDIUM --- */
+  
+  &.circle-medium {  
+    width: em(172,25);
+    height: em(172,25);
+    @include rem ('font-size',25);
+    line-height: em(172,25);
+    font-weight: normal;
+  
+    background-image: asset-url('circle-medium-gray.png', image);  
+  
+    .circle-inner {          
+      &.iconified {
+        display: block;
+        @include rem ('font-size',120);
+        font-weight: normal;
+        line-height: em(130,120);
+      }
+    }   
+  
+    &.circle-two-lines {   
+      line-height: em(26,25); 
+      
+      .circle-inner {
+        display: block;
+        padding: 0 em(25,25);
+        padding-top: em(57,25);
+      }
+    }
+  }
+  
+  /* LARGE --- */
+  
+  &.circle-large {  
+    width: em(284,36);
+    height: em(284,36);
+    @include rem ('font-size',36);
+    line-height: em(284,36);
+    font-weight: normal;
+  
+    background-image: asset-url('circle-large-gray.png', image);  
+  
+    .circle-inner {          
+      &.iconified {
+        display: block;
+        @include rem ('font-size',120);
+        font-weight: normal;
+        line-height: em(130,120);
+      }
+    }   
+  
+    &.circle-two-lines {   
+      line-height: em(36,36); 
+      
+      .circle-inner {
+        display: block;
+        padding: 0 em(20,36);
+        padding-top: em(110,36);
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     COLORS
+  */
+  
+  /* BLUE --- */
+  
+  &.circle-blue {  
+    background-image: asset-url('circle-small-blue.png', image);
+    color: white !important;
+    text-shadow: 0 -1px 0 darken($secondary,5);
+    
+    &.circle-mini { background-image: asset-url('circle-mini-blue.png', image); }
+    
+    &.circle-medium { 
+      width: em(196,25);
+      height: em(214,25);
+      @include rem ('font-size',25);
+      line-height: em(172,25);
+      margin-left: em(20,25);
+            
+      background-image: asset-url('circle-medium-blue.png', image); 
+  
+      .circle-inner {          
+        &.iconified {
+          width: em(172,120);
+        }
+      }  
+  
+      &.circle-two-lines {   
+        line-height: em(26,25); 
+                
+        .circle-inner {
+          width: em(122,25);
+          display: block;
+          padding: 0 em(25,25);
+          padding-top: em(57,25);
+        }
+      }
+    }
+  
+    &:hover,
+    &:focus {
+      .circle-inner {
+        color: lighten($secondaryStart,10) !important;
+      }
+    }
+  }
+  
+  /* ORANGE --- */
+  
+  &.circle-orange {
+    color: white !important;
+    text-shadow: 0 -1px 0 darken($primary,5); 
+    
+    &.circle-large { 
+      width: em(307,36);
+      height: em(337,36);
+      @include rem ('font-size',36);
+      line-height: em(284,36);
+      font-weight: normal;
+    
+      background-image: asset-url('circle-large-orange.png', image);     
+      
+      .circle-inner {
+        width: em(244,36);
+      }
+    
+      &.circle-two-lines {   
+        line-height: em(36,36); 
+        
+        .circle-inner {
+          display: block;
+          padding: 0 em(20,36);
+          padding-top: em(110,36);
+        }
+      }
+    }  
+  
+    &:hover,
+    &:focus {
+      .circle-inner {
+        color: lighten($primaryStart,20) !important;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     SPECIFIC
+  */
+  
+  .featured-project & {    
+    width: em(62);
+    height: em(62);
+    @include rem ('font-size',13);
+    line-height: em(62);
+    
+    background-image: asset-url('circle-homepage-sprite.png', image);
+    background-position: -1px center;
+  
+    .circle-inner {   
+      &.iconified {
+        display: block;
+        @include rem ('font-size',36);
+        font-weight: normal;
+        line-height: em(45,36);
+      }
+    }
+    
+    &.active,
+    &:focus {
+      background-position: -65px 0;
+      color: white !important;      
+    }
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .ie7 & {
+    &.circle-blue {
+      &.circle-medium {   
+        text-align: left;
+        .circle-inner {
+          text-align: center;                    
+        }
+      }
+    }
+    &.circle-orange {
+      &.circle-large {   
+        text-align: left;
+        .circle-inner {
+          text-align: center;                      
+        }
+      }
+    }
+  }
+   
+}

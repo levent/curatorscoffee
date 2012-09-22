@@ -1,0 +1,262 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Edit App - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="../favicon.ico" rel="shortcut icon">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../../vendor/assets/stylesheets/compiled/docs-cosmui.css">
+  <!--! end of stylesheets -->
+  
+  <!-- head scripts -->
+  <script src="../../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+</head>
+<body>
+
+  <!-- #container -->
+  <div class="container container-connected">
+
+    <!-- header -->
+    <header role="banner" class="main-header grid-row">
+      <nav class="content main-header-content grid-9 clearfix">
+        <hgroup class="branding">
+          <h1><a href="/docs/">Cosm</a></h1>
+          <h2>Connect to your world</h2>
+        </hgroup>
+        <ul role="navigation" class="navigation unstyled clearfix">
+          <li><a href="#" title="Discover popular feeds, featured projects and more. Explore Cosm.">Explore</a></li>
+          <li><a href="#" title="Spruce up you knowledge and check the API documentation.">Support/API</a></li>
+          <li><a href="#" title="The Cosm official blog.">Blog</a></li>
+        </ul>
+        <form role="search" class="search" data-cosmui="searchbox">
+          <input type="text" class="input-medium leveled search-query" placeholder="Search">
+          <button type="submit" class="button icon icon-only icon-search ir">Go</button>
+        </form>
+      </nav>
+
+      <aside class="sidebar main-header-sidebar grid-3" role="complementary">
+        <article role="navigation" class="user-menu box"> <!-- user login box -->
+          <header class="user-menu-header box-header">
+            <a class="user-menu-button dark" href="#" title="Go to my profile" data-cosmui="toggler" data-target="next">
+              <img src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=24" alt="The user profile picture.">
+              petecorreia
+            </a>
+            <nav class="user-menu-links closed"> <!-- user login links -->
+              <ul class="unstyled">
+                <li><a href="#" title="Go to my Console" class="dark icon icon-user">Console</a></li>
+                <li><a href="#" title="Manage my Apps" class="dark icon icon-apps">Apps</a></li>
+                <li><a href="#" title="Manage and debug my Keys" class="dark icon icon-keys">Keys</a></li>
+                <li><a href="#" title="Edit my Settings" class="dark icon icon-settings">Settings</a></li>
+                <li><a href="#" title="Debug my Feeds" class="dark icon icon-debug">Debug</a></li>
+                <li><a href="#" title="Logout of Cosm" class="dark icon icon-logout">Logout</a></li>
+              </ul>            
+            </nav> <!--!  end of user login links -->
+          </header>
+          <div class="box-content user-menu-content">
+            <button class="user-notifications-button icon icon-only icon-activity" title="View your activity" data-badge="3" data-cosmui="dropdown" data-target="next"></button>
+            <div class="user-notifications activity dropdown-menu aligned-right">          
+              <h5 class="user-notifications-header dropdown-menu-header">Notifications</h5> 
+              <ul class="user-notifications-list unstyled">
+                <li class="comment icon icon-comments">
+                  <a class="dark" href="#" title="Go to comment">
+                    Bob Anderson left a comment on a My Feed.
+                    <time class="timeago" datetime="2012-02-15T09:24:17Z">Feb 15 at 09:24</time>
+                  </a>
+                </li>
+                <li class="trigger icon icon-trigger">
+                  <a class="dark" href="#" title="View trigger">
+                    Datastream1 at My Feed is now &lt;100 &deg;F
+                    <time class="timeago" datetime="2012-02-15T03:47:17Z">Feb 15 at 03:47</time>
+                  </a>
+                </li>
+                <li class="people icon icon-followers">
+                  <a class="dark" href="#" title="View followers">
+                    Adam West is now following My Feed.
+                    <time class="timeago" datetime="2012-02-14T16:03:17Z">Feb 14 at 16:03</time>
+                  </a>
+                </li>
+              </ul>
+              <footer class="user-notifications-footer">
+                <a href="/users/devadmin/notifications" class="dark">View All</a>
+              </footer>
+            </div>
+          </div>
+        </article> <!--! end of user login box -->
+      </aside>
+    </header> <!--! end of header -->
+
+    <!-- #main -->
+    <div id="main" class="grid-row">
+      <section role="main" class="content main-content grid-9">
+
+        <!-- page header -->
+        <header class="page-header">
+
+          <h2 class="page-header-title">Edit App</h2>
+          
+        </header> <!--! end of page header -->
+        
+        <article class="box"> <!-- box -->
+          <form class="box-content" accept-charset="UTF-8" action="/apps/3f1422eee6b02788db0a" data-validate="true" id="edit_app_3f1422eee6b02788db0a" method="post" novalidate="novalidate">
+            
+            <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="K4w53oZL71dxD+F8nul4oK9hqhiE6vPyNainygNpRd8="></div>
+            
+            <fieldset>
+              <legend>Information</legend>
+          
+              <div class="field">
+                <label for="app_published">Published</label>
+                <div class="input">
+                  <ul class="inputs-list">
+                    <li>
+                      <label for="app_published">
+                        <input name="app[published]" type="hidden" value="0"><input id="app_published" name="app[published]" type="checkbox" value="1">
+                        <span>Publish this app in our listings</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          
+              <div class="field required help-inline"><label for="app_name">Name</label><div class="input">
+                <input class="wide required" disabled="disabled" id="app_name" name="app[name]" size="30" type="text" value="Teenage App Riot">
+              </div></div>
+              <div class="field help-inline"><label for="app_website_uri">Website URI</label><div class="input">
+                <input class="xlarge" id="app_website_uri" name="app[website_uri]" placeholder="www.example.com" size="30" type="text" value="">
+              </div></div>
+              <div class="field required help-inline"><label for="app_contact_email">Contact Email</label><div class="input">
+                <input data-validate="true" id="app_contact_email" name="app[contact_email]" placeholder="yourname@example.com" size="30" type="text" value="dudester@dudesville.com">
+              </div></div>
+              <div class="field help-inline"><label for="app_tags">Tags</label><div class="input">
+                <input class="xlarge" id="app_tags" name="app[tags]" size="30" type="text" placeholder="e.g. energy, air quality">
+                <span class="help">Tags are separated by commas.</span>
+              </div></div>
+              <div class="field help-b"><label for="app_description">Description</label><div class="input">
+                <textarea class="xxlarge" id="app_description" name="app[description]" rows="3" placeholder="Tell us about your app."></textarea>
+              </div></div>
+          
+            </fieldset>
+            <fieldset>
+              <legend>OAuth Settings</legend>
+              <div class="field required help-inline"><label for="app_oauth_redirect_uri">OAuth Redirect URI</label><div class="input">
+                <input class="xxlarge" data-validate="true" id="app_oauth_redirect_uri" name="app[oauth_redirect_uri]" size="30" type="text" value="http://example.com">
+              </div></div>
+          
+              <div class="field">
+                  <label>Access level</label>
+                  <div class="input">
+                    <span class="uneditable-input" style="overflow: auto;">Read</span>
+                  </div>
+              </div>
+              
+              <small class="required-notice"><em>*</em> - indicates required fields</small>
+              
+              <div class="actions">
+                <input class="button button-primary" name="commit" type="submit" value="Save">
+                <a href="/users/devadmin/apps" class="button">Cancel</a>
+                <div class="secondary-action">
+                  <a href="/apps/3f1422eee6b02788db0a" class="button button-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow" title="Delete App">Delete</a>
+                </div>
+              </div>
+          
+            </fieldset>
+        
+          </form>
+          
+        </article>
+              
+      </section>
+        
+      <!-- sidebar -->
+      <aside class="sidebar main-sidebar grid-3" role="complementary">
+      
+        <article class="box"> <!-- box -->
+          <header class="box-header">
+            <h3 class="box-header-title">About OAuth Apps</h3>
+          </header>
+          <div class="box-content">
+            <p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. <a href="#">Read more</a></p>
+          </div>
+        </article> <!--! end of box -->
+      
+        <article class="box"> <!-- box -->
+          <header class="box-header">
+            <h3 class="box-header-title">Useful Links</h3>
+          </header>
+          <div class="box-content">
+            <ul class="unstyled no-margin">
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!--! end of box -->
+      
+      </aside> <!--! end of sidebar -->
+      
+    </div> <!--! end of #main -->
+    
+    <!-- footer -->
+    <footer class="main-footer grid-row" role="contentinfo">
+      <p class="copyright no-margin">
+        &copy; 2012 Cosm, a <span class="ir">LogMeIn</span> company
+      </p>
+      <nav>
+        <ul class="unstyled no-margin clearfix">
+          <li>
+            <a href="#" title="Go to About Us">About Us</a>
+          </li>
+          <li>
+            <a href="#" title="Go to How it works">How it works</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Press">Press</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Terms of Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer> <!--! end of footer -->
+
+  </div> <!--! end of #container -->
+
+  <!-- scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.modal.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.steps.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.range.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  
+</body>
+</html>

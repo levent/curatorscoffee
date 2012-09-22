@@ -1,0 +1,137 @@
+/* 
+ *
+ * Api-keys.scss 
+ *
+*/
+
+.api-keys {
+  .tags li { margin-bottom: 0; }
+  .private-access { margin-left: em(18,11); }
+  .expires { 
+    @include rem ('font-size',13);
+    color: $gray;
+    margin-left : em(18);
+  }
+    
+  .icon-expand {
+    margin-right: 1em;
+    @include rem ('font-size',13);
+    line-height: em(18);
+    
+    &:before { margin-right: 0; }      
+    &:after { content: "more"; }
+    
+    &.active {
+      &:before { content: "-"; top: -.25em; }
+      &:after { content: "less"; }
+    }
+    
+    &:hover {
+      color: $base;
+    }
+  }
+  
+  .inline-tag {
+    width: auto;
+    max-width: none;
+  }
+  
+  .box-header {
+    @include clearfix();
+    
+    h3, h4 {
+      font-weight: bold;
+      float: left;
+      
+      &:before { 
+        color: $grayLighter;
+        margin-right: em(15,30); 
+      }
+    }
+  }
+  
+  .actions {      
+    @include opacity(0);
+    @include transition (opacity ease-out .2s);
+    
+    .button {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    
+    button.button:before {
+      color: $gray;
+    }
+    
+    &.visible {
+      @include opacity(100);
+    }
+    
+    & > .icon {
+      float: left;
+      color: $grayLight;
+      background: transparent;
+      margin-left: .25em;
+    }
+    
+    
+  }
+  
+  article:hover {
+    .actions {
+      @include opacity(100);
+    } 
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .ie9 & {
+    .box-header {
+      .icon-activity,
+      .icon-settings {
+        &:before {
+          font-size: 75%;
+        }
+      }
+    }
+  }
+  
+  .oldie & {
+    .box-header {
+      .icon-activity,
+      .icon-settings {
+        &:before {
+          font-size: 1.3em !important;
+        }
+      }
+    }
+  }
+}
+
+.regenerate-key-form {
+  display: inline-block;
+  width: 50%;
+  margin-right: em(18);
+}
+
+.key-value {
+  font-family:monospace,monospace;
+  @include rem ('font-size',11);
+  color: $gray;
+  
+  $transition: color .2s ease-out, border-color .2s ease-out;
+  @include transition($transition);
+  
+  &:focus, &:hover { 
+    cursor: pointer;
+    color: black; 
+  }
+}
+
+.key-advanced-privileges {
+  legend > a {
+    text-indent: 0;
+  }
+}

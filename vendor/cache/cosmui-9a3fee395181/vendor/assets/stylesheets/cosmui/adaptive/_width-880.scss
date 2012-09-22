@@ -1,0 +1,451 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   WIDTH 880 (px)
+ 
+*/
+  
+/* ----------------------------------------
+   QUICK HOMEPAGE ADJUSTMENT
+*/
+
+@media only screen and (min-width: 881px) and (max-width: 965px) {
+  #main.homepage .main-content .circle.how-it-works {
+    right: 9%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  
+  /* ----------------------------------------
+     GRID
+  */
+  
+  .container {
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  
+  .grid-row {
+    max-width: 100%;
+    min-width: 0;
+  } 
+    
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12  {
+    max-width: 100%;
+    min-width: 0; 
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+    float: none;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  
+  /* disconnected */
+  .container-connected {
+    .main-header,
+    #main {
+      &:before {
+        display: none !important;
+      }
+    }   
+    
+    .main-header-content,
+    .main-content,
+    .sidebar {    
+      & > .box:after {
+        display: none !important;
+      }
+    }
+    
+    .main-header-content,
+    .main-content {
+      padding-right: 0;    
+    }
+    
+    .sidebar {
+      padding-left: 0;
+    }
+  }
+  
+  /* ----------------------------------------
+     HEADER
+  */
+  
+  .container .main-header,
+  .container-connected .main-header {
+    height: em(61);
+    
+    .branding {
+      margin: em(9) em(10) 0 0;
+      
+      h1 a {
+        position: relative;
+      }
+      
+      h2 {
+        display: none;
+      }
+    }
+    
+    .navigation {
+      display: none;
+    }
+    
+    .alt-navigation {
+      float: left;
+      margin: em(17) 0 0 em(13);
+      width: em(132);
+      display: block;
+    }
+    
+    .search {
+      margin-top: em(11);
+      .search-query {
+        &:focus {
+          background: white;
+        }
+      }
+    }
+    
+    .main-header-sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+    }
+  }
+    
+  .user-menu {
+    float: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0;
+    margin-top: em(11);
+    width: em(220);
+    
+    &.user-menu-login {
+      ul {
+        display: none;
+      }
+    }
+  }  
+  
+  /* ----------------------------------------
+     MAIN
+  */
+  
+  #main {
+    padding-top: em(10);
+    padding-bottom: 0;
+  }
+  
+  /* ----------------------------------------
+     ACTIONS
+  */
+      
+  .box-header .actions,
+  .list-item-header .actions {
+    @include opacity (100);
+  }
+  
+  /* ----------------------------------------
+     FEED SUMMARY
+  */
+  
+  .feed-summary-icon {
+    display: none;
+  }
+  
+  .feed-summary-map,
+  a.feed-summary-map {
+    display: none;
+  }
+  
+  .feed-summary-datastreams {
+    margin-left: 0;
+  }
+  
+  /* ----------------------------------------
+     USER SUMMARY
+  */
+  
+  .user-summary {
+    footer .circle {
+      @include opacity (100);
+    }    
+  }
+  
+  /* ----------------------------------------
+     SIDEBAR
+  */
+  
+  .main-sidebar {
+    padding-top: 18px;
+    margin-top: 18px;
+    border-top: 1px solid $borderGray;
+    
+    .box {
+      width: 48.5%;
+      float: left;
+      margin-right: 0;
+    }
+    
+    .box:nth-child(odd) {
+      margin-right: 3%;
+    }
+    
+    .box:first-child:last-child {
+      float: none;
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  .user.box .user-edit {
+    @include opacity (100);
+  }
+  
+  /* ----------------------------------------
+     API KEYS
+  */
+  
+  .api-keys .actions {
+    padding-top: em(4,18);
+  }
+  
+  /* ----------------------------------------
+     DATASTREAM BOX
+  */
+  
+  .datastream-box-tags {
+    max-width: none;  
+  }
+  
+  /* ----------------------------------------
+     TRIGGER LIST
+  */
+  
+  table.trigger-list {
+    width: 100%;
+    margin: 0;
+    
+    .trigger-condition {
+      width: 100%;
+    }
+    
+    .trigger-actions,
+    .trigger-content .innerCell {
+      width: em(100);
+    }
+    
+    .trigger-actions {
+      position: static;
+      padding: 0;
+      background: transparent;
+      border: none;
+      @include box-shadow (none);
+      @include border-radius (0);
+      @include opacity (100);
+    }
+  }
+  
+  /* ----------------------------------------
+     FEED COMMENTS
+  */
+  
+  .comments-box {
+    .grid-6 {
+      margin-bottom: em(36);
+    }
+    
+    .grid-6 + .grid-6 {
+      margin-bottom: 0;
+    }
+  }
+    
+  .commenter-button {
+    display: block;
+    float: none;
+  }
+  
+  /* ----------------------------------------
+     FEED PAGE EDIT
+  */
+
+  #main form.feed-page-edit {
+    .actions-floating {      
+      max-width: none;
+      min-width: 0;
+    }
+  }
+  
+  /* ----------------------------------------
+     ERROR PAGES
+  */
+
+  #main .error-messaging {  
+    header {    
+      &:before {
+        display: none;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     SUPPORT HOME
+  */
+  
+  #main .support {
+    .grid-4 {
+      width: 30.37%;
+      margin-left: 4.4%;
+      float: left;
+  
+      &:first-child {
+        margin-left: 0;
+      }
+    }    
+  }
+  
+  /* ----------------------------------------
+     HOMEPAGE
+  */
+  
+  #main.homepage {    
+    .main-content .circle.how-it-works {
+      top: em(15,36);
+      right: 0;
+    }
+    
+    .main-sidebar {
+      margin-top: 0;
+      @include clearfix();
+      
+      .box:nth-child(odd) {
+        margin-right: 0;
+      }
+      
+      .box:nth-child(even) {
+        margin-right: 3%;
+      }
+    }
+    
+    .main-sidebar .sign-up {
+      position: absolute;
+      top: - em(380);
+      left: auto;
+      right: 2%;
+    }
+  }
+
+  .sign-up {
+    .box {
+      max-width: none;
+    }
+  }
+  
+  .main-sidebar .sign-up:not(.on-line) {
+    width: 48.5%;
+    float: left;
+  }
+  
+  /* ----------------------------------------
+     OAUTH
+  */
+  
+  .oauth #main {
+    .grid-6 {
+      width: 47.8%;
+      margin-left: 4.4%;
+      float: left;
+  
+      &:first-child {
+        margin-left: 0;
+      }
+    }    
+  }
+  
+  #temp-cosm-notice p {
+    padding-top: em(9);
+  }
+  
+  /* ----------------------------------------
+     APPS
+  */
+  
+  .app .app-information.box-content {
+    .app-creator, 
+    .tags {
+      float: none;
+    }
+  }
+  
+  .app .app-information-description,
+  .app .grid-7 {
+    padding-top: em(18);
+  }
+  
+  /* ----------------------------------------
+     FEATURED APPS
+  */
+  
+  .featured-app {
+    width: 30.37%;
+    margin-left: 4.4%;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    
+    &:first-child {
+      margin-left: 0;
+    }
+    
+  }
+      
+  /* ----------------------------------------
+     PACHUBE IS NOW COSM
+  */     
+  
+  .announcements {
+    margin-top: 0;
+  }
+  
+  /* ----------------------------------------
+     OTHER APPS (APPS LISTING)
+  */
+
+  .other-apps-item { 
+    padding-bottom: em(18);
+  }
+
+  .other-apps-row + .other-apps-row {
+    padding-top: 0;
+    border-top: none;
+    margin-top: 0;
+  }
+  
+  /* ---------------------------------------
+     Curators Coffee Minimal
+  */
+
+  .slides-container {
+    display: none;
+  }
+  
+}

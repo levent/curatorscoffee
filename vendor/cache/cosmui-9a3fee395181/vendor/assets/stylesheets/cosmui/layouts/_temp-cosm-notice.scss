@@ -1,0 +1,58 @@
+/* 
+ *
+ * Temp-cosm-notice.scss 
+ *
+*/
+
+#temp-cosm-notice {
+  display: block;
+  padding: 0 20px;
+  color: $grayLighter;
+  text-shadow: 0 1px 0 darken($base,10);
+  border-top: 2px solid black;
+  border-bottom: 2px solid white;
+  min-height: em(36);
+  
+  @include vertical-gradient (darken($base,10),$base);
+
+  div {
+    position: relative;
+    width: 100%;
+    max-width: 1133px;
+    margin: em(9) auto;
+  }
+  
+  h3 {
+    color: white;
+    display: inline;
+    margin: 0 em(18) 0 0;
+    padding: 0;
+    @include rem ('font-size', 13);
+  }
+  
+  p {
+    display: inline-block;
+    padding: 0 em(36,12) 0 0;
+    margin: 0;
+    @include rem ('font-size', 12);
+    white-space: normal;
+    
+    a {
+      margin-left: em(9,12);
+    }
+  }
+  
+  .close {
+    position: absolute;
+    top: - em(3,20);
+    right: 0;
+    color: $grayLighter;
+    @include opacity (100);
+    text-shadow: 0 1px 0 black;
+    
+    &:hover {
+      color: white;
+    }
+  }
+  
+}

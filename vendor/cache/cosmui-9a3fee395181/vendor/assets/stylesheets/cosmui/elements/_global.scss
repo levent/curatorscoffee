@@ -1,0 +1,223 @@
+/* 
+ *
+ * Global.scss
+ * 
+*/
+
+
+/* ----------------------------------------
+   BORDERS
+*/
+
+
+.bordered { border: 3px solid $borderGray; }
+
+.bordered-bottom {
+  @include rem ('margin-bottom', 18);
+  @include rem ('padding-bottom', 17);
+  border-bottom: 3px solid $borderGray;
+}
+
+.bordered-top {
+  @include rem ('margin-top', 18);
+  @include rem ('padding-top', 17);
+  border-top: 3px solid $borderGray;
+}
+
+.bordered-left {
+  @include rem ('margin-left', 18);
+  @include rem ('padding-left', 17);
+  border-left: 3px solid $borderGray;
+}
+
+.bordered-right {
+  @include rem ('margin-right', 18);
+  @include rem ('padding-right', 17);
+  border-right: 3px solid $borderGray;
+}
+
+// Adjustments
+
+h1, .grid-row { 
+  &.bordered { 
+    @include rem ('margin-bottom', 36);
+    @include rem ('padding-bottom', 35);
+  }
+  &.bordered-top { 
+    @include rem ('margin-top', 36);
+    @include rem ('padding-top', 35);
+  }
+}
+
+h5, h6 { 
+  &.bordered { 
+    @include rem ('margin-bottom', 9);
+    @include rem ('padding-bottom', 8);
+  }
+  &.bordered-top { 
+    @include rem ('margin-top', 9);
+    @include rem ('padding-top', 8);
+  }
+}
+
+
+/* ----------------------------------------
+   PULLS
+*/
+
+.pulled-down { @include rem ('padding-top', 18); }
+.pulled-left { @include rem ('padding-left', 18); }
+.pulled-right { @include rem ('padding-right', 18); }
+
+// Adjustments
+
+h1, .grid-row {
+  &.pulled-down { @include rem ('padding-top', 36); }
+}
+
+
+/* ----------------------------------------
+   CLOSE
+*/
+
+a.close {
+  display: inline-block;
+  position: relative;
+  float: right;
+  padding: em(5,20) em(10,20);
+  margin-top: - em(5,20);
+  margin-left: - em(10,20);
+  @include rem ('font-size',20);
+  font-weight: bold;
+  line-height: em(18,20);
+  color: black;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  opacity: .2;
+  
+  &:hover {
+    color: black;
+    text-decoration: none;
+    opacity: .4;
+    cursor: pointer;
+  }
+}
+
+
+/* ----------------------------------------
+   BADGE
+*/
+
+[data-badge] {
+  overflow: visible;
+  &:after {
+    content: attr(data-badge);
+    float: right;
+    position: relative;
+    top: - em(4,11);
+    margin-left: - em(7,11);
+    padding: em(1,11) em(5,11) em(2,11);
+    @include rem ('font-size',11);
+    font-weight: bold;
+    background-color: $base;
+    color: white;
+    
+    @include border-radius(em(8,11));
+  }
+  
+  &:hover:after {
+    //background-color: $primary;
+  }
+  
+  .ie7 & {
+    .badge-fallback {
+      display: inline-block;
+      position: relative;
+      top: -10px;
+      left: -3px;
+      padding: 2px 5px;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 13px;
+      background: $base;
+      color: white;
+    }
+  }
+}
+
+
+/* ----------------------------------------
+   LOADING SPINNER
+*/
+
+.loading,
+.loading-on-white,
+.loading-on-background,
+.loading-on-drawerBackground,
+.loading-on-orange {
+                                background: no-repeat center center !important;
+}
+
+.loading,
+.loading-on-white {             background-image: asset-url('spinner-on-white.gif', image) !important; background-color: white !important; }
+.loading-on-background {        background-image: asset-url('spinner-on-background.gif', image) !important; background-color: $background !important; }
+.loading-on-drawerBackground {  background-image: asset-url('spinner-on-drawerBackground.gif', image) !important; background-color: $drawerBackground !important; }
+.loading-on-orange {            background-image: asset-url('spinner-on-orange.gif', image) !important; background-color: $primary !important; }
+
+.loading-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+
+/* ----------------------------------------
+   ACCORDION
+*/
+
+.accordion {
+  .accordion-header {
+    position: relative;
+    display: block;
+    padding: em(18,14);
+    @include rem ('font-size',14);
+    font-weight: bold;
+    
+    &.disabled {
+      color: $grayLight;
+      cursor: default;
+    }
+  }
+  
+  section {
+    padding: 0;
+    border: 1px solid $borderGray;
+    border-bottom-color: transparent;
+    
+    &:last-child {
+      border-bottom-color: $borderGray;
+    }
+  }
+  
+  .accordion-content {
+    padding: 0 em(18) em(18);
+    @include clearfix();
+  }
+}
+
+
+/* ----------------------------------------
+   USER SNIPPET
+*/
+
+.user {
+  margin-bottom: em(10,14);
+  @include rem ('font-size',14);
+  line-height: em(24,14);
+  @include clearfix();
+  
+  img {
+    float: left;
+    margin-right: em(10,14);
+  }
+}

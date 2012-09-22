@@ -1,0 +1,342 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   SEARCH FORM
+ 
+*/
+
+.search {
+  position: relative;
+  display: block;
+  width: em(132,14);
+  @include rem ('font-size',14);
+  z-index: 99;
+  overflow: hidden;
+  $transition: width ease-out .2s, 
+               height  ease-out .2s, 
+               background-color  ease-out .2s, 
+               box-shadow ease-out .2s,
+               padding ease-out .2s,
+               border ease-out .2s;
+  @include transition ($transition);
+  
+  .search-query {
+    width: em(70,14);
+    height: em(18,14);
+    padding: em(10,14) em(45,14) em(10,14) em(15,14);
+    @include rem ('font-size',14);
+    line-height: em(18,14);
+    color: $grayLight;
+    $transition: all .2s ease-out;
+    @include transition ($transition);
+  }
+    
+  &:hover .search-query {
+    color: darken($gray, 10);
+    border-color: darken($grayLight, 5);
+    $shadow: inset 0 1px 0 white, 0 1px 2px rgba(0,0,0,.05);
+    @include box-shadow($shadow);  
+    @include border-radius(.4em);
+  }
+  
+  .button.icon-only {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    height: em(40);
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-indent: -9999px;
+    color: transparent;
+    @include box-shadow(none);
+    @include border-radius(0px);
+    
+    &:before {
+      float: none;
+      top: .45em;
+      width: auto;
+      margin: 0;
+      padding: 0 .5em .4em .4em;
+      font-size: 1.5em;
+      text-indent: 0;
+      color: $base;
+      border-left: 1px solid $grayLighter;
+    }
+  }
+    
+  &.opened .button.icon-only:hover {
+    &:before {
+      color: $primary;
+    }
+  }
+  
+  .inputs-list {
+    overflow: hidden;
+    width: auto;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    
+    li {
+      width: auto;
+      margin: 0;
+      padding: .25em 0;
+      color: $base;
+      border: none;
+      
+      label {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      
+      input[type="checkbox"], input[type="radio"] { top: 0; }
+    }
+  }
+  
+  // opened
+  
+  &.opened {
+    width: em(237,14);
+    padding: em(3,14);
+    background: white;
+    border: 1px solid $borderGray;
+    @include border-radius(.4em);
+    @include box-shadow('15px 18px 8px rgba(0,0,0,.1)');
+    
+    .search-query { width: em(175,14); } 
+    
+    .button.icon-only {
+      top: 4px;
+      right: 5px;
+    }
+    
+    .inputs-list { 
+      height: em(96,14); 
+      padding: em(10,14);
+      opacity: 1;
+    }
+  }
+    
+  &.opened .search-query,
+  .search-query:focus,
+  .search-query.focus {
+    background: white;
+    color: $base;
+    outline: 0;
+    border-color: $borderGray;
+    $shadow: inset 0 1px 2px rgba(0,0,0,.15);
+    @include box-shadow($shadow);
+  }
+  
+  
+  /* ----------------------------------------
+     SEARCH RESULTS
+  */
+  
+  #main & {
+    display: block;
+    float: left;
+    height: em(30,14);
+    margin: 0 0 0 em(18,14);
+    position: relative;
+    width: em(320,14);
+    overflow: visible;
+    
+    @include clearfix();
+    
+    .search-query {
+      position: relative;
+      top: - em(5,14);
+      width: em(257,14);
+      max-width: none;
+    }
+    
+    .button {
+      top: - em(5);
+    }
+  }
+}
+
+.search-results-total {
+  position: relative;
+  top: em(2,14);
+  color: darken($grayLight,10);
+  display: inline-block;
+  float: none;
+  margin-right: em(18,14);
+  
+  .ie7 & {
+    float: left;
+  }
+}
+
+.search-results .stats-icons button:hover {
+  cursor: default;  
+}
+
+
+/* -------------------------------------------
+   IE ADJUSTMENTS
+*/
+
+.oldie,
+.ie9 {
+  .search {      
+    .button.icon-only {
+      top: em(2);
+      height: em(37);           
+      
+      &:before {
+        top: .3em;
+        border: none;
+        background: transparent;
+      }
+    }
+  
+    &.opened {      
+      .button.icon-only {
+        top: .4em;
+        right: 4px;
+      }
+    }
+  }
+  
+  #main .search {
+    .button {
+      top: - em(3);
+      right: 2px;
+    }
+  }
+}
+
+.ie9 {
+  .search {      
+    .button.icon-only {     
+      &:before {
+        font-size: 55%;        
+      }
+    }
+  }
+}
+
+.oldie {
+  .search {      
+    .button.icon-only {
+      color: $grayLight !important;
+      text-indent: 0;
+      padding: 0 em(5);
+      display: none;
+      overflow: visible;
+      font-weight: bold;
+      border-left: 1px solid $grayLighter;
+
+      &:before {
+        display: none;
+      }
+    }
+  
+    &.opened {  
+      .search-query,
+      .search-query:focus {      
+        border-color: $primary;
+      }  
+      
+      .button.icon-only {
+        display: inline-block;
+        color: $grayLight !important;
+        
+        &:hover {
+          color: $gray !important;
+        }
+      }
+    }
+  }
+}
+
+.ie7 {
+  .search { 
+    width: em(140,14);
+    padding-right: em(5,14);
+    
+    .search-query {
+      width: em(65,14);
+    }
+    
+    &.opened {
+      .search-query {
+        position: relative;
+        left: -8px;
+        width: em(75,14);
+      }
+     
+      .button.icon-only {
+        right: 10px;
+      }      
+    }
+    
+    .icon-fallback {
+      display: none;
+    }
+    .button.icon-only {
+      line-height: em(38);
+      border:none;
+    }
+  }
+}
+
+
+/* -------------------------------------------
+   SEARCH RESULTS ITEMS
+*/
+
+.search-result-footer {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: em(3);
+  float: right;
+  max-width: em(400);
+  text-align: right;  
+}
+  
+.search-result-creator,
+.search-result-last-updated {
+  display: block;
+  margin-bottom: 0;
+  color: $grayLight;
+  
+  a {
+    margin-left: em(5);
+  }
+}
+
+.search-result-last-updated {
+  margin-top: em(6,11);
+  @include rem ('font-size',11);
+}
+
+.search-result-tags {
+  max-width: em(320);
+  height: auto;
+  
+  li {
+    margin-bottom: em(5)
+  }
+}
+
+.search-result-description {
+  width: 60%;
+  margin: 0;
+  margin-left: em(60,12);
+  padding-top: em(30,12);
+  @include rem ('font-size',12);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $gray;
+}
+  
+.search-result-tags + .search-result-description {
+  padding-top: em(3,12);
+}

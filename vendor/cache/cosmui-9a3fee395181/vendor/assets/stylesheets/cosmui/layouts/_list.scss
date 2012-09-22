@@ -1,0 +1,25 @@
+/* 
+ *
+ * List.scss 
+ *
+*/
+
+.list-header {
+  @include rem ('font-size',30);
+  padding-top: em(18,36);
+  padding-bottom: em(36,36);
+  
+  &:before {
+    color: $grayLight;
+  }    
+}
+  
+h4.list-header {
+  @include rem ('font-size',24);
+  padding-top: em(18,24);
+  padding-bottom: em(36,24);
+}
+      
+.list-item + .list-header {
+  padding-top: em(36,36);
+}

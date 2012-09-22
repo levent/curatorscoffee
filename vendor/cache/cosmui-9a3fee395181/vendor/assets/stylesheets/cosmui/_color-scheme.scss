@@ -1,0 +1,159 @@
+/* 
+ *
+ * Color-Scheme.scss
+ *
+ *
+*/
+
+  
+/* ----------------------------------------
+
+   ::: BASE :::
+   
+   Usually neutral, used as canvas
+
+*/
+  
+/* ----------------------------------------
+   COPY
+*/
+
+$base:                    #444;       
+$baseHover:               lighten($base, 25%);
+
+  
+/* ----------------------------------------
+   BACKGROUND
+*/
+
+$background:              #f2f4f5;
+$drawerBackground:        #f9f9f9;
+  
+  
+/* ----------------------------------------
+   BORDERS
+*/
+
+$borderGray:              #dee0e0;
+  
+  
+/* ----------------------------------------
+   GRAYS
+*/
+
+$black:                   #000;
+$grayDark:                #3e3f40;
+$gray:                    #7d7f80;
+$grayLight:               #afb2b3;
+$grayLighter:             #d4d8d9;
+$white:                   #fff;
+
+  
+/* ----------------------------------------
+
+   ::: THEME BASE COLORS :::
+   
+   Used in the most relevant elements
+
+*/
+  
+/* ----------------------------------------
+   PRIMARY
+*/
+
+$primary:                 #59C8CA;
+$primaryHover:            darken($primary, 20%);
+/* Gradient */
+$primaryStart:            #fc8b2f;
+$primaryEnd:              #f05505;
+  
+  
+/* ----------------------------------------
+   SECONDARY
+*/
+
+$secondary:               #00bff3;
+$secondaryHover:          lighten($secondary, 10%);
+/* Gradient */
+$secondaryStart:          #77dffc;
+$secondaryEnd:            #0eb1ec;
+
+  
+/* ----------------------------------------
+
+   ::: STATE STYLES :::
+   
+   Used in stuff like alerts and labels
+
+*/
+  
+/* ----------------------------------------
+   WARNING
+*/
+
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken($warningBackground, 3%);
+  
+  
+/* ----------------------------------------
+   ERROR
+*/
+
+$errorText:               #b94a48;
+$errorBackground:         #f2dede;
+$errorBorder:             darken($errorBackground, 3%);
+  
+  
+/* ----------------------------------------
+   SUCCESS
+*/
+
+$successText:             #468847;
+$successBackground:       #dff0d8;
+$successBorder:           darken($successBackground, 5%);
+  
+  
+/* ----------------------------------------
+   INFO
+*/
+
+$infoText:                #3a87ad;
+$infoBackground:          #d9edf7;
+$infoBorder:              darken($infoBackground, 7%);
+
+  
+/* ----------------------------------------
+
+   ::: ACCENT COLORS :::
+   
+   Basic palette of colors that should be
+   fine tuned to the theme's base colors
+
+*/
+
+$blue:                    #049CDB;
+$blueDark:                #0064CD;
+$green:                   #8fe21f;
+$red:                     #c43c35;
+$yellow:                  #ffc600;
+$orange:                  #f89406;
+$pink:                    #c3325f;
+$purple:                  #7a43b6;
+
+  
+/* ----------------------------------------
+
+   ::: HELPERS :::
+
+*/
+
+$complement:              complement($base);       
+$split1:                  adjust-hue($base, 158);  
+$split2:                  adjust-hue($base, -158);
+$triad1:                  adjust-hue($base, 135);  
+$triad2:                  adjust-hue($base, -135);
+$tetra1:                  adjust-hue($base, 90);   
+$tetra2:                  adjust-hue($base, -90);
+$analog1:                 adjust-hue($base, 22);   
+$analog2:                 adjust-hue($base, -22);         

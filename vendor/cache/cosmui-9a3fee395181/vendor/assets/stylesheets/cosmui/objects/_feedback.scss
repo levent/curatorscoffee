@@ -1,0 +1,28 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   FEEDBACK
+ 
+*/
+
+#feedback {
+  text-align: center;
+  
+  p {
+    @include rem ('font-size',16);
+    font-weight: bold;
+    color: $gray;
+    margin-bottom: em(18,16);
+  }
+  
+  .button {
+    margin-bottom: 0;
+  }
+  
+  textarea {
+    margin-bottom: em(9);
+  }
+  
+}
+
+
+  

@@ -1,0 +1,43 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   BUTTON GROUPS
+ 
+*/
+
+.button-group {
+  position: relative;
+  @include clearfix();
+}
+
+.button-group .button {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  vertical-align: middle;
+  float: none !important;
+  margin: 0 0 0 -1px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  @include border-radius(0);
+  
+  &:first-child {
+    margin-left: 0 !important;
+    @include border-radius-left(em(4));
+  }
+  
+  &:last-child { @include border-radius-right(em(4));  }
+  
+  &.button-large {
+    @include border-radius(0);
+    &:first-child { @include border-radius-left(em(6,16)); }
+    &:last-child { @include border-radius-right(em(6,16)); }
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    z-index: 2;
+  }
+}
+

@@ -1,0 +1,241 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Umoya Wind Turbines - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="../favicon.ico" rel="shortcut icon">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../../vendor/assets/stylesheets/compiled/docs-cosmui.css">
+  <!--! end of stylesheets -->
+  
+  <!-- head scripts -->
+  <script src="../../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+</head>
+<body>
+
+  <!-- #container -->
+  <div class="container container-connected">
+
+    <!-- header -->
+    <header role="banner" class="main-header grid-row">
+      <nav class="content main-header-content grid-9 clearfix">
+        <hgroup class="branding">
+          <h1><a href="#">Cosm</a></h1>
+          <h2>Connect to your world</h2>
+        </hgroup>
+        <ul role="navigation" class="navigation unstyled clearfix">
+          <li class="active"><a href="#" title="Discover popular feeds, featured projects and more. Explore Cosm.">Explore</a></li>
+          <li><a href="#" title="Spruce up you knowledge and check the API documentation.">Support/API</a></li>
+          <li><a href="#" title="The Cosm official blog.">Blog</a></li>
+        </ul>
+        <form role="search" class="search" data-cosmui="searchbox">
+          <input type="text" class="input-medium leveled search-query" placeholder="Search" value="My search query">
+          <button type="submit" class="button icon icon-only icon-search ir">Search</button>
+        </form>
+      </nav>
+
+      <aside class="sidebar main-header-sidebar grid-3" role="complementary">
+        <article role="navigation" class="user-menu user-menu-login box">
+          <form class="user-menu-header box-header" accept-charset="UTF-8" action="/login" id="login-form" method="post">
+            <input id="login" name="login" placeholder="Username" type="text"><input id="password" name="password" placeholder="Password" type="password" value="">
+            <button class="icon icon-only icon-arrow-right" type="submit" form="login-form"></button>
+          </form>
+          <ul class="user-menu-helpers unstyled no-margin clearfix">
+            <li>
+              <a class="login dark" href="#" title="Login to Cosm">Login</a>
+            </li>
+            <li>
+              <a class="get-started dark" href="#" title="Get Started with Cosm" data-cosmui="toggler" data-target="#signup">Get Started</a>
+            </li>
+          </ul>
+        </article>
+      </aside>
+    </header> <!--! end of header -->
+
+    <!-- #main -->
+    <div id="main" class="grid-row">
+      <section role="main" class="content main-content grid-9">
+
+        <!-- page header -->
+        <header class="page-header">
+          <h2 class="page-header-title">Explore</h2>
+          
+        </header> <!--! end of page header -->
+        
+        <!-- main content -->
+        
+        <article class="featured-project box"> <!-- box -->  
+          <header class="box-header">
+            <h3 class="box-header-title box-header-title-breadcrumbed"><a href="#">Built on Cosm</a> <span class="divider">&gt;</span> Umoya Wind Turbines</h3>
+          </header>        
+          <div class="box-content">
+            <address class="vcard">
+              <div class="featured-project-info-container">
+                <p class="featured-project-info featured-project-info-value fn">Umoya Wind Turbines</p>
+                <p class="featured-project-info">By:<span class="featured-project-info-value">Jasper Pons, Allan Rumney and Adrian Padt</span></p>
+                <p class="featured-project-info">Location:<span class="featured-project-info-value geo">Durban, South Africa</span></p>
+                <p class="featured-project-info">Web:<a href="http://umoyasa.co.za" class="featured-project-info-value url">umoyasa.co.za</a></p>
+                <p class="featured-project-info">Cosm feed:<a href="https://cosm.com/feeds/40318" class="featured-project-info-value url">cosm.com/feeds/40318</a></p>
+                <p class="featured-project-info">Data:<span class="featured-project-info-value">Energy, wind speed and temperature</span></p>
+              </div>
+              <img class="featured-project-info" src="../../vendor/assets/images/umoya-photo3-thumbnail-big.jpg" alt="Photograph representing this project">
+            </address>
+            
+            <section class="featured-project-description">
+              <h4>Description</h4>
+              <p>Umoya, which means “spirit wind” in Isizulu, is a South African startup company that manufactures Vertical Axis Wind Turbines (VAWT). In addition to providing energy from renewable resources, Umoya also pioneers the sharing of data such as energy production, wind speed, and temperature to facilitate communication between the company, investors, and the growing renewable energy community. This data runs on Cosm.</p>
+              
+              <h4>Developers</h4>
+              <p>Adrian Padt and Allan Rumney, electronic and mechanical engineers with a background in manufacturing plasma cutting robotic machines, turned their attention to renewable energies in 2007 and founded Umoya to begin manufacturing VAWTs capable of producing 1kW to 15kW, enough energy for light industrial use. Ironically, they soon met their collaborator, Jasper Pons, an electronics engineer who runs, Scanman, a business specializing in developing warehouse barcodes and RFID software, while kitesurfing. The rest is history.</p>
+              
+              <h4>Challenge</h4>
+              <p>To track the VAWT data set, Jasper initially thought to build his own data service. However, beyond the time and effort needed to accomplish the task, he found the cost prohibitive. In conversation with his electronics supplier, Jasper heard about people using a combination of Arduinos and a data service called Cosm to track radiation levels. He quickly chose ¬Nanodes and GSM modules to upload information directly to Cosm, finding the instant graphs and charts helpful. The price was attractive as well.</p>
+              
+              <h4>Cosm Connection</h4>
+              <p>Thanks to Cosm, measured data and information from Umoya’s turbines is transparent and open to all, investors and renewable energy enthusiasts alike. Umoya benefits by directly monitoring the performance of each wind generator to ensure functionality, safety, and performance. In addition, this stream of data is critical to maintenance, design improvements, and geographical anomalies. Keeping the company invested in the product beyond installation.</p>              
+              <p>Customers benefit from Cosm’s charts and graphs by truly understanding their environmental impact and their relationship to the community of like minded users. This feedback relationship between technology developers and the users plays a critical role in promoting a more sustainable approach to energy generation buttressed by actual numbers and measurements taken from their turbines.</p>
+            </section>
+            
+            <section class="featured-project-media">
+              <h4>Photos</h4>
+              <a href="../../vendor/assets/images/umoya-photo1.jpg">
+                <img src="../../vendor/assets/images/umoya-photo1-thumbnail.jpg">
+              </a>
+              <a href="../../vendor/assets/images/umoya-photo2.jpg">
+                <img src="../../vendor/assets/images/umoya-photo2-thumbnail.jpg">
+              </a>
+              <a href="../../vendor/assets/images/umoya-photo4.jpg">
+                <img src="../../vendor/assets/images/umoya-photo4-thumbnail.jpg">
+              </a>
+            </section>
+          </div>
+        </article> <!--! end of box -->
+        
+        <!--! end of main content -->
+      
+      </section>
+        
+      <!-- sidebar -->
+      <aside class="sidebar main-sidebar grid-3" role="complementary">
+        
+        <div class="sign-up">
+          <a class="circle circle-two-lines circle-medium circle-blue" href="#" data-cosmui="toggler" data-target="#signup">
+            <span class="circle-inner">Get Started</span>
+          </a>
+          <div class="wrapper">
+            <form class="stacked compact closed" id="signup">
+              <div class="field">
+                <label for="sign-up-email" class="visuallyhidden">Email</label>
+                <div class="input">
+                  <input class="large" id="sign-up-email" name="email" size="30" type="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="field">
+                <label for="sign-up-username" class="visuallyhidden">Username</label>
+                <div class="input">
+                  <input class="large" id="sign-up-username" name="username" size="30" type="text" placeholder="Username">
+                </div>
+              </div>
+              <div class="field">
+                <label for="sign-up-password" class="visuallyhidden">Password</label>
+                <div class="input">
+                  <input class="large" id="sign-up-password" name="password" size="30" type="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="actions">
+                <input type="submit" class="button button-primary" value="Sign Up">
+              </div>
+            </form>
+          </div>
+        </div>
+      
+        <article class="box"> <!-- box -->
+          <header class="box-header">
+            <h3 class="box-header-title">Recent Feeds</h3>
+          </header>
+          <div class="box-content">
+            <ul class="no-margin">
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!--! end of box -->
+      
+      </aside> <!--! end of sidebar -->
+      
+    </div> <!--! end of #main -->
+    
+    <!-- footer -->
+    <footer class="main-footer grid-row" role="contentinfo">
+      <p class="copyright no-margin">
+        &copy; 2012 Cosm, a <span class="ir">LogMeIn</span> company
+      </p>
+      <nav>
+        <ul class="unstyled no-margin clearfix">
+          <li>
+            <a href="#" title="Go to About Us">About Us</a>
+          </li>
+          <li>
+            <a href="#" title="Go to How it works">How it works</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Press">Press</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Terms of Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer> <!--! end of footer -->
+
+  </div> <!--! end of #container -->
+
+  <!-- scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  <!--! end of scripts-->
+  
+</body>
+</html>

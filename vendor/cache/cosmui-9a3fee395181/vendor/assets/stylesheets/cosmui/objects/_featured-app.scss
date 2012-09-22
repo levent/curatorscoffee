@@ -1,0 +1,39 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   FEATURED APP
+ 
+*/
+
+.featured-app {
+  background: $background;
+  border-bottom: 1px solid lighten($borderGray,2);
+}
+
+.featured-app-name,
+.featured-app-description {
+  @include rem ('padding',18);
+}
+
+.featured-app-name {
+  padding-top: em(30,16);
+  padding-bottom: 0;
+}
+
+.featured-app-description {
+  padding-top: em(9);
+  padding-bottom: em(30);
+}
+  
+.featured-app-link {
+  display: block;
+}
+  
+.featured-app-icon {
+  margin: 0 auto em(30);
+}
+
+.ie7 .featured-apps {
+  .box-header-title {
+    float: left;
+  }
+}

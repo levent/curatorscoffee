@@ -1,0 +1,523 @@
+/*
+ * :: Cosm - CSS ::
+ * 
+ * Cosm / Logmein - 2012 All Rights Reserved
+ *
+ */
+ 
+ 
+/* -------------------------------------------
+ *
+ * cosmUI v0.0.1
+ *
+ * Copyright 2012 Cosm, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+
+// asset-url polyfill
+
+@function asset-url ($file ,$type: 'font') {
+  @if $type == 'font' {
+    $type: 'fonts';
+  }
+  @if $type == 'image' {
+    $type: 'images';
+  }
+  @return url(#{'../../' + $type + '/' + $file})
+}
+
+@function font-url ($file) {
+  @return url(#{'../../fonts/' + $file});
+}
+ 
+@import "cosmui/reset";
+@import "cosmui/helpers";
+@import "cosmui/color-scheme";
+@import "cosmui/grid";
+@import "cosmui/elements";
+@import "cosmui/components";
+@import "cosmui/objects";
+@import "cosmui/adaptive";
+
+
+/*  -------------------------------------------
+*
+*   General
+*/
+
+html { -webkit-font-smoothing: antialiased; }
+
+body { 
+  background-color: $background;
+  @include rem ('font-size', 13);
+  line-height: em(18);
+}
+
+body, button, input, select, textarea { 
+  color: $base;
+  @include sans-serif-font(); 
+}
+
+
+/*---  Header ---*/
+
+
+header.main {
+  height: 5.5em;
+  margin: 1em auto;
+  overflow: hidden;
+  
+  h1 {
+    display: block;
+    @include rem ('font-size', 60);
+    letter-spacing: -.05em;
+    line-height: 1em;
+    padding: 0;
+    margin: 0 .2em 0 0;
+    float: left;
+    
+    a {
+      position: relative;
+      display: block;
+      padding: .1em .5em .2em 0;
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.75)), to(rgba(0,0,0,1)));
+    }
+  }  
+}
+  
+.navigation {
+  ul {
+    @include clearfix();
+    
+    list-style: none;
+    margin: 0;
+  }
+  
+  li { 
+    float: left;
+    margin-left: .75em;
+  }
+  
+  a {
+    position: relative;
+    color: $base;
+    display: block;
+    margin: 1.2em 0;
+    padding: .45em .75em;
+    @include rem ('font-size',18);
+    @include transition('color .1s ease-out');
+    
+    &:visited { color: $base; }
+    &:hover { color: $secondary; }
+  }
+  
+  .selected {
+    a {
+      color: $secondary;
+    }
+  }
+}
+
+
+/*---  Main ---*/
+
+#main {
+  @include rem ('font-size', 13);
+  position: relative;
+  overflow: visible;
+}
+
+.page-header {
+  padding: 0;
+  margin: 0;
+  
+  h1 {
+    float: left;
+    margin-right: 1em;
+    padding: 1em 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.2);
+    
+    &:before {
+      height: 1em; 
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.75)), to(rgba(0,0,0,1)));
+    }
+  }
+  
+  nav {
+    float: left;
+    padding: em(36) 0;
+    a {
+      margin: 0;
+      padding: 0 em(9,16); 
+      @include rem ('font-size',16);
+      line-height: em(54,16);
+    }
+  }
+}
+
+#common {
+  margin-top: 0;
+}
+  
+.sample {
+  position: relative;
+  padding-bottom: 2em;
+  
+  &:first-child {
+    margin-top: 0;
+    border-top: none;
+  }
+  
+  .title {
+    position: relative;
+    border-top: 3px solid $grayLighter;
+    padding: 1.5em 0;
+    margin-bottom: 0;
+  }
+  
+  &.bordered-top {
+    border-top: 3px solid $grayLighter;
+    padding: em(36) 0 em(18);
+  }
+  
+  #with-line-guide {
+    position: relative;
+  }
+  
+  #line-guide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 25.8rem;
+    border-color: $grayLight;
+  }
+}
+
+#circles .circle { 
+  float:left;
+  margin: 0 1em 1em 0;
+}
+
+#icon-sample {
+  @include rem ('font-size', 42);
+  text-shadow: 0 1px 0 white;
+}
+
+.home-links {
+  text-align: center;
+  margin-top: 4em;
+
+  h1 {
+    display: inline-block;
+    margin-right: 1.75em;
+    margin-bottom: 2em;
+  }
+
+  a {
+    display: block;
+    color: $base;
+    
+    &:hover {
+      color: $primary;
+      
+      .icon {
+        position: relative;
+        top: .5em;
+      }
+    }
+  }
+  .icon {
+    display: block;
+    height: 3em;
+    text-shadow: 0 1px 0 white;
+        
+    @include transition('top .15s ease-out');
+  
+    &:before {
+      font-size: 4em;
+      height: .73em;
+      width: 100%;
+      -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.75)), to(rgba(0,0,0,1)));
+    }
+  }
+}
+
+#home-notice {
+  padding-top: 0;
+  @include serif-font();
+  @include rem ('font-size', 18);
+  line-height: 1.4em;
+  text-align: center;
+  color: $gray;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.grid-sample {
+  .grid-row {
+    margin-bottom: 1em;
+  }
+
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12 {
+    height: 2em;
+    line-height: 2em;
+    color: darken($grayLighter,15);
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    font-weight: bold;
+    background: $grayLighter;
+    border-top: 1px solid rgba(0,0,0,.1);
+    @include box-shadow ('0 1px 0 white');
+    
+    &:before {
+      content: " ";
+      display: block;
+      float: left;
+      width: 1em;
+      height: 1em;
+    }
+  }  
+  
+  &.nesting-sample {
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7,
+    .grid-8,
+    .grid-9,
+    .grid-10,
+    .grid-11,
+    .grid-12 {
+      height: 10em;
+      background: lighten($grayLighter,5);
+    
+      &:before { display: none; }
+    }    
+    
+    .grid-row .grid-row {
+      .grid-1,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .grid-5,
+      .grid-6,
+      .grid-7,
+      .grid-8,
+      .grid-9,
+      .grid-10,
+      .grid-11,
+      .grid-12 {
+        background: $grayLighter; 
+      }
+    }
+  }
+}
+
+#accordion {
+  a {
+    display: block;
+    padding: em(18);
+    font-weight: bold;  
+  }
+  
+  section {
+    padding: 0;
+    border: 1px solid $borderGray;
+    border-bottom-color: transparent;
+    
+    &:last-child {
+      border-bottom-color: $borderGray;
+    }
+  }
+  
+  p {
+    padding: 0 em(18) em(18);
+  }
+}
+
+.icon-set-mapping {
+  @include clearfix();
+  
+  li {
+    display: block;
+    float: left;
+    margin: 1.7em 1em 0 0;
+  }
+  
+  .icon {
+    width: 1.3em;
+    font-size: 3em;
+    line-height: 1.5em;
+    text-shadow: 0 1px 0 white;
+    
+    @include transition(all 2s ease-out);
+  }
+  
+  &.icon-example-0 .icon {
+    color: $base;
+  }
+  
+  &.icon-example-1 .icon {
+    color: $primary;
+  }
+  
+  &.icon-example-2 .icon {
+    color: $secondary;
+  }
+  
+  &.icon-example-3 .icon {
+    text-shadow: 2px 5px 3px rgba(0,0,0,.3);
+  }
+}
+
+
+/* -------------------------------------------
+   IE ADJUSTMENTS
+*/
+
+.oldie,
+.ie9 {
+  .home-links {
+    a {
+      &:hover {
+        .icon {
+          top: auto;
+        }
+      }
+    }
+  }
+}
+
+.ie9 {
+  .home-links {
+    .icon {
+      &:before {
+        font-size: .5em;
+      }
+    }
+  }
+}
+
+.oldie {
+  .home-links {
+    a {
+      .icon {        
+        &:before {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.ie7 {
+  .home-links {
+    h1 {
+      display: inline;
+    }
+  } 
+}
+
+
+/*---  Footer ---*/
+
+
+footer.main { 
+  padding: 1.5em 0;
+  border: none;
+}
+
+
+/*  -------------------------------------------
+*
+*   Media queries
+*/
+
+@media only screen and (max-width: 880px) {
+
+  header.main {
+    height: auto;
+    
+    nav {
+      float: left;
+      margin-left: -20px;
+      
+      a {
+        margin: 0;
+      }
+    }
+  }
+
+  .page-header {
+    h1 {
+      padding: 0;
+    }
+    
+    nav {
+      padding-top: 0;
+      margin-left: -18px;
+      
+      a {
+        line-height: 1.75em;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 520px) {
+
+  header.main,
+  .page-header {
+    text-align: center;
+    
+    h1 {
+      float: none;
+    }
+    
+    nav {
+      float: none;
+      margin-left: -20px;
+      
+      li {
+        float: none;
+        display: inline-block;
+      }
+      
+      a {
+        margin: 0;
+      }
+    }
+  }
+  
+  .home-index header.main nav { display: none; }
+
+  .home-links {
+    text-align: center;
+    margin-top: 0;
+  
+    h1 {
+      @include rem ('font-size',20);
+      margin-right: .5em;
+      margin-left: .5em;
+      margin-bottom: 2em;
+    }
+  }
+  
+}

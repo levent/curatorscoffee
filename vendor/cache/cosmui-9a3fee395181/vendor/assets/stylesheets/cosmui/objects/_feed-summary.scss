@@ -1,0 +1,391 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   FEED SUMMARY
+ 
+*/
+
+/* ----------------------------------------
+   HEADER TITLE   shared with user-summary
+*/
+    
+.feed-summary-title,
+.user-summary-title {
+  font-weight: bold;
+  color: $grayLight;
+  float: left;
+  
+  &:before { margin-right: em(15,30); }
+}
+
+.feed-summary-title {  
+  span.icon {
+    vertical-align: middle;
+    position: relative;
+    top: - em(2,18);
+    width: em(24,18);
+    margin-right: em(5,18);
+  }
+  
+  .dashboard-link {
+    @include rem ('font-size',11);
+    line-height: em(20,11);
+    max-width: none;
+    padding: em(1,11) em(4,11);
+    margin-top: - em(5,11);
+    margin-left: em(9,11);
+    
+    &:before {
+      top: -0.25em;
+      font-size: 2.3em;
+    }
+  }
+}
+   
+/* ----------------------------------------
+   CONTENT
+*/
+
+.feed-summary-content {
+  position: relative;
+  min-height: em(124);
+  @include clearfix();
+}
+  
+.feed-summary-icon {
+  display: inline-block;
+  position: absolute;
+  width: em(50);
+  height: em(50);
+  top: - em(3);
+  left: em(53);
+  background: $base asset-url('feed-default-icon2.png', image) no-repeat center center;
+  border: em(3) solid $base;
+  @include border-radius (em(5));
+  @include box-shadow (em(3) em(3) 0 rgba(#000,.25));
+  z-index: 10;
+  
+  &.with-pointer:before {
+    content: '';
+    display: inline-block;
+    border-left: em(7) solid transparent;
+    border-right: em(10) solid transparent;
+    border-top: em(7) solid rgba(#000,.25);
+    position: absolute;
+    bottom: - em(10);
+    left: em(18);
+    z-index: 5;
+  }
+  
+  &.with-pointer:after {
+    content: '';
+    display: inline-block;
+    border-left: em(7) solid transparent;
+    border-right: em(7) solid transparent;
+    border-top: em(7) solid $base;
+    position: absolute;
+    bottom: - em(10);
+    left: em(18);
+    z-index: 5;
+  }
+}
+   
+/* ----------------------------------------
+   MAP
+*/
+
+.feed-summary-map,
+a.feed-summary-map {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2.25%;
+  width: em(122);
+  height: em(122);
+  margin-right: em(18);
+  overflow: hidden;
+  color: $grayLighter;
+  background: $background;
+  border: 1px solid $borderGray;
+  z-index: 5;
+}
+
+.feed-summary-map-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .65;
+  width: em(124);
+  height: em(124);
+  max-width: none;
+  z-index: 4;
+  
+  $transition: width ease-out .2s, height ease-out .2s, top ease-out .2s, left ease-out .2s, opacity ease-out .2s;
+  @include transition ($transition);
+    
+  .feed-summary-map:hover & {
+    width: em(225);
+    height: em(225);
+    top: - em(50);
+    left: - em(50);
+    opacity: 1;
+  }
+}
+
+.feed-summary-map-center {
+  display: block;
+  position: relative;
+  top: em(58);
+  left: em(58);
+  width: em(4);
+  height: em(4);
+  background: $base;
+  border: 2px solid $base;
+  @include border-radius (em(10));
+  @include box-shadow (0 0 em(3) rgba(0,0,0,0.4));
+  @include opacity (0);
+  z-index: 10;
+}
+
+.feed-summary-map-empty {      
+  &:before {
+    content: ",";
+    position: absolute;
+    top: em(72,46);
+    left: em(47,46);
+    @include rem ('font-size ',46);
+    font-family: $iconfont;
+  } 
+}
+
+.feed-owned .feed-summary-map-empty {  
+  &:after {
+    content: "+";
+    position: absolute;
+    top: em(60,26);
+    left: em(35,26);
+    @include rem ('font-size ',26);
+    font-family: $iconfont;
+  }
+}
+
+.feed-owned a.feed-summary-map-empty {  
+  &:hover {
+    color: $primary;
+  } 
+}
+   
+/* ----------------------------------------
+   DATASTREAM TABLE
+*/
+
+.feed-datastream-table {
+  margin: 0;
+    
+  td {
+    border: none;
+  }
+}
+
+.feed-datastream-graph {
+  position: relative;
+  width: 100%;
+  padding: 0 0 em(6) 0;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    border-top: em(5,12) solid transparent;
+    border-bottom: em(5,12) solid transparent;
+    border-right: em(5,12) solid $primary;
+    position: absolute;
+    top: em(9);
+    right: - em(10,12);
+    z-index: 5;
+  }
+    
+  tr:last-child & {
+    padding-bottom: 0;
+  }
+}
+      
+.feed-summary .datastream-graph-container {
+  display: block;
+  height: em(30);
+}
+
+.feed-datastream-id {
+  display: inline-block;
+  position: absolute;
+  left: em(10);
+  top: 0;
+  padding: em(5);
+  margin-top: em(2);
+  font-weight: bold;
+  line-height: 1em;
+  color: $base;
+  background: rgba(white,.8);
+  border: 1px solid $borderGray;  
+  @include opacity(25);
+  @include transition (opacity ease-out .2s);      
+
+  .feed-datastream-graph:hover & {
+    @include opacity(100);
+    filter:none;
+  }
+}  
+   
+/* ----------------------------------------
+   CURRENT VALUE
+*/
+    
+.feed-datastream-current-value {
+  position: relative;
+  display: block;
+  @include rem ('font-size',12);
+  padding: em(6,12) em(15,12) em(7,12);
+  margin: em(2,12) 0 em(9,12) em(10,12);
+  max-width: 200px;
+  cursor: default;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1em;
+  height: 1em;
+  background: $primary;
+  color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @include border-radius(em(3,12));
+  
+  &:last-child { margin-bottom: 0;}
+}
+  
+.feed-datastream-unit {
+  margin-left: .5em;
+  white-space: nowrap;
+}
+   
+/* ----------------------------------------
+   THREE DATATREAMS
+*/
+
+.feed-summary-datastreams {
+  position: relative;
+  display: block;
+  margin-left: em(143);
+  padding: em(10);
+  overflow: hidden;
+  border: 1px solid $background;
+  min-height: em(101);
+}
+   
+/* ----------------------------------------
+   TWO DATASTREAMS
+*/
+
+.feed-summary-two-datastreams {    
+  .feed-summary-graph {
+    &:after {
+      top: em(21);
+    }
+  }
+    
+  .datastream-graph-container {
+    height: em(48);
+  }
+  
+  .feed-summary-current-value {
+    margin-top: em(13,12);
+  }
+}
+   
+/* ----------------------------------------
+   ONE DATASTREAM
+*/
+   
+.feed-summary-one-datastream,
+.feed-summary-one-datastreams { 
+  .feed-datastream-graph {
+    &:after {
+      top: em(46);
+    }
+  }
+
+  .datastream-graph-container {
+    height: em(102);
+  }
+  
+  .feed-datastream-current-value {
+    margin-top: em(38,12);
+  }
+}
+   
+/* ----------------------------------------
+   NO DATASTREAMS
+*/
+  
+.feed-summary-datastreams-empty {
+  background: none;
+  color: $gray;
+}
+  
+/* ----------------------------------------
+   IE ADJUSTMENTS
+*/
+
+.oldie,
+.ie9 {    
+  feed-datastream-table {
+    border-collapse: separate;
+    border-spacing: em(5);
+  }
+    
+  .feed-datastream-graph {
+    vertical-align: middle;
+  }
+
+  .feed-datastream-current-value {
+    vertical-align: middle;
+    padding: em(10);
+    margin: 0;
+    
+    &:after {
+      display: none;
+    }
+  }
+}
+  
+/* ----------------------------------------
+   CURRENT VALUE HOVER
+*/
+
+#current-value-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  @include rem ('font-size',12);
+  padding: em(6,12) em(15,12) em(7,12);
+  margin: em(2,12) 0 em(9,12) em(10,12);
+  max-width: 200px;
+  cursor: default;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1em;
+  height: 1em;
+  background: $primary;
+  color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  z-index: 90;
+  
+  @include border-radius(em(3,12));
+  
+  &:last-child { margin-bottom: 0;}
+  
+  .feed-datastream-unit {
+    margin-left: .5em;
+    white-space: nowrap;
+  }
+}

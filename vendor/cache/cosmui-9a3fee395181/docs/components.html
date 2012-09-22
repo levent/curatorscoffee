@@ -1,0 +1,751 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Components - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="favicon.ico" rel="shortcut icon">
+  
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../vendor/assets/stylesheets/compiled/docs.css">
+  <!--! end of css -->
+  
+  
+  <!-- head scripts -->
+  <script src="../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+  
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="main grid-row">
+    
+      <h1>
+        <a href="index.html" title="Go to Homepage">cosmUI</a>
+      </h1>
+      
+      <nav class="navigation">
+        <ul>
+          <li><a href="grid.html" title="Go to Grid">Grid</a></li>
+          <li><a href="elements.html" title="Go to Elements">Elements</a></li>
+          <li class="selected"><a href="components.html" title="Go to Components">Components</a></li>
+          <li><a href="objects.html" title="Go to Objects">Objects</a></li>
+          <li><a href="layouts.html" title="Go to Layouts">Layouts</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <div id="main" role="main" class="main grid-row">
+    
+      <div class="page-header grid-row">
+        <h1 class="icon icon-components">Components</h1>
+      
+        <nav class="navigation">
+          <ul>
+            <li><a href="#tabs" title="Go to Tabs">Tabs</a></li>
+            <li><a href="#dropdowns" title="Go to Dropdowns">Dropdowns</a></li>
+            <li><a href="#buttons" title="Go to Buttons">Buttons</a></li>
+            <li><a href="#alerts" title="Go to Alerts">Alerts</a></li>
+            <li><a href="#toggler" title="Go to Toggler">Toggler</a></li>
+            <li><a href="#tooltips" title="Go to Tooltips">Tooltips</a></li>
+            <li><a href="#modal" title="Go to Modal">Modal</a></li>
+            <li><a href="#range" title="Go to Range">Range</a></li>
+          </ul>
+        </nav>
+      </div>  
+      
+      
+      <div class="sample" id="tabs">
+      
+        <h2 class="title">Tabs</h2>
+        <div class="grid-row">
+          <div class="grid-3">
+          
+            <h4>Requirements</h4>
+            <p>The toggles must have <code>data-cosmui="tab"</code>.</p>
+            <p>Set the tab pane #id in the <code>href</code> (or <code>data-target</code>) of the respective toggle.</p>
+            <p>Use a <code>&lt;ul&gt;</code> for the toggles.</p>
+            
+            <h4 class="bordered-top">Notes</h4>
+            <p>An <code>.active</code> will be set in the tab pane and toggle's <code>&lt;li&gt;</code>.</p>
+            <p><span class="label label-notice">notice</span> You don't need to use the structure in the code sample, <strong>just meet the requirements</strong>. The sample is simply an out of the box solution with styling and semantic elements.</p>           
+                      
+          </div>
+          
+          <div class="grid-4">
+          
+            <article class="box">
+              <ul class="nav-tabs">
+                <li class="active"><a href="#tab-1" data-cosmui="tab">Section 1</a></li>
+                <li><a href="#tab-2" data-cosmui="tab">Section 2</a></li>
+              </ul>
+              <div class="tab-content box-content">
+                <section class="tab-pane active" id="tab-1">
+                  <p><strong>Use it as <code>.box</code> tabs</strong></p>
+                </section>
+                <section class="tab-pane" id="tab-2">
+                  <p>Howdy, I'm in Section 2.</p>
+                </section>
+              </div>
+            </article>     
+            
+            <article class="box"> 
+              <header class="box-header">Inside a Box</header>
+              <div class="box-content">     
+                <ul class="nav-tabs">
+                  <li class="active"><a href="#tab-3" data-cosmui="tab">Section 1</a></li>
+                  <li><a href="#tab-4" data-cosmui="tab">Section 2</a></li>
+                  <li><a href="#tab-5" data-cosmui="tab">Section 3</a></li>
+                </ul>
+                <div class="tab-content">
+                  <section class="tab-pane active" id="tab-3">
+                    <p>I'm in Section 1.</p>
+                  </section>
+                  <section class="tab-pane" id="tab-4">
+                    <p>Howdy, I'm in Section 2.</p>
+                  </section>
+                  <section class="tab-pane" id="tab-5">
+                    <p>Section 3.</p>
+                  </section>
+                </div>
+              </div>          
+            </article>
+            
+            <article class="box">
+              <ul class="nav-tabs">
+                <li class="active"><a href="#tab-6" data-cosmui="tab">Section 1</a></li>
+                <li><a href="#tab-7" data-cosmui="tab">Section 2</a></li>
+              </ul>
+              <div class="tab-content box-content">
+                <section class="tab-pane active" id="tab-6">
+                  <ul class="nav-tabs">
+                    <li class="active"><a href="#tab-8" data-cosmui="tab">Nested Section 1</a></li>
+                    <li><a href="#tab-9" data-cosmui="tab">Nested Section 2</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <section class="tab-pane active" id="tab-8">
+                      <p>I'm in Nested Section 1.</p>
+                    </section>
+                    <section class="tab-pane" id="tab-9">
+                      <p>Howdy, I'm in Nested Section 2.</p>
+                    </section>
+                  </div>
+                </section>
+                <section class="tab-pane" id="tab-7">
+                  <p>Howdy, I'm in Section 2.</p>
+                </section>
+              </div>
+            </article>            
+          </div>
+          <div class="grid-5">
+<pre class="prettyprint">
+&lt;ul class=&quot;nav-tabs&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;
+    &lt;a href=&quot;#tab-1&quot; data-cosmui=&quot;tab&quot;&gt;&lt;!-- Title --&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#tab-2&quot; data-cosmui=&quot;tab&quot;&gt;&lt;!-- Title --&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;tab-content&quot;&gt;
+  &lt;section class=&quot;tab-pane active&quot; id=&quot;tab-1&quot;&gt;
+    &lt;!-- Content --&gt;
+  &lt;/section&gt;
+  &lt;section class=&quot;tab-pane&quot; id=&quot;tab-2&quot;&gt;
+    &lt;!-- Content --&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+</pre>   
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <div class="sample" id="dropdowns">
+      
+        <h2 class="title">Dropdowns</h2>
+        <div class="grid-row">
+        
+          <div class="grid-3"> 
+            <span class="label label-success">developed</span>  
+          </div>
+          
+          <div class="grid-9"> 
+            <a class="button dropdown-toggle" data-cosmui="dropdown" href="#dropdown3">
+              Dropdown 2
+            </a>
+            <div class="dropdown-menu" id="dropdown3">   
+              Hey there gorgeous!
+            </div>
+        
+            <a class="button button-leveled dropdown-toggle" data-cosmui="dropdown" data-target="next" href="#">
+              Dropdown
+            </a>
+            <div class="dropdown-menu">          
+              <h5 class="header">Sort By</h5> 
+              <ul class="inputs-list no-borders">
+                <li>
+                  <label>
+                    <input type="radio" name="searchFilters" value="feeds" checked="checked">
+                    <span>Recently Added</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="searchFilters" value="support">
+                    <span>Recent Activity</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="searchFilters" value="blog">
+                    <span>Alphabetical</span>
+                  </label>
+                </li>
+              </ul>         
+              
+              <h5 class="header">View</h5> 
+              <ul class="inputs-list no-borders">
+                <li>
+                  <label>
+                    <input type="checkbox" name="searchFilters" value="feeds" checked="checked">
+                    <span>My Feeds</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="searchFilters" value="support" checked="checked">
+                    <span>Feeds I'm Following</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="searchFilters" value="blog" checked="checked">
+                    <span>Users</span>
+                  </label>
+                </li>
+              </ul>
+            </div>   
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      
+      <div class="sample" id="buttons">
+      
+        <h2 class="title">Buttons</h2>
+        <h3>Button Groups</h3>
+        <div class="grid-row">
+          <div class="grid-4">
+            <p><span class="label label-important">very important</span> In order for the buttons to be properly close together, <strong>don't set any white space</strong> between them, it should be <code>&lt;/button&gt;&lt;button&gt;</code>.</p>
+          </div>
+          <div class="grid-8">
+            <div class="button-group">
+              <button class="button">One</button><button class="button">Two</button><button class="button">Three</button>              
+            </div>
+            <div class="button-group pulled-down">
+              <button class="button button-leveled">One</button><button class="button button-inset">Two</button><button class="button button-leveled">Three</button>              
+            </div>
+            <div class="button-group pulled-down">
+              <button class="button button-leveled icon icon-only icon-activity "></button><button class="button button-leveled icon icon-only icon-user"></button><button class="button button-inset icon icon-only icon-layout"></button>
+            </div>
+            <div class="button-group pulled-down">
+              <button class="button button-large button-primary">One</button><button class="button button-large">Two</button><button class="button button-large">Three</button>              
+            </div>
+            <div class="button-group pulled-down">
+              <button class="button button-small">One</button><button class="button button-small">Two</button><button class="button button-small">Three</button>              
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      
+      
+      <div class="sample" id="alerts">
+      
+        <h2 class="title">Alerts</h2>
+        <div class="grid-row">
+          <div class="grid-6">   
+            <h3>Inline Alerts</h3>      
+            <div class="alert alert-success" id="alert1" data-cosmui="alert">
+              <a class="close">&times;</a>
+              <strong class="alert-heading icon icon-success">Success</strong> Your settings were saved succesfully.
+            </div>
+            <div class="alert alert-warning" data-cosmui="alert">
+              <a class="close">&times;</a>
+              <strong class="alert-heading icon icon-warning">Warning</strong> Your settings might not have been saved.
+            </div>
+            <div class="alert alert-error" data-cosmui="alert">
+              <a class="close">&times;</a>
+              <strong class="alert-heading icon icon-error">Error</strong> Your settings could not be saved.
+            </div>
+            <div class="alert alert-info" data-cosmui="alert">
+              <a class="close">&times;</a>
+              <strong class="alert-heading icon icon-info">Info</strong> Your settings are currently being processed.
+            </div>
+          </div>
+          <div class="grid-6"> 
+            <h3>Block Alerts</h3>
+            <div class="alert alert-block alert-success" data-cosmui="alert">
+              <a class="close">&times;</a>
+              <strong class="alert-heading icon icon-success">Success</strong>
+              Your settings were saved succesfully.
+            </div>
+            <div class="alert alert-block alert-info" data-cosmui="alert">
+              <a class="close">&times;</a>
+              <strong class="alert-heading icon icon-info">Info</strong>
+              <p>Your settings might not have been saved.</p>
+              <button class="button button-primary">Save</button> <button class="button close">Dismiss</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-row">        
+          <div class="grid-6">          
+<pre class="prettyprint">
+&lt;div class=&quot;alert [alert-block] alert-[success, warning, error, info]&quot; data-cosmui=&quot;alert&quot;&gt;
+  &lt;a class=&quot;close&quot;&gt;&amp;times;&lt;/a&gt;
+  &lt;strong class=&quot;alert-heading icon icon-[success, warning, error, info]&quot;&gt;
+    &lt;!-- Alert Title --&gt;
+  &lt;/strong&gt;
+  &lt;!-- Alert Content --&gt;
+&lt;/div&gt;
+</pre>          
+          </div>
+          <div class="grid-6">             
+            <p>You can do it <strong>programatically</strong> too, using <code>cosmUI.alert.close( [alert div(s)] )</code>:</p>
+            <button class="button" id="closealert">Close an Alert</button> <button id="closeallalerts" class="button">Close all Alerts</button></p> 
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <div class="sample" id="toggler">
+      
+        <h2 class="title">Toggler</h2>
+        <div class="grid-row">
+          <div class="grid-6">
+            <h3>Toggle anything</h3>
+            <p>The Toggler plugin essentially allows you to show/hide any element(s) you wish, in a very simple way.</p>  
+            <h4>Requirements</h4>
+            <p>As with all other components, you need <strong>data-cosmui="toggler"</strong>. You also need to indicate the element(s) you wish to toggle with either <strong>href="#[id]"</strong> or <strong>data-target="[CSS selector]"</strong>. That's all you need to do, when the toggle is clicked, the target will either open or close depending on current state.</p>
+            
+            <h4>Options</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Opener</td>
+                  <td>
+                    <strong>data-cosmui="toggler opener"</strong> - the toggle will only open the target
+                  </td>
+                </tr>
+                <tr>
+                  <td>Closer</td>
+                  <td>
+                    <strong>data-cosmui="toggler opener"</strong> - it will only close the target
+                  </td>
+                </tr>
+                <tr>
+                  <td>Animation</td>
+                  <td>
+                    <strong>data-animation="[showHide, fade, slide]"</strong> - choose which animation will be used to toggle the element, the default is 'slide'
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Events</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Open</td>
+                  <td>
+                    <dl class="no-margin">
+                      <dt>cosmui.toggler.open</dt>
+                      <dd>cosmui.toggler.open-before</dd>
+                      <dd>cosmui.toggler.open-after</dd>
+                    </dl>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Close</td>
+                  <td>
+                    <dl class="no-margin">
+                      <dt>cosmui.toggler.close</dt>
+                      <dd>cosmui.toggler.close-before</dd>
+                      <dd>cosmui.toggler.close-after</dd>
+                    </dl>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>How to use events</h5>
+            <pre class="prettyprint lang-js">$(yourTargetElement).on('cosmui.toggler.close-before', yourFunction() );</pre>   
+          </div>
+          <div class="grid-6"> 
+            
+            <h3>Sample Code</h3>
+<pre class="prettyprint">
+&lt;button data-cosmui=&quot;toggler&quot; data-target=&quot;#toggler h2&quot; class=&quot;button&quot;&gt;
+  &lt;!-- Toggle Text --&gt;
+&lt;/button&gt; 
+</pre>     
+            <h3 class="pulled-down">Examples</h3>
+            <button class="button" data-cosmui="toggler" href="#toggler1">Toggle the box</button>
+            <button class="button" data-cosmui="toggler" data-target="#toggler div > h3">Toggle the titles</button> 
+            <button class="button" data-cosmui="toggler" data-target="#somethingpretty">Toggle something pretty</button> 
+            <article class="box" id="toggler1">
+              <div class="box-content">
+                You can use it in any element you want! Pretty sweet.
+              </div>
+            </article> 
+            <div>
+              <img id="somethingpretty" class="closed" src="http://www.popartuk.com/g/l/lgwiz01459+unicorn-and-comets-by-steve-read-poster.jpg">  
+            </div>      
+          </div>
+        </div>
+        
+        <div class="grid-row bordered-top" id="toggler-accordion">
+        
+          <div class="grid-4">
+            <h3>Accordion</h3>
+            <p>It's easy to make an accordion with the Toggler component by specifying a parent and it's children.</p>
+            <h4>Parenting</h4>
+            <ul class="unstyled">
+              <li><strong>data-parent="[CSS selector]"</strong></li>
+              <li><strong>data-children="[CSS selector]"</strong></li>
+            </ul>
+            <p>By indicating a parent with <code>data-parent</code> in the Toggler, when it is clicked all elements within the specified <code>data-children</code> will be closed.</p>
+          </div>
+        
+          <div class="grid-8">
+            <article class="box">
+              <div class="box-content" id="accordion" data-children="#accordion p">
+                <section>
+                  <a data-cosmui="toggler" data-target="next" data-parent="#accordion">Section 1</a>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor.</p>
+                </section>
+                <section>
+                  <a data-cosmui="toggler" data-target="next" data-parent="#accordion">Section 2</a>
+                  <p class="closed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor.</p>
+                </section>
+                <section>
+                  <a data-cosmui="toggler" data-target="next" data-parent="#accordion">Section 3</a>
+                  <p class="closed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor.</p>
+                </section>
+              </div>
+            </article>   
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <div class="sample" id="tooltips">
+      
+        <h2 class="title">Tooltips</h2>
+        <div class="grid-row">
+          <div class="grid-4">
+            <h3>It's Peanuts</h3>
+            <p>Get a tooltip in just <strong>two easy steps</strong>:</p>
+            <ol>
+              <li><strong>data-cosmui="tooltip"</strong> on the element</li>
+              <li><strong>title=""</strong> attribute for tooltip content.</li>
+              <li class="pulled-down"><span class="label">optional</span> <strong>data-gravity</strong> with: <br><code>nw | n | ne | w | e | sw | s | se </code> (compass)<br> to position your tooltip where you want it.</li>
+            </ol>
+          </div>
+          <div class="grid-8"> 
+            <h3>Examples</h3>
+            <p><a href="#" data-cosmui="tooltip" title="My name is Pete and I really really love cosmUI &hearts;">Hover me</a></p>
+            <p><span data-cosmui="tooltip" data-gravity="w" title="cosmUI is awesome &hearts;">Hover on the right</span></p>
+<pre class="prettyprint">
+&lt;span data-cosmui=&quot;tooltip&quot; [data-gravity=&quot;w&quot;] title=&quot;Tooltip content&quot;&gt;Hover me&lt;/span&gt;
+</pre>
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <div class="sample" id="modal">
+      
+        <h2 class="title">Modal</h2>
+        <div class="grid-row">
+          <div class="grid-6">
+            <a class="button button-primary" data-cosmui="modal" href="#myModal" >Launch Modal</a>
+            
+            <article class="box modal" id="myModal">
+              <header class="box-header">
+                <a class="close">&times;</a>
+                <h3 class="box-header-title">Modal header</h3>
+              </header>
+              <div class="box-content">
+                <h4>Modal content</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor.</p>
+                
+                <footer>
+                  <a href="#" class="button button-primary">Save changes</a>
+                  <a href="#" data-close="modal" class="button">Close</a>
+                </footer>
+              </div>
+            </article>
+            
+            <h4 class="bordered-top">Quick & Easy</h4>
+            <ol>
+              <li>Call the <strong>cosmui.modal.js</strong> file after cosmui.js near the end of the body tag</li>
+              <li>Stick a <code>.modal</code> class and an <code>id</code> on your a box element</li>
+              <li>To use an element to open a modal, you need to add two things to it:</li>
+              <ol>
+                <li>Set <code>data-cosmui="modal"</code></li>
+                <li>Use <code>href</code> or <code>data-target</code> with the <code>id</code> of the modal</li>
+              </ol>
+            </ol>
+            
+            <h4 class="bordered-top">Auto-open</h4>
+            <p>In case you want to <strong>share a link to a modal</strong>, you simply need to share the link as you would for any anchor, with an hash with the id of the modal, i.e. <a target="_blank" href="/docs/components/#myModal">like this</a></p>
+            
+            <h4 class="bordered-top">Notes</h4>
+            <p>If you want to add buttons inside the modal that can close it, just add <code>data-close="modal"</code>.</p>
+            <p>The sample code is not the required code for the component to work, it's an easy to copy structure to jumpstart the use.</p>
+            
+          </div>
+          
+          <div class="grid-6"> 
+            <h4>Sample Code</h4>
+<pre class="prettyprint">
+&lt;!-- Modal Toggle --&gt;
+&lt;a class=&quot;button primary&quot; data-cosmui=&quot;modal&quot; href=&quot;#myModal&quot;&gt;
+  &lt;!-- Toggle Text --&gt;
+&lt;/a&gt;
+
+&lt;!-- Modal Box --&gt;
+&lt;article class=&quot;box modal&quot; id=&quot;myModal&quot;&gt;        
+  &lt;header class=&quot;box-header&quot;&gt; &lt;!-- [Optional] Header --&gt;
+    &lt;a class=&quot;close&quot;&gt;&amp;times;&lt;/a&gt;
+    &lt;h3 class=&quot;box-header-title&quot;&gt;&lt;!-- Your Title --&gt;&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;box-content&quot;&gt;
+    &lt;!-- 
+      Your Content 
+    --&gt;
+    &lt;footer&gt; &lt;!-- [Optional] Action Buttons --&gt;
+      &lt;a href=&quot;#&quot; data-close=&quot;modal&quot; class=&quot;button&quot;&gt;Close&lt;/a&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</pre>
+          </div>
+        </div>
+        
+        <div class="grid-row pulled-down">
+          <div class="grid-6">
+            <h3>Methods</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Open</strong>
+                  </td>
+                  <td>
+                    <code>cosmUI.modal.open( $(yourModal) )</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Close</strong></td>
+                  <td>
+                    <code>cosmUI.modal.close( $(yourModal) )</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Re-assign events</strong></td>
+                  <td>
+                    <code>cosmUI.modal.reload()</code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>If you need a custom method, submit as an issue on github if you think it's re-usable or consider extending the plugin.</p>
+          </div>
+        
+          <div class="grid-6">
+            <h3>Events</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Open</td>
+                  <td>
+                    <dl class="no-margin">
+                      <dt>cosmui.modal.open</dt>
+                      <dd>cosmui.modal.open-before</dd>
+                      <dd>cosmui.modal.open-after</dd>
+                    </dl>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Close</td>
+                  <td>
+                    <dl class="no-margin">
+                      <dt>cosmui.modal.close</dt>
+                      <dd>cosmui.modal.close-before</dd>
+                      <dd>cosmui.modal.close-after</dd>
+                    </dl>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>How to use events</h5>
+            <pre class="prettyprint lang-js">$(yourModal).on('cosmui.modal.close-before', yourFunction() );</pre>             
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <div class="sample" id="range">
+      
+        <h2 class="title">Range</h2>
+        <div class="grid-row">
+          <div class="grid-6">
+            <h3>Range slider</h3>
+            <p>The Range plugin allows you to transform a select box into an accessible value slider.</p>  
+            <h4>Requires only 2 things</h4>
+            <ol>
+              <li>Load the script cosmui.range.js</li>
+              <li>Add <strong>data-cosmui="range"</strong> to the <code>&lt;select&gt;</code></li>
+            </ol>
+            
+            <h4 class="pulled-down">Events</h4>
+            <dl>
+              <dt><strong>cosmui.range.created</strong></dt>
+              <dd>Triggers when the element is created and inserted in the DOM.</dd>
+              <dd>
+                <strong>Arguments</strong><br>
+                <strong>event</strong> : the jQuery event object<br>
+                <strong>obj</strong> : an object containing information about the created element.
+              </dd>
+              <dt class="bordered-top"><strong>cosmui.range.change</strong></dt>
+              <dd>Triggers when the value in the slider changes.</dd>
+              <dd>To avoid too many change events, sequential events never happen in less than 500ms.</dd>
+              <dd>
+                <strong>Arguments</strong><br>
+                <strong>event</strong> : the jQuery event object<br>
+                <strong>value</strong> : the value to which the slider changed to, corresponding to the value of the select box <code>&lt;option&gt;</code>
+              </dd>
+            </dl>
+                    
+            <h5>How to use events</h5>
+            <pre class="prettyprint lang-js">$(yourSelectElement).on('cosmui.range.change', yourFunction(e,value) );</pre> 
+          </div>
+          <div class="grid-6"> 
+            <h3>Example</h3>
+            
+            <select data-cosmui="range">
+              <option value="300">5 minutes</option>
+              <option value="1800">30 minutes</option>
+              <option value="3600">1 hour</option>
+              <option value="10800">3 hours</option>
+              <option value="86400" selected="selected">1 day</option>
+              <option value="604800" >1 week</option>
+              <option value="2592000">30 days</option>
+              <option value="7776000">3 months</option>
+              <option value="15552000">6 months</option>
+              <option value="31536000">1 year</option>
+            </select>    
+            <h3 class="pulled-down">Sample Code</h3>
+<pre class="prettyprint">
+&lt;select class=&quot;graph-duration&quot; data-cosmui=&quot;range&quot;&gt;
+  &lt;option value=&quot;300&quot;&gt;5 minutes&lt;/option&gt;
+  &lt;option value=&quot;1800&quot;&gt;30 minutes&lt;/option&gt;
+  &lt;option value=&quot;3600&quot;&gt;1 hour&lt;/option&gt;
+  &lt;option value=&quot;10800&quot;&gt;3 hours&lt;/option&gt;
+  &lt;option value=&quot;86400&quot; selected=&quot;selected&quot;&gt;1 day&lt;/option&gt;
+  &lt;option value=&quot;604800&quot; &gt;1 week&lt;/option&gt;
+  &lt;option value=&quot;2592000&quot;&gt;30 days&lt;/option&gt;
+  &lt;option value=&quot;7776000&quot;&gt;3 months&lt;/option&gt;
+  &lt;option value=&quot;15552000&quot;&gt;6 months&lt;/option&gt;
+  &lt;option value=&quot;31536000&quot;&gt;1 year&lt;/option&gt;
+&lt;/select&gt; 
+</pre>       
+          </div>
+        </div>
+        
+      </div>
+
+        
+        
+            
+    </div> <!--! end of #main -->
+    <footer class="main">
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+
+  <!-- scripts -->
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.modal.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.range.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  <!--! end of scripts-->
+
+
+  <script>
+  
+    //   !!!!!!  CHANGE UA-XXXXXX TO GOOGLE ANALYTICS ACCOUNT  !!!!!!
+  
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  
+  <script>
+  
+    $('#toggler')
+      .find('.grid-6:first-child h3')
+      .on('cosmui.toggler.open'        , function(e) { console.log('cosmui.toggler.open'); })
+      .on('cosmui.toggler.open-before' , function(e) { console.log('cosmui.toggler.open-before'); })
+      .on('cosmui.toggler.open-after'  , function(e) { console.log('cosmui.toggler.open-after'); })
+      .on('cosmui.toggler.close'       , function(e) { alert("I'm a callback function for cosmui.toggler.close, look at your console for other fired events!"); console.log('cosmui.toggler.close');  })
+      .on('cosmui.toggler.close-before', function(e) { console.log('cosmui.toggler.close-before'); })
+      .on('cosmui.toggler.close-after' , function(e) { console.log('cosmui.toggler.close-after'); });
+  
+    $('#closealert').on('click', function() { cosmUI.alert.close($('#alert1')); return false; }); 
+    $('#closeallalerts').on('click', function() { cosmUI.alert.close($('.alert')); return false; });    
+    
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

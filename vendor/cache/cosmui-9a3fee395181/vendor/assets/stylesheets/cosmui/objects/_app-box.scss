@@ -1,0 +1,300 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   APP BOX
+ 
+*/
+
+.app { 
+  
+  /* ----------------------------------------
+     HEADER
+  */
+  
+  .box-header-title {
+    a {
+      font-weight: bold;
+    }
+  
+    .icon {
+      &:before {
+        color: $grayLight;
+      }
+      
+      &:hover:before {
+        color: $primary;
+      }
+    }
+  }
+  
+  .box-header {
+    .actions {      
+      button.button:before {
+        color: $gray;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     CONTENT
+  */
+  
+  .bordered-top {
+    border-top: 3px solid $background;
+  }
+  
+  .grid-7,
+  .app-information-description {
+    padding-top: em(54);
+  }
+  
+  .app-oauth-settings {      
+    margin-top: em(17);
+    padding-top: em(18);
+  
+    h4 {
+      padding-bottom: em(9,14);
+      @include rem ('font-size',14);
+      line-height: em(18,14);
+      color: $gray;
+    }
+  }
+  
+  .app-client-id,
+  .app-oauth-redirect {
+    @include rem ('font-size',18);
+    line-height: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .app-access-level {
+    margin-bottom: em(18);
+    
+    .inline-tag {
+      @include rem ('font-size',16);
+      max-width: none;
+      margin-bottom: em(9,16);
+      text-transform: lowercase;
+      
+      &:hover {
+        color: $base;
+        background-color: darken($background,3);
+        cursor: default;
+      }
+    }
+  }
+  
+  .app-client-secret {
+    @include rem ('font-size',16);
+    line-height: em(18,16);
+    margin-bottom: em(36,16);
+  }  
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .oldie & {
+    .app-creator {
+      img {
+        display: none;
+      }
+    }
+  }
+  
+  .ie7 & {
+    .box-header-title {
+      float: left;
+    }
+  }
+  
+}
+  
+/* ----------------------------------------
+   APP INFORMATION
+*/
+  
+.app-information,
+.app-oauth-settings {
+  h3 {
+    padding: em(9,18) 0 em(27,18);
+  }
+}
+
+.app-information-meta {
+  overflow: hidden;
+
+  h4,
+  p,
+  .tags {
+    margin-left: em(158);
+  }
+}
+
+.app-information {    
+  
+  h4 {
+    padding: 0 em(9) 0 0;
+    @include rem ('font-size',13);
+    line-height: em(18);
+    color: $grayLight;
+  }
+  
+  p {
+    margin-bottom: em(9);
+  }
+}
+
+.app-information.box-content {
+  @include clearfix();
+  
+  .app-description {
+    padding-bottom: em(9);
+  }
+  
+  h4 {
+    float: left;
+    clear: none;
+  }
+  
+  .app-creator,
+  .tags {
+    margin-top: 0;
+    float: left;
+    padding-right: em(36);
+  }
+}
+
+.app-creator {
+  margin-top: em(5);
+  
+  a {
+    position: relative;
+    top: em(1);
+  }
+  
+  img {
+    position: relative;
+    top: em(7);
+    margin-top: - em(11);
+    width: em(24);
+    height: em(24);
+  }
+}
+
+.app-url {
+  white-space: nowrap;
+}
+
+.app-icon {
+  position: relative;
+  @include rem ('font-size',13);
+  display: block;
+  width: em(140);
+  max-width: 100%;
+  background: darken($background,5);
+  $shadow : 1px 2px 4px rgba(0, 0, 0, 0.25); 
+  @include box-shadow     ( $shadow );
+  @include border-radius  ( em(15) );
+  @include transition     ( 'all .1s ease-out' );
+  
+  a:hover > & {
+    top: -5px;
+    left: -3px;
+    $shadow : 3px 5px 7px rgba(0, 0, 0, 0.15); 
+    @include box-shadow     ( $shadow );
+  }
+  
+  .app & {
+    float: left;
+    margin-right: em(18);
+    margin-bottom: em(9);
+  }
+  
+  .app-information.box-content & {
+    width: em(88);
+    @include border-radius  ( em(10) );
+  }
+}
+
+.app-icon-empty {
+  position: relative;
+  height: em(140);
+  color: darken($grayLighter,5);
+  background: darken($background,5);
+  border: 1px solid $borderGray; 
+  
+  &:before,
+  .icon-fallback {
+    @include rem ('font-size',80);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: - em(25,80);
+    margin-left: - em(30,80);
+    text-shadow: 0 2px 0 darken(#fff,5), 0 -2px darken($grayLighter,8) ;
+  }
+  
+  .app-information.box-content & {
+    height: em(88);
+    
+    &:before,
+    .icon-fallback {
+      @include rem ('font-size',50);
+      margin-top: - em(18,50);
+      margin-left: - em(18,50);
+    }
+  }
+}
+  
+/* ----------------------------------------
+   OTHER APPS (APPS LISTING)
+*/
+
+.other-apps-row + .other-apps-row {
+  padding-top: em(18);
+  border-top: 1px solid $background;
+  margin-top: em(18);
+}
+
+.other-apps-item {
+  @include clearfix();
+}
+
+.other-apps-item-icon { 
+  display: block;
+  float: left;
+  width: em(60);
+  
+  &.app-icon-empty {
+    height: em(60);
+
+    &:before,
+    .icon-fallback {
+      @include rem ('font-size',40);
+      margin-top: - em(15,40);
+      margin-left: - em(14,40);
+    }
+  }
+}
+
+.other-apps-item-header,
+.other-apps-item-content {
+  margin-left: em(75);
+}
+
+.other-apps-item-title {
+  @include rem ('font-size',14);
+  line-height: em(18,14);
+  padding-bottom: em(9,14);
+}
+
+.other-apps-item-description {
+  @include rem ('font-size',12);
+  line-height: em(18,12);
+  color: $gray;
+}
+  
+
+
+  
+

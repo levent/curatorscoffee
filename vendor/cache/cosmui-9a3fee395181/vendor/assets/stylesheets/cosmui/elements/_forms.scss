@@ -1,0 +1,645 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   FORMS   
+
+*/
+
+fieldset {
+  padding: em(18) 0;
+  
+  legend {
+    display: block;
+    padding: 1em 0 1em;
+    margin-top: 1em;
+    @include rem ('font-size', 18);
+    line-height: 1em;
+    color: $grayDark;
+    width: 100%;
+    text-indent: em(150,18);
+    *padding: 0 0 5px em(145,18); /* IE6-7 */
+    *line-height: 1.5; /* IE6-7 */
+  }
+  
+  & + fieldset {
+    legend {
+      padding-top: em(36,18);
+      border-top: 1px solid $borderGray;
+    }
+  }
+  
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+form .field {
+  @include rem ('font-size', 13);
+  margin-bottom: em(18);
+  padding: em(3) 0;
+  @include clearfix();
+  
+  &.bordered-top {
+    padding-top: em(21);
+  }
+  
+  .ie7 & {
+    position: relative; // help for placeholder fallback
+  }
+}
+
+label,
+input,
+select,
+textarea {
+  @include sans-serif-font();
+  @include rem ('font-size', 13);
+  -webkit-font-smoothing: antialiased;
+}
+
+label {
+  padding: em(5) 0 em(7);
+  @include rem ('font-size', 13);
+  line-height: 1.4em;
+  float: left;
+  width: em(130);
+  text-align: right;
+  font-weight: bold;
+}
+
+form .input {
+  margin-left: em(150);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  display: inline-block;
+  width: 100%;
+  max-width: em(200);
+  padding: .41em;
+  @include rem ('font-size', 13);
+  line-height: 1.4em;
+  color: $gray;
+  border: 1px solid $grayLighter;
+  @include border-radius(.25em);
+}
+
+input.leveled {  
+  background: transparent;
+  border-color: $borderGray;
+  color: $gray;
+  $shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 1px 0 rgba(255,255,255,.75);
+  @include box-shadow($shadow);
+  
+  &:hover {
+    color: darken($gray, 10);
+    border-color: darken($grayLight, 5);
+    $shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 1px 2px rgba(0,0,0,.05);
+    @include box-shadow($shadow);      
+  }
+  &:focus {
+    background: white;
+    outline: 0;
+    border-color: rgba($primary,.8);
+    $shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba($primary,.6);
+    @include box-shadow($shadow);
+  }
+}
+
+select {
+  padding: initial;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  width: 1.2em;
+  padding: 0;
+  margin: 1px 0;
+  *margin-top: 0; /* IE6-7 */
+  line-height: normal;
+  border: none;
+}
+
+input[type=file] {
+  background-color: transparent;
+  padding: initial;
+  border: initial;
+  line-height: initial;
+  @include box-shadow(none);
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  width: auto;
+  height: auto;
+}
+
+select,
+input[type=file] {
+  @include rem ('font-size', 13);
+  height: 2.33em; // In IE7, the height of the select element cannot be changed by height, only font-size
+  *height: auto; // Reset for IE7
+  line-height: 2.33em;
+  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
+}
+
+select[multiple] {
+  height: inherit;
+  @include rem ('font-size', 15);
+  margin: .35em 0 .45em;
+  background-color: $white; // Fixes Chromium bug of unreadable items
+  
+  option {
+    border-bottom: 1px solid $grayLighter;
+  }
+}
+
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+.uneditable-input {
+  background-color: $white;
+  display: block;
+  border-color: $grayLighter;
+  @include box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+  cursor: not-allowed;
+}
+
+:-moz-placeholder {
+  color: $grayLight;
+}
+::-webkit-input-placeholder {
+  color: $grayLight;
+}
+
+input,
+textarea {
+  $transition: border linear .2s, box-shadow linear .2s;
+  @include transition($transition);
+  @include box-shadow(inset 0 1px 3px rgba(0,0,0,.1));
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-color: rgba($primary,.8);
+  $shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba($primary,.6);
+  @include box-shadow($shadow);
+}
+
+input[type=file]:focus,
+input[type=checkbox]:focus,
+select:focus {
+  @include box-shadow(none); // override for file inputs
+  outline: 1px dotted #666; // Select elements don''t get box-shadow styles, so instead we do outline
+}
+
+@mixin formFieldState($textColor: #555, $borderColor: #ccc, $backgroundColor: #f5f5f5) {
+
+  > label,
+  .help {
+    color: $textColor;
+  }
+  
+  input,
+  textarea {
+    color: $textColor;
+    border-color: $borderColor;
+    &:focus {
+      border-color: darken($borderColor, 10%);
+      @include box-shadow(0 0 6px lighten($borderColor, 20%));
+    }
+  }
+  
+  .input-prepend .add-on,
+  .input-append .add-on {
+    color: $textColor;
+    background-color: $backgroundColor;
+    border-color: $textColor;
+  }
+
+  .placeholder {
+    color: darken($borderColor,15);
+  }
+}
+
+
+form .field.error,
+form.error {
+  @include formFieldState($errorText, $errorBorder, $errorBackground);
+}
+
+form .field.warning {
+  @include formFieldState($warningText, $warningBorder, $warningBackground);
+}
+
+form .field.success {
+  @include formFieldState($successText, $successBorder, $successBackground);
+}
+
+.input-mini,
+input.mini,
+textarea.mini,
+select.mini {
+  width: em(60);
+}
+
+.input-small,
+input.small,
+textarea.small,
+select.small {
+  width: em(90);
+}
+
+.input-medium,
+input.medium,
+textarea.medium,
+select.medium {
+  width: em(150);
+}
+
+.input-large,
+input.large,
+textarea.large,
+select.large {
+  width: em(210);
+}
+
+.input-xlarge,
+input.xlarge,
+textarea.xlarge,
+select.xlarge {
+  width: em(270);
+}
+
+.input-xxlarge,
+input.xxlarge,
+textarea.xxlarge,
+select.xxlarge {
+  width: 97%;
+  max-width: em(530);
+}
+
+textarea.xxlarge {
+  overflow-y: auto;
+}
+
+.input-maxlarge,
+input.maxlarge,
+textarea.maxlarge,
+select.maxlarge {
+  max-width: none;
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: lighten($grayLighter,14);
+  border-color: $grayLighter;
+  cursor: not-allowed;
+}
+
+form .actions {
+  @include rem ('font-size', 13);
+  margin-top: em(18);
+  margin-bottom: em(18);
+  padding: em(17) em(18) 0 em(150);
+  border-top: 1px solid $borderGray;
+  @include border-radius(0 0 3px 3px);
+  @include clearfix();
+  .secondary-action {
+    float: right;
+    margin-left: .5em;
+    margin-right: 0;
+  }
+  .button {
+    float: left;
+    margin-right: .5em;
+  }
+  
+  &:last-child {
+    margin-bottom: 0 !important;
+    
+    .button {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.help-inline,
+.help-block {
+  .help {
+    margin-top: em(3);
+    @include rem ('font-size', 13);
+    line-height: em(18);
+    color: $grayLight;
+  }
+}
+.help-inline {
+  .help {
+    padding-left: em(5);
+    *position: relative; /* IE6-7 */
+    *top: -5px; /* IE6-7 */
+  }
+}
+
+.help-block {
+  .help {
+    display: block;
+    max-width: em(600);
+  }
+}
+
+.inline-inputs {
+  color: $gray;
+  span {
+    padding: 0 em(2) 0 em(1);
+  }
+}
+
+.input-prepend,
+.input-append {
+  input {
+    @include border-radius(0 3px 3px 0);
+  }
+  .add-on {
+    position: relative;
+    background: lighten($grayLighter,10);
+    border: 1px solid $grayLighter;
+    z-index: 2;
+    float: left;
+    display: block;
+    width: auto;
+    min-width: em(16);
+    height: em(18);
+    padding: em(5) em(7) em(5) em(7);
+    margin-right: -1px;
+    @include rem ('font-size', 13);
+    font-weight: normal;
+    line-height: 18px;
+    color: $grayLight;
+    text-align: center;
+    text-shadow: 0 1px 0 $white;
+    @include border-radius(3px 0 0 3px);
+  }
+  .active {
+    background: $successBackground;
+    border-color: $successBorder;
+    color: $successText;
+  }
+}
+
+.input-prepend {
+  .add-on {
+    *margin-top: 1px; /* IE6-7 */
+  }
+}
+
+.input-append {
+  input {
+    float: left;
+    @include border-radius(3px 0 0 3px);
+  }
+  .add-on {
+    @include border-radius(0 3px 3px 0);
+    margin-right: 0;
+    margin-left: -1px;
+  }
+}
+
+.inputs-list {
+  margin: 0;
+  padding: em(6) 0 em(3);
+  width: 100%;
+  li {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  label {
+    position: relative;
+    display: block;
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 0 0 em(9) 1.55em;
+    line-height: em(18);
+    text-align: left;
+    font-weight: normal;
+    white-space: normal;
+    small {
+      font-size: 13px - 2;
+      font-weight: normal;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &.disabled {
+      color: $grayLight;
+    }
+  }
+  .inputs-list {
+    margin-left: 25px;
+    margin-bottom: 10px;
+    padding-top: 0;
+  }
+  input[type=radio],
+  input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }  
+  li + li {
+    label {
+      padding-top: em(9);
+    }
+    input[type=radio],
+    input[type=checkbox] {
+      top: em(9);
+    }  
+  }
+}
+
+.field.required {
+  & > label {
+    position: relative;
+    &:after { 
+      content: "*";
+      position: absolute;
+      top: 0;
+      right: -.75em;
+    }
+  }
+}
+
+form .required-notice {
+  color: darken($grayLight,5);
+  @include rem ('font-size',11);
+  line-height: em(18,11);
+  margin-left: em(150,11);
+  
+  em {
+    position: relative;
+    top: .25em;
+    font-size: 2em;
+    line-height: inherit;
+  }
+}
+
+form .placeholder {
+  color: $grayLight;
+}
+
+
+/* ----------------------------------------
+   STACKED
+*/
+
+form.stacked {
+  .field {
+    padding: 0;
+  
+    &.bordered-top {
+      padding-top: em(21);
+    } 
+  }
+
+  legend {
+    text-indent: 0;
+  }
+  
+  label {
+    display: inline-block;
+    float: none;
+    width: auto;
+    line-height: em(18);
+    text-align: left;
+  }
+  
+  .input {
+    margin-left: 0;
+  }
+  
+  .required-notice {
+    margin-left: 0;
+  }
+  
+  .actions {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+/* ----------------------------------------
+   COMPACT
+*/
+
+form.compact {
+  fieldset {
+    margin-top: 0;
+    padding: 1em 0;
+  
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  
+  legend {
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  .field {
+    margin-bottom: .5em;
+  }
+  
+  fieldset + fieldset {
+    legend {
+      padding-top: 1em;
+    }
+  }
+  
+  .inputs-list {
+    label {
+      padding-bottom: 0;
+    }
+  }
+  
+  .field.bordered-top,
+  .actions {
+    margin-top: em(9);
+    padding-top: em(8);
+  }
+  
+  .actions {
+    padding-bottom: 0;
+    margin-bottom: em(9);
+  }
+  
+  &.stacked {
+    label {
+      padding-bottom: em(3);
+    }
+  
+    .field.bordered-top,
+    .actions {
+      margin-top: em(16);
+    }
+  
+    .inputs-list {
+      label {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+  
+/* ----------------------------------------
+   IE ADJUSTMENTS
+*/
+
+.oldie {
+  input:focus,
+  textarea:focus {
+    border-color: $primary;
+  }
+
+  form .field.error,
+  form.error {
+    input:focus,
+    textarea:focus {
+      border-color: $errorText;
+    }    
+  }
+
+  form .field.warning {
+    input:focus,
+    textarea:focus {
+      border-color: $warningText;
+    }   
+    
+  }
+  
+  form .field.success {
+    input:focus,
+    textarea:focus {
+      border-color: $successText;
+    }       
+  }
+}

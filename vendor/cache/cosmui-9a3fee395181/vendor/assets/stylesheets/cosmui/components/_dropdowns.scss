@@ -1,0 +1,193 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   DROPDOWNS
+ 
+*/
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-toggle {
+  *margin-bottom: -3px;
+  
+  &:after {
+    font-family: $iconfont;
+    position: relative;
+    top: -.2em;
+    float: right;
+    font-size: 1.5em;
+    line-height: inherit;
+    margin-left: .1em;
+    color: $grayLight;
+  }
+  
+  &:hover,
+  &.active,
+  &:active {
+    &:after {
+      color: $gray;
+    }
+  }
+}
+
+.dropdown-toggle:active,
+.open .dropdown-toggle {
+  outline: 0;
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: em(200,14);
+  min-width: em(75,14);
+  padding: em(12,14);
+  margin: 10px 0 0; // override default ul  
+  z-index: $zindexDropdown;
+  list-style: none;  
+  @include rem ('font-size',14);
+  background: white;
+  border: 1px solid $borderGray;
+  @include border-radius(.4em);
+  @include box-shadow('15px 18px 8px rgba(0,0,0,.1)');
+  
+  &.activity {
+    width: em(220,14);
+    max-width: none;
+  }
+
+  a {
+    display: block;
+    padding: 3px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    
+    color: $base;    
+    &:visited { color: $base; }
+    &:focus { color: $primary !important; } 
+    &:hover { color: $primary; } 
+        
+    &.icon {
+      padding-left: em(30,14);
+    
+      &:before,
+      i.icon.icon-fallback {
+        position: absolute;
+        top: -.1em;
+        left: 0;
+        color: $grayLighter;
+        width: .8em;
+        text-align: center;
+      }
+      
+      &:hover:before,
+      &:hover i.icon.icon-fallback {
+        color: $primary;
+      }
+    }
+  }
+   
+  .inputs-list {
+    padding: 0;   
+    min-width: em(140); 
+    
+    li {
+      width: auto;
+      margin: 0;
+      padding: .25em 0;
+      line-height: em(18);
+      color: $base;
+      border: none;
+    }
+      
+    label {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    
+    input[type="checkbox"], input[type="radio"] { top: 0; }
+  }
+  
+  ul {
+    margin-bottom: 0;
+  }
+  
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left:   7px solid transparent;
+    border-right:  7px solid transparent;
+    border-bottom: 7px solid $borderGray;
+    position: absolute;
+    top: -7px;
+    left: 9px;
+  }
+  
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left:   6px solid transparent;
+    border-right:  6px solid transparent;
+    border-bottom: 6px solid white;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+  
+  &.aligned-right {   
+    &:before, &:after { left: auto; }
+    &:before { right: 14px; }
+    &:after { right: 15px; }
+  }
+  
+  &.dropdown-menu-south {
+    margin-top: 0;  
+    
+    &:before {
+      border-left:   7px solid transparent;
+      border-right:  7px solid transparent;
+      border-top: 7px solid $borderGray;
+      border-bottom: none;
+      top: auto;
+      bottom: -7px;
+      left: auto;
+      right: 14px; 
+      margin-left: -7px;
+    }
+    
+    &:after {
+      border-left:   6px solid transparent;
+      border-right:  6px solid transparent;
+      border-top: 6px solid white;
+      border-bottom: none;
+      top: auto;
+      bottom: -6px;
+      left: auto;
+      right: 15px; 
+      margin-left: -6px;
+    }
+  }
+    
+  .dropdown-menu-header {
+    padding: em(13) 0 em(6);
+    
+    &:first-child { padding-top: 0; }
+  }
+  
+  &.open {
+    display: block;
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .oldie & {
+    border: 1px solid $borderGray;
+    border-bottom: 3px solid $borderGray;
+  }
+}

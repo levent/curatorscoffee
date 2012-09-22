@@ -1,0 +1,1050 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   WIDTH 520 (px)
+ 
+*/
+
+@media only screen and (max-width: 520px) { 
+  
+  .container {
+    position: relative;
+  }
+  
+  /* ----------------------------------------
+     HEADER
+  */
+  
+  .container .main-header,
+  .container-connected .main-header {
+    
+    .branding {
+      width: em(171);
+      margin-right: 0;
+      
+      h1 a {
+        padding-right: 0;
+      }
+    }
+    
+    .search,
+    .alt-navigation {
+      float: right;
+    }
+    
+    .alt-navigation {
+      width: em(80);
+      margin-left: em(5);
+    }
+    
+    .search {
+      z-index: 1;
+      margin-left: em(5,14);
+      
+      .search-query {
+        &:focus {
+          width: 5em;
+        }
+      }
+    }
+    
+    .main-header-sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+    
+  .user-menu {
+    max-width: none;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 0;
+    background-color: lighten($grayLighter,5);
+    border-bottom: 1px solid white;
+    @include box-shadow ('inset 0 2px 2px rgba(0, 0, 0, 0.1)');
+    @include border-radius (0);
+    text-shadow: 0 1px 0 lighten($grayLighter,15);
+    
+    .user-menu-header, .user-menu-content { background-color: transparent; }
+    &:before { display: none; }
+    .user-menu-header.bordered { border-bottom-color: $grayLighter; }
+    
+    &.expanded {
+      border-bottom: 1px solid $grayLighter;
+      $shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+      @include box-shadow ($shadow);
+    }
+    
+    nav a {
+      padding: em(9,16) 0;
+      @include rem ('font-size',16);
+      
+      &:before {
+        font-size: 2.5em;
+        color: $grayLight;
+        text-shadow: 0 1px 0 lighten($grayLighter,15);
+      }
+    }
+    
+    .icon-activity:before {
+      text-shadow: 0 1px 0 white;
+    }
+    
+    &.user-menu-login {
+      input {
+        width: em(80,12);
+        padding: em(3,12) em(5,12);
+        @include rem ('font-size',12);
+      }
+      
+      .icon-only {
+        right: auto;
+        left: em(197,14);
+        top: em(10,14);
+        background: $grayLight;
+        color: white;
+        
+        &:hover,
+        &:focus {
+          color: $primary;
+          background: white;            
+        }
+      }
+    }
+  }  
+  
+  .main-content > header {
+    h2, h3 {
+      width: 100%;
+      float: none;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    
+    .actions {
+      text-align: right;
+      width: 100%;
+      display: block;
+      float: none;
+      @include clearfix();
+      
+      .button-secondary {
+        float: right;
+      }
+      
+      .dropdown-menu {
+        text-align: left;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     ACTIONS
+  */
+      
+  .box-header .actions,
+  .list-item-header .actions {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: none;
+    @include clearfix();
+    
+    .circle {
+      float: right;
+    }
+  }
+  
+  /* ----------------------------------------
+     BOXES & LIST ITEMS
+  */
+    
+  .box-header {    
+    .dashboard-link {
+      margin-top: em(9,11) !important;
+    }
+  }
+      
+  .box-header-title,
+  .list-item-title {
+    width: 100%;
+    float: none;
+    padding-bottom: 18px;
+  }
+  
+  .list-item-header {
+    padding-bottom: 18px;
+  }
+  
+  /* ----------------------------------------
+     FEED SUMMARY
+  */
+
+  .feed-summary,
+  .datastream-box {
+    padding: 0;
+    
+    .box-content {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+  
+  .feed-summary-content {
+    padding-bottom: 8px;
+    min-height: 0;
+  }
+
+  .feed-summary-datastreams {
+    padding: 35px 10px 10px 0;
+    overflow-x: auto;
+    border: none;
+    min-height: 0;
+  }
+  
+  .feed-summary-datastreams-empty {
+    padding: 18px 18px 10px;
+    line-height: 30px;
+    border-top: 1px solid $background;
+    
+    .button {
+      margin-bottom: 0;
+    }
+  }
+  
+  .feed-datastream-table {
+    border-right: 18px solid white;
+  }
+    
+  .feed-datastream-graph {
+    padding-bottom: 50px;
+    width: 320px;
+    
+    .innerCell {
+      width: 320px;
+    }
+  }
+  
+  .feed-datastream-id {
+    top: -40px;
+    left: 0;
+    width: 310px;
+    padding-top: 10px;
+    opacity: 1;
+    color: $gray;
+    border: none;
+    white-space: nowrap;
+  }
+  
+  /* ----------------------------------------
+     USER SUMMARY
+  */
+  
+  .user-summary {
+    h3 {
+      float: none;
+      padding-bottom: 36px;
+    }
+    footer {
+      width: 100%;
+      float: none;
+    }
+    footer .circle {
+      float: right;
+      @include opacity (100);
+    }    
+  }
+  
+  /* ----------------------------------------
+     SIDEBAR
+  */
+  
+  .main-sidebar {
+    
+    .box {
+      width: 100%;
+      float: none;
+    }
+    
+    .box:nth-child(odd) {
+      float: none;
+    }
+  }
+  
+  /* ----------------------------------------
+     SEARCH PAGE
+  */
+  
+  #main .search {
+    margin-top: - em(15,14);
+    margin-left: 0;
+    width: 100%;
+        
+    .search-query {
+      width: 81%;
+      padding-left: 4%;
+      padding-right: 15%;    
+    }
+  }
+  
+  /* ----------------------------------------
+     LIST ITEM
+  */
+  
+  .list-item-accessory-icon {
+    position: absolute;
+    top: - em(80);
+    right: - em(16);
+    width: em(20);
+    height: em(20);
+  }
+  
+  .list-item-header-title {
+    margin-right: em(50,16);
+  }
+  
+  /* ----------------------------------------
+     SEARCH RESULTS
+  */
+      
+  .search-result-description,
+  .search-result-footer {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .list-item-accessory-icon + .search-result-description,
+  .search-result-description:nth-child(2) {
+    padding-top: 0;
+  }
+  
+  /* ----------------------------------------
+     API KEYS
+  */
+  
+  .api-keys {
+    header .button-secondary {
+      position: absolute;
+      top: em(15);
+      right: 0;
+    }
+  
+    h4 {
+      width: 100%;
+    }
+    
+    .private-access {
+      margin-top: 5px;
+    }
+    
+    .expires {
+      position: absolute;
+      bottom: - em(30);
+      right: 0;
+      display: block;
+      margin-left: 0;
+      padding-top: em(9);
+    }
+    
+    .actions {
+      float: left;
+      clear: left;
+      padding-top: em(9);
+    }
+  }
+    
+  /* ----------------------------------------
+     SUPPORT INNER PAGE
+  */
+  
+  #main .support-page {
+    margin-top: - em(75);
+  }
+  
+  /* ----------------------------------------
+     DATASTREAM BOX
+  */
+  
+  .datastream-box-tags {
+    display: block;
+    clear: both;
+    padding: em(9) 0 0;
+    margin: 0;
+  }
+  
+  .datastream-box-content {
+    padding: 0;
+    padding-bottom: 18px;
+    min-height: 0;
+  }
+
+  .datastream-table-container {
+    padding: 0 18px 0 36px;
+    overflow-x: auto;
+    border: none;
+    min-height: 0;
+  }
+  
+  .datastream-table {
+    border-right: 18px solid white;
+  }
+    
+  .datastream-graph {
+    padding-bottom: 50px;
+    width: 500px;
+    
+    .datastream-graph-container,
+    .innerCell {
+      width: 500px;
+    }
+  }
+
+  .datastream-graph-current-value {
+    max-width: 150px;
+  }
+    
+  .datastream-graph-unit {
+    text-overflow: ellipsis;
+  }
+
+  .datastream-graph-empty {
+    text-align: right;
+    max-width: 190px;
+    left: auto;
+    right: 0;
+    
+    p {
+      @include rem ('font-size',12);
+      line-height: em(18,12);
+      padding: 0 em(18,12);
+    }
+  }
+    
+  .datastream-graph-empty-heading {
+    @include rem ('font-size',16);
+    line-height: em(18,16);
+    padding: em(10,16) em(18,16) em(18,16);
+    
+    &:before {
+      display: none;
+    }
+  }
+  
+  /* ----------------------------------------
+     FEED METADATA
+  */
+  
+  .feed-metadata {  
+    .box {
+      .feed-information {
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-bottom: em(18);
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     FEED COMMENTS
+  */
+  
+  .comment header .actions {
+    float: right;
+    clear: none;
+    padding-bottom: em(18);
+    
+    .icon {
+      float: right;
+    }
+  }
+  
+  .comment-user-name {
+    padding-bottom: 0;
+  }
+  
+  .comment-user {
+    float: none;
+  }
+  
+  .comment .list-item-header {
+    padding-bottom: 0;
+  }
+  
+  /* ----------------------------------------
+     FEED PAGE EDIT
+  */
+
+  #main form.feed-page-edit {
+    .actions-floating {   
+      h3 {
+        display: none;
+      }
+    }
+  }
+
+  .feed-edit-helper-title { 
+    display: block; 
+    
+    h2 {
+      padding-bottom: 0 !important;
+    }
+  }
+  
+  #main .feed-page-edit .feed-metadata section + section footer {
+    float: none;
+    width: 100%;
+    margin: 0 0 em(18) 0;
+    border: none;
+    padding: 0;
+  }
+  
+  /* ----------------------------------------
+     ERROR PAGES
+  */
+
+  #main .error-messaging {  
+    padding-top: em(30);
+    
+    .circle {
+      width: em(100,25);
+      height: em(100,25);
+      line-height: em(100,25);
+      background-size: em(100,25) em(100,25);      
+      
+      .circle-inner {
+        @include rem ('font-size',30);
+        line-height: em(100,30);
+      }
+    }
+    
+    h4 {
+      padding-top: 0 !important;
+      @include rem ('font-size',36);
+    }
+    
+    header {
+      text-align: center;
+    }
+    
+    p {
+      width: auto;
+    }
+  }
+  
+  /* ----------------------------------------
+     FEATURED PROJECTS
+  */
+  
+  .featured-project {
+    width: 100%;
+    margin: 0;
+    margin-bottom: em(9);
+    
+    & + .featured-project {
+      margin-bottom: 0;
+    }
+    
+    strong {
+      display: none;
+    }
+  }
+  
+  /* ----------------------------------------
+     PROJECT
+  */
+  
+  .featured-project-description,
+  .featured-project-media {
+    float: none;
+    width: 100%;
+  }
+  
+  .featured-project-media {
+    padding-top: em(36);
+  }
+  
+  /* ----------------------------------------
+     SUPPORT HOME
+  */
+  
+  #main .support {
+    .circle {  
+      float: left;
+      clear: both;
+      margin-right: em(9);
+    }   
+    
+    .grid-row {
+      padding: 0;
+      
+      & + .grid-row {
+        padding: 0;
+      }
+    }
+      
+    .grid-4 {
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: em(18);
+      float: none;
+      text-align: left;
+      @include clearfix();
+      
+      h3 {
+        margin-top: 0;
+        padding: em(13,18) 0;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     HOMEPAGE
+  */
+  
+  header[role="banner"] .signup-button { 
+    position: absolute;
+    top: - em(12);
+    right: 0;
+    z-index: 99;
+    padding-top: em(2);
+    padding-bottom: em(3);
+  }
+  
+  #main.homepage {  
+  
+    .main-content .featured-project h4 {
+      top: auto;
+      right: auto;
+      bottom: - em(11,18);
+      left: em(70,18);
+      padding: em(10,18);
+      z-index: 2;
+      background-color: $background;
+      @include border-radius (0 em(50,18) 0 0);
+      
+      strong {
+        @include rem ('font-size',16);
+      }
+    }
+    
+    .main-content .featured-project {
+      margin-bottom: 0;
+      width: em(642);
+    }
+    
+    .main-content .more-info div {
+      width: em(180,14);
+        
+      &:after {
+        height: em(20,14);
+        width: 0;
+        border: none;
+        border-left: 1px solid $borderGray;
+        top: -20px;
+        left: 84px;
+      }
+    }
+    
+    .main-content .more-info.first div:after {
+      left: 30px;
+    }
+    
+    .main-content .more-info.third div:after {
+      left: 134px;
+    }
+    
+    .main-content header {
+      padding-top: 2em;
+    }
+  
+    .main-content .circle.how-it-works {
+      position: relative;
+      top: 0;
+      left: 50%;
+      margin-left: -143px;
+    }
+    
+    .main-sidebar .sign-up {
+      position: static;
+      right: auto;
+      width: 100%;
+      float: none;
+      height: auto;
+      margin: em(18) 0;
+      
+      form .field input {
+        width: 100%;
+      }
+    }    
+  }
+  
+  .main-sidebar .sign-up:not(.on-line) {
+    width: 100%;
+    float: none;
+  }
+  
+  /* ----------------------------------------
+     FEATURED PROJECTS
+  */
+  
+  .featured-projects .featured-project {
+    width: 100%;
+    float: none;
+    margin: 0;
+    margin-bottom: em(18);
+  }
+  
+  /* ----------------------------------------
+     OAUTH
+  */
+  
+  .oauth-logged-out {  
+    .box .box-content form,
+    .box .box-content p {
+      text-align: center;
+    }
+    
+    #login,
+    #password {
+      margin: 0;
+      margin-bottom: em(9);
+    }
+  }
+  
+  .container.oauth-logged-out {
+    header[role="banner"] {
+      padding-top: 0;
+  
+      .signup-button { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        padding: em(5) em(10);
+      }
+    }
+  }
+  
+  .oauth #main {
+    .box .box-content form {
+      text-align: center;
+    }
+  }
+  
+  /* ----------------------------------------
+     HOW IT WORKS
+  */
+  
+  #main .how-it-works {
+    .box-header {
+      padding-left: 0;
+      padding-right: 0;
+      
+      .circle {
+        margin-left: em(9,36);
+      }
+      
+      h3 {
+        @include rem ('font-size',22);
+        padding-left: em(18,22);
+        padding-right: em(18,22);
+      }
+    }
+  
+    .box-content {
+      section {
+        width: 100%;
+        float: none;
+        clear: both;
+        
+        h4 {
+          padding-bottom: em(18,64);
+        }
+        
+        h5 {
+          @include rem ('font-size',18);
+        }
+        
+        p {
+          height: auto;
+          @include rem ('font-size',14);
+          line-height: em(18,14);
+          padding-bottom: em(18,14);
+        }
+      }
+    }
+    
+    .tagline {
+      margin-top: em(30,34);
+    }
+  }
+  
+  /* ----------------------------------------
+     ABOUT US
+  */
+  
+  .about-us {
+    .lead { 
+      @include rem ('font-size',18);
+    }    
+  
+    li,
+    li.our-community,
+    li.our-commercial-side {
+      padding: 0 0 em(40);
+      background: none;
+    }
+  }
+  
+  /* ----------------------------------------
+     MODAL
+  */
+  
+  .modal {
+    .box-header,
+    .box-content {
+      padding-left: em(18);
+      padding-right: em(18);
+    }
+  }
+  
+  /* ----------------------------------------
+     STEPS
+  */
+  
+  [data-cosmui="steps"] {
+    .pick-one {
+      li {
+        height: em(80);
+      }
+    
+      a {
+        padding: em(18,18) em(18,18) 0 em(100,18); 
+        height: em(60,18);
+        text-indent: 0;
+        padding-left: 0;
+        text-align: center;
+        
+        span {
+          text-align: center;
+        }
+      }
+    
+      .arduino,
+      .currentCost,
+      .generic,
+      .twitter { 
+        background: none; 
+        &:before {
+          display: none;
+        }
+      }
+    }
+    
+    .form-steps {
+      .actions {
+        margin-top: em(9);
+      }
+      
+      textarea,
+      input[type="text"] {
+        width: 96%;
+        max-width: none;
+      }
+      
+      ol.configure {
+        max-width: 100%;
+        
+        li {
+          padding-left: 0;
+          width: 45%;
+          
+          &:before {
+            display: none;
+          }
+        } 
+      }
+    }
+  }
+
+  /* ----------------------------------------
+     ADD TRIGGER
+  */
+  
+  #addTrigger {
+    .pick-one a {
+      &:before {
+        display: inline-block;
+        top: .15em;
+        float: none;
+        margin-left: 0;
+        @include rem ('font-size',35);
+      }
+    }
+    .form-steps-header h3 {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     SUPPORT HOME
+  */
+  
+  #main .support-page {
+    .hardware-item,
+    .hardware-item-left,
+    .hardware-item-right {
+      width: 100%;
+      float: none;
+      padding-left: 0;
+      padding-right: 0;
+      
+      header,
+      .content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    
+    .hardware-item + .hardware-item {
+      border-top: 1px solid $borderGray;
+      padding-top: em(18)
+    }
+  }
+  
+  /* ----------------------------------------
+     APPS
+  */
+  
+  .main-content > header h2.icon:before {
+    float: none;
+    display: inline-block;
+    top: -.05em;
+  }
+  
+  .app .app-icon {
+    float: none;
+    margin-bottom: em(18);
+  }
+  
+  .app-information-meta {
+    h4,
+    p,
+    .tags {
+      margin-left: 0;
+    }
+  }
+
+  
+  /* ----------------------------------------
+     EVENTS LIST
+  */
+
+  .events-list-item {
+    padding-left: 0;
+  }
+  
+  .events-list-item-title {
+    padding-bottom: em(9,16);
+  }
+  
+  .events-item-meta {
+    position: static;
+  }
+  
+  .events-item-date {
+    float: left;
+    margin-right: em(18);
+  }
+  
+  .events-item-date-end {
+    margin-top: 0;
+    
+    &:before {
+      top: -2px;
+      left: -15px;
+    }
+  }
+  
+  .events-item-location,
+  .events-box .list-item-content {
+    clear: both;
+  }
+
+  
+  /* ----------------------------------------
+     CONSOLE MINIMAL
+  */
+  
+  .no-summaries.box {
+    text-align: center;
+    
+    .circle-medium {
+      float: none;
+    }
+    
+    h3 {
+      padding: 0 0 em(18,32);
+    }
+  }
+
+  /* ---------------------------------------
+     Curators Coffee Minimal
+  */
+
+  .slides-container {
+    display: none;
+  }
+
+  #main.curatorscoffee {
+    margin-top: em(0);
+    
+    h1 a {
+      @extend .ir;      
+      @include rem ('font-size',65);
+      text-transform: lowercase;
+      color: $primary;
+      width: 300px;
+      height: 224px;
+      @include rem ('font-size',65);
+      background: transparent asset-url('logo-studio-stamp.png', image) no-repeat left top;
+      @include opacity(100);
+      @include transition (opacity ease-out .25s);
+
+      &:hover,
+      &:focus { 
+        cursor: pointer; 
+        @include opacity(75);
+      }
+    }
+
+    header {
+      padding: 0.5em 0.5em 0.5em 0;
+    }
+    
+    header h3 {
+      @include rem ('font-size',18);
+      font-weight: 200;
+      line-height: em(30,22);
+      text-align: justify;
+    }
+
+    article { 
+      p {
+        @include rem ('font-size', 16);
+      }
+      &.info {
+        margin-top:2em;
+      }
+    }
+  }
+}

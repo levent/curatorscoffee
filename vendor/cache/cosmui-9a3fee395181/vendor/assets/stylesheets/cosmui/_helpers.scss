@@ -1,0 +1,354 @@
+/* -----------------------------------------------------------------
+
+#
+# Helpers.scss
+#
+
+--------------------------------------
+
+# Typography
+
+  @ font-size       (size in px) does math for rem and adds the px fallback for older browsers
+  @ font-size       (size in px) does math for rem and adds the px fallback for older browsers
+
+--------------------------------------
+
+# Misc
+
+  .clearfix         clearing floats
+  .ir               image-replacement
+  .hidden           hide an element
+  .visuallyhidden   hide an element but keep it for screen readers
+  .invisible        hide an element while retaining the space it occupied
+  
+  @ clearfix        mixin for .clearfix  
+  @ center-block    center an block element
+  @ size            (width, height)
+  @ square          (size)
+  @ placeholder     (color)
+  @ reset-filter
+
+--------------------------------------
+
+# CSS3
+
+  @ opacity         (0 - 100)
+  @ border-radius   (value)
+  @ transition      (value) don't use values like -webkit-transform because each of those needs it's own prefix
+  @ box-shadow      (value)
+  @ transform       (value)
+  
+  @ horizontal-gradient
+  @ vertical-gradient
+  @ directional-gradient
+  @ vertical-three-colors-gradient
+  @ gradientBar
+
+--------------------------------------
+
+# PLUGIN :: Google Code Prettify
+
+*/ 
+  
+/* ----------------------------------------
+   Z-INDEX
+*/
+
+$zindexDropdown:        1000;
+$zindexPopover:         1010;
+$zindexTooltip:         1020;
+$zindexFixedNavbar:     1030;
+$zindexModalBackdrop:   1040;
+$zindexModal:           1050;
+
+/* ----------------------------------------
+   TYPOGRAPHY
+*/
+
+@mixin rem ($property: 'font-size', $value: 13) {
+  #{$property}: $value + px;
+  #{$property}: ($value / 16) + rem;
+}
+
+@mixin em ($property: 'font-size', $value: 13) {
+  #{$property}: ($value / 13) + em;
+}
+
+@function em($n: 18, $base: 13) {
+  @return $n / $base + em;
+}
+
+@mixin default-font() {
+  @include font-size(13);
+  @include absolute-line-height(18);
+}
+
+ 
+
+/* ----------------------------------------
+   MISC
+*/
+
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.clearfix { @include clearfix; }
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.inline { display: inline; }
+.block { display: block; }
+.no-margin { margin-bottom: 0 !important; }
+.align-center { text-align: center; }
+.scroll-x { overflow-x: auto; }
+.scroll-y { overflow-y: auto; }
+  
+/* ----------------------------------------
+   POSITION
+*/
+
+@mixin center-block {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+  
+/* ---------------------------------------
+   SQUARES
+*/
+
+@mixin size($width: 5px, $height: 5px) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size: 5px) {
+  @include size($size, $size);
+}
+  
+/* ----------------------------------------
+   PLACEHOLDERS
+*/
+
+@mixin placeholder($color: $grayLight) {
+  :-moz-placeholder {
+    color: $color;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin reset-filter() {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+  
+/* ----------------------------------------
+   CSS3
+*/
+
+@mixin opacity($opacity: 100) {
+  @if $opacity == 100 {
+    filter: none; // better for IE7
+  } @else {
+    filter: alpha(opacity=$opacity);
+  }
+  -khtml-opacity: $opacity / 100;
+    -moz-opacity: $opacity / 100;
+         opacity: $opacity / 100;
+}
+
+@mixin border-radius ($radii) {
+  -webkit-border-radius: $radii;
+     -moz-border-radius: $radii;
+          border-radius: $radii;
+}
+
+@mixin border-radius-top ($radii) {
+   -webkit-border-top-left-radius: $radii;
+       -moz-border-radius-topleft: $radii;
+           border-top-left-radius: $radii;
+  -webkit-border-top-right-radius: $radii;
+      -moz-border-radius-topright: $radii;
+          border-top-right-radius: $radii;
+}
+
+@mixin border-radius-bottom ($radii) {
+   -webkit-border-bottom-left-radius: $radii;
+       -moz-border-radius-bottomleft: $radii;
+           border-bottom-left-radius: $radii;
+  -webkit-border-bottom-right-radius: $radii;
+      -moz-border-radius-bottomright: $radii;
+          border-bottom-right-radius: $radii;
+}
+
+@mixin border-radius-right ($radii) {
+     -webkit-border-top-right-radius: $radii;
+         -moz-border-radius-topright: $radii;
+             border-top-right-radius: $radii;
+  -webkit-border-bottom-right-radius: $radii;
+      -moz-border-radius-bottomright: $radii;
+          border-bottom-right-radius: $radii;
+}
+
+@mixin border-radius-left ($radii) {
+     -webkit-border-top-left-radius: $radii;
+         -moz-border-radius-topleft: $radii;
+             border-top-left-radius: $radii;
+  -webkit-border-bottom-left-radius: $radii;
+      -moz-border-radius-bottomleft: $radii;
+          border-bottom-left-radius: $radii;
+}
+
+@mixin transition ($value) {  
+  -webkit-transition: #{$value};
+     -moz-transition: #{$value};
+      -ms-transition: #{$value};
+       -o-transition: #{$value};
+          transition: #{$value};
+}
+
+@mixin box-shadow ($value) {  
+  -webkit-box-shadow: #{$value}; 
+     -moz-box-shadow: #{$value}; 
+          box-shadow: #{$value}; 
+}
+
+@mixin transform ($value) {  
+  -webkit-transform: #{$value};
+     -moz-transform: #{$value};
+      -ms-transform: #{$value};
+       -o-transform: #{$value};
+          transform: #{$value};
+}
+  
+/* ----------------------------------------
+   GRADIENTS
+*/
+
+@mixin horizontal-gradient ($startColor: #555, $endColor: #333) {
+  background-color: lighten($endColor,3);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, right top, from($startColor), to($endColor)); // Konqueror
+  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+  background-image: -ms-linear-gradient(left, $startColor, $endColor); // IE10
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(left, $startColor, $endColor); // Le standard
+}
+
+@mixin vertical-gradient ($startColor: #555, $endColor: #333) {
+  background-color: lighten($endColor,3);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from($startColor), to($endColor)); // Konqueror
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -ms-linear-gradient(top, $startColor, $endColor); // IE10
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(top, $startColor, $endColor); // The standard
+}
+
+@mixin directional-gradient ($startColor: #555, $endColor: #333, $deg: 45deg) {
+  background-color: lighten($endColor,3);
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
+  background-image: -ms-linear-gradient($deg, $startColor, $endColor); // IE10
+  background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient($deg, $startColor, $endColor); // The standard
+}
+
+@mixin vertical-three-colors-gradient($startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f) {
+  background-color: lighten($endColor,3);
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
+  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -moz-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -ms-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+}
+  
+/* ----------------------------------------
+   GRADIENT BARS
+*/
+
+@mixin gradientBar($primaryColor, $secondaryColor) {
+  @include vertical-gradient($primaryColor, $secondaryColor);
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) opacify(rgba(0,0,0,.1), .15);
+}
+
+@mixin leveledGradientBar($primaryColor, $secondaryColor) {
+  color: white;
+  background: $secondaryColor;
+  border-color: $primaryColor $primaryColor darken($primaryColor, 15%);
+  border-color: rgba(0,0,0,.1);
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  $shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 0 rgba(255,255,255,.75);
+  @include box-shadow($shadow);
+  &:hover {
+    background: lighten($secondaryColor,5);
+    border-color: darken($secondaryColor,5) darken($secondaryColor,5) darken($secondaryColor, 20%);
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) opacify(rgba(0,0,0,.1), .15);
+    $shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.2);
+    @include box-shadow($shadow);
+  }
+  &:active {
+    background: lighten($secondaryColor, 5%);
+    $shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05);
+    @include box-shadow($shadow);
+  }
+}
+
+@mixin insetGradientBar($color) {
+  background: darken($color,3);
+  border-color: darken($color,8);
+  $shadow: inset -1px 1px 1px rgba(0,0,0,.5), inset 1px 1px 1px rgba(0,0,0,.5), 0 1px 0 white;
+  
+  &:hover {
+    color: white;
+    background: darken($color, 6);
+    border-color: darken($color,12);
+  }
+
+  &:active {
+    background: darken($color, 9);
+    $shadow: inset -2px 2px 4px rgba(0,0,0,.25), inset 2px 2px 4px rgba(0,0,0,.25), 0 1px 0 white;
+    @include box-shadow($shadow);         
+  }
+}
+  
+/* ----------------------------------------
+   IE7
+*/
+
+@mixin ie7-restore-right-whitespace() {
+  *margin-right: .3em;
+
+  &:last-child {
+    *margin-left: 0;
+  }
+}

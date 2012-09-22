@@ -1,0 +1,240 @@
+/* 
+ *
+ * Feed-page.scss 
+ *
+*/
+
+.feed-updated {
+  position: relative;
+  top: em(5,13);
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: em(10,13);
+  @include rem ('font-size',13);
+  color: $gray;
+  text-shadow: 0 1px 0 white;
+  float: right;
+}
+
+.feed-metadata {
+  width: 100%;
+  margin-bottom: em(18);
+  clear: both;
+  @include clearfix();
+  
+  section {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    float: left;
+    
+    .box {
+      margin-right: em(9);
+    }
+  }
+  
+  section + section .box {
+    margin-right: 0;
+    margin-left: em(9);
+  }
+  
+  .box {
+    padding: 0;
+    margin: 0;
+    
+    .box-content {
+      @include clearfix();
+    }
+    
+    .feed-information {
+      width: 40%;
+      float: right;
+      padding: em(10);
+      margin-left: em(18);
+      border: 1px solid $background;
+      
+      h5 {
+        display: block;
+        font-weight: normal;
+        
+        &:before,
+        .icon-fallback {
+          color: $grayLight;
+          font-size: 2em;
+        }
+        
+        &.icon-followers {
+          display: inline-block;
+          padding-bottom: 0;
+        }
+      }
+        
+      .bordered-bottom {
+        margin-left: - em(10,14);
+        margin-right: - em(10,14);
+        padding-left: em(10,14);
+        padding-right: em(10,14);
+        padding-bottom: em(9,14);
+        margin-bottom: em(9,14);
+        border-color: $background;
+        width: 100%;
+      }
+      
+      .follower-count {
+        font-weight: bold;
+        display: inline;
+        margin-left: 1em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .no-map {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: em(200);
+    text-indent: -999em;
+    overflow: hidden;
+    color: $grayLighter;
+    background: $background;
+    border: 1px solid $borderGray; 
+    text-shadow: 0 2px 0 white, 0 -2px 0 darken($grayLighter,3);
+    
+    &:before,
+    .icon-fallback {
+      content: ",";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-indent: 0;
+      @include rem ('font-size ',140);
+      margin-top: - em(30,140);
+      margin-left: - em(40,140);
+      font-family: $iconfont;
+    }
+    
+    .icon-fallback {
+      display: block;
+      line-height: 160px;
+      height: 160px;
+      margin-top: -110px;
+      margin-left: -50px;
+    }
+    
+    &.map-add-location:after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-indent: 0;
+      @include rem ('font-size ',60);
+      margin-top: - em(70,60);
+      margin-left: - em(60,60);
+      font-family: $iconfont;      
+    }
+    
+    &.map-add-location:hover {
+      color: $primary;
+      border-color: lighten($primary,20);
+      text-shadow: 0 2px 0 white, 0 -2px 0 darken($primary,10);
+    }
+  }
+  
+  .tags {
+    .view-more a {
+      color: $primary;
+    }
+  }
+  
+  .description {
+    @include rem ('font-size',14);
+    
+    [data-cosmui="toggler"] {
+      @include rem ('font-size',13);
+    }
+  }
+  
+  .feed-formats {
+    @include clearfix();
+    
+    li {
+      float: left;
+    }
+    
+    a {
+      display: inline-block;
+      padding: em(5) em(8) em(4);
+      margin-right: em(5);
+      font-weight: bold;
+      
+      &:hover {
+        background: darken($background,3);
+      }
+    }
+  }
+  
+  .feed-info {
+    color: $grayLight;
+    font-weight: bold;
+    margin-bottom: em(4);
+    
+    .feed-info-value {
+      color: $base;
+      font-weight: normal;
+    }
+    
+    a.feed-info-value {
+      color: $primary;
+      
+      &:hover { color: $primaryHover; }
+    }
+    
+    &.feed-id {
+      margin-bottom: em(9,20);
+      @include rem ('font-size',20);
+      color: $gray;
+      
+      .feed-info-value {
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .grid-row.bordered-top {
+    margin-top: em(18);
+    padding-top: em(17);
+    border-top: 1px solid $borderGray;    
+  }
+    
+
+  /* ----------------------------------------
+     NO MAP
+  */
+  
+  &.no-map {
+    section {
+      width: 100%;
+    }
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .ie9 & {
+    .box {
+      footer {
+        h5:before {
+          font-size: 55%;
+        }
+      }
+    }
+  }
+  
+  .ie7 & {
+    section {
+      width: 49.9%;
+    }
+  }
+}

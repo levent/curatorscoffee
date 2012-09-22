@@ -1,3 +1,12 @@
+GIT
+  remote: https://levent@github.com/levent/cosmui.git
+  revision: 9a3fee39518174b6d65e925f32e085c3cfe60731
+  branch: curators
+  specs:
+    cosmui (0.0.1)
+      railties (>= 3.1.3)
+      sass (>= 3.1.10)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -111,6 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  cosmui!
   dalli
   jquery-rails
   newrelic_rpm

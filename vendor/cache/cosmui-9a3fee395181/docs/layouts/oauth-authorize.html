@@ -1,0 +1,140 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Oauth Authorize - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="../favicon.ico" rel="shortcut icon">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../../vendor/assets/stylesheets/compiled/docs-cosmui.css">
+  <!--! end of stylesheets -->
+  
+  <!-- head scripts -->
+  <script src="../../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+</head>
+<body>
+
+<!-- #container -->
+  <div class="container oauth">
+
+    <!-- header -->
+    <header role="banner" class="main-header grid-row">
+    <nav class="content main-header-content grid-9 clearfix">
+        <hgroup class="branding">
+          <h1><a href="https://appdev.loc/">Cosm</a></h1>
+          <h2>Connect to your world</h2>
+        </hgroup>
+      </nav>
+      <aside class="sidebar main-header-sidebar grid-3" role="complementary">
+          <article role="navigation" class="user-menu box">
+  <header class="user-menu-header box-header">
+    <img alt="User-default" src="https://secure.gravatar.com/avatar/60a2161700b1b97bcb8f0a09582f5529.png?alt=The user profile picture.&amp;d=https://appdev.loc/assets/user-default.png&amp;r=PG&amp;s=24" />
+    <a class="user-menu-button dark" href="#" title="Go to my profile" data-cosmui="toggler" data-target="next">devadmin</a>
+    <nav class="user-menu-links closed"> <!-- user login links -->
+      <ul class="unstyled">
+        <li><a href="/logout " title="Logout of Cosm" class="dark icon icon-logout">Logout</a></li>
+      </ul>
+    </nav> <!--!  end of user login links -->
+  </header>
+</article>
+
+      </aside>
+    </header> <!--! end of header -->
+
+    <div id="main" class="grid-row">
+      <section role="main" class="content main-content main-content-full-width grid-12">
+
+        <header class="page-header">
+          <h2 class="page-header-title">Authorise appleluia to access your account?</h2>
+        </header>
+
+        
+
+        
+
+<article class="box">
+  <div class="box-content">
+    <p class="description">Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget.</p>
+
+    <section class="grid-row access-level bordered-bottom">
+      <div class="grid-6 access-permitted">
+        <h2>This app will be able to:</h2>
+        <ul><li>Read feeds</li></ul>
+      </div>
+
+      <div class="grid-6 access-denied">
+        <h2>This app will not be able to:</h2>
+        <ul><li>Update feeds</li><li>Delete feeds</li><li>Create feeds</li><li>Access private feeds</li></ul>
+      </div>
+    </section>
+
+    <form accept-charset="UTF-8" action="/oauth/authorise?client_id=06c0cc04653e0b1a5e5d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="NmamNEk9csQ8V0tLEngmVAiH4Bs2AN8utjJ4L04+zt4=" /></div>
+      <button type="submit" class="button button-primary button-large">
+        Authorise
+      </button>
+
+      <a href="http://example.com?error=access_denied" class="button button-large">Cancel</a>
+</form>  </div>
+</article>
+      
+      </section>
+      
+    </div> <!--! end of #main -->
+    
+    <!-- footer -->
+    <footer class="main-footer grid-row" role="contentinfo">
+      <p class="copyright no-margin">
+        &copy; 2012 Cosm, a <span class="ir">LogMeIn</span> company
+      </p>
+      <nav>
+        <ul class="unstyled no-margin clearfix">
+          <li>
+            <a href="#" title="Go to About Us">About Us</a>
+          </li>
+          <li>
+            <a href="#" title="Go to How it works">How it works</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Press">Press</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Terms of Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer> <!--! end of footer -->
+
+  </div> <!--! end of #container -->
+
+  <!-- scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.modal.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.steps.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.range.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  
+</body>
+</html>

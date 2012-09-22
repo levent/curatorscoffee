@@ -1,0 +1,89 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   TAGS
+
+*/
+
+/* ----------------------------------------
+   INLINE TAG
+*/
+
+.inline-tag,
+a.inline-tag,
+.inline-tag a,
+.tags li a {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 em(5) 0 0;
+  padding: 0 em(5) em(2);
+  float: none;
+  @include rem ('font-size',13);
+  font-weight: bold;
+  text-align: left;
+  line-height: normal;
+  background: darken($background,3);
+  color: $base;
+  width: auto;
+  max-width: em(120);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  &:hover,
+  &:hover a {
+    color: $primary;
+    background-color: $background;
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .oldie &,
+  .ie9 & {
+    padding-top: em(2);
+  }
+}
+
+
+/* ----------------------------------------
+   TAG LIST
+*/
+  
+.tags { /* <ul class="tags"> */
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    display: inline-block;
+    margin-bottom: em(7);
+  
+    &.view-more a,
+    &.title a {
+      color: $gray;
+      background: transparent;
+      font-weight: normal;
+      padding: 0;
+      
+      &:hover {
+        background: transparent;
+        color: $primary;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .ie7 & { 
+    @include clearfix();
+    
+    li {
+      float: left;
+    }
+  }
+}

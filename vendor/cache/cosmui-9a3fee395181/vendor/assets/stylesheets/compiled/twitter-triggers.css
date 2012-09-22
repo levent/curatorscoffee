@@ -1,0 +1,153 @@
+/*
+ * :: Cosm - Twitter Triggers ::
+ * 
+ * Cosm / Logmein - 2012 All Rights Reserved
+ *
+ */
+html, body {
+  background: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  height: 215px; }
+
+form {
+  position: relative; }
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold; }
+
+body p.tips {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  font-size: 12px;
+  margin-top: 0;
+  float: none;
+  color: #7d7f80; }
+
+body #tweet, body #previewtweet {
+  width: 590px;
+  margin: 0;
+  min-height: 0;
+  margin-top: 5px;
+  font-size: 14px; }
+
+body #tweet {
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 0 20px;
+  min-height: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 18px;
+  height: 36px;
+  color: #444;
+  border: 1px solid #d4d8d9;
+  resize: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
+
+body #tweet:focus {
+  outline: 0;
+  border-color: rgba(254, 98, 4, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(254, 98, 4, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(254, 98, 4, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(254, 98, 4, 0.6); }
+
+body p.tweet-counter {
+  top: 77px;
+  font-size: 11px;
+  float: none; }
+
+body p {
+  margin: 0; }
+
+body #previewtweet {
+  background: none;
+  width: 585px;
+  margin-top: 10px;
+  border-left: 5px solid #d4d8d9;
+  padding: 0;
+  padding-left: 10px;
+  margin-bottom: 1.45em;
+  color: #7d7f80; }
+
+body a#twittertrigger-signout,
+body a {
+  display: inline-block;
+  color: #fe6204;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: normal; }
+  body a#twittertrigger-signout:hover,
+  body a:hover {
+    cursor: pointer;
+    color: #fe8237;
+    text-decoration: none; }
+
+body #connect {
+  font-weight: bold;
+  color: white;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.385em;
+  padding: 0.385em 0.769em;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 0.308em;
+  -moz-border-radius: 0.308em;
+  border-radius: 0.308em;
+  font-weight: bold;
+  color: white;
+  background-color: #f05505;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fc8b2f), to(#f05505));
+  background-image: -moz-linear-gradient(top, #fc8b2f, #f05505);
+  background-image: -ms-linear-gradient(top, #fc8b2f, #f05505);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fc8b2f), color-stop(100%, #f05505));
+  background-image: -webkit-linear-gradient(top, #fc8b2f, #f05505);
+  background-image: -o-linear-gradient(top, #fc8b2f, #f05505);
+  background-image: linear-gradient(top, #fc8b2f, #f05505);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8b2f', endColorstr='#f05505', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #f05505 #f05505 #a53a03;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s; }
+  body #connect:hover {
+    background-position: 0 -15px;
+    text-decoration: none; }
+  body #connect:focus {
+    outline: 1px dotted #666; }
+
+body .tweet-counter-warning,
+body .error {
+  color: #b94a48 !important; }

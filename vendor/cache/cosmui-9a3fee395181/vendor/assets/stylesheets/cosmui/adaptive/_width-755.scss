@@ -1,0 +1,299 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   WIDTH 755 (px)
+ 
+*/
+
+@media only screen and (max-width: 755px) {
+  
+  /* ----------------------------------------
+     GRID
+  */
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  /* ----------------------------------------
+     HEADER
+  */
+  
+  .container .main-header,
+  .container-connected .main-header {    
+    .search {
+      position: relative;
+      width: em(20,14);
+      height: em(38,14);
+      overflow: visible;
+      
+      &:hover {
+        cursor: pointer;
+      }
+        
+      &:before {
+        display: block;
+        position: absolute;
+        top: .1em;
+        left: 0;
+        content: "s";
+        font-family: $iconfont;
+        font-size: 1.85em;
+        background: $background;
+      }
+      
+      .search-query {
+        position: absolute;
+        top: - em(3,14);
+        left: 0;
+        opacity: 0;
+        width: em(20,14);
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+        @include transition (none);
+      
+        &:hover {
+          cursor: pointer;
+        }
+        
+        &:focus {
+          border: 5px solid $borderGray;
+          opacity: 1;
+          width: em(85,14) !important;
+          max-width: none !important;
+          padding-left: em(9,14);
+          padding-right: em(45,14);   
+          @include box-shadow (0 em(2) em(6) rgba(0,0,0,0.5)); 
+          @include border-radius(10px 10px);
+        }
+      }
+      
+      .button.icon-only {
+        display: none;
+        right: - em(126);
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     SEARCH PAGE
+  */
+  
+  #main .search {
+    z-index: 1;
+    
+    & + .actions {
+      width: 100%;
+      display: block;
+      padding-top: em(18);
+      clear: both;
+      float: none;
+    }
+  }
+    
+  header .search-results-total + .view-selector {
+    float: right;
+  }
+  
+  /* ----------------------------------------
+     TRIGGER LIST
+  */
+  
+  .trigger-drawer {
+    overflow-x: auto;
+  }
+  
+  table.trigger-list {
+    .trigger-type {
+      width: auto;
+      padding-right: 0;
+      
+      .icon {
+        @include rem ('font-size',14);
+      
+        &:before {
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     FEED METADATA
+  */
+  
+  .feed-metadata {  
+    section {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      float: none;
+      
+      .box {
+        margin-right: 0;
+        margin-bottom: em(18);
+      }
+    }
+    
+    section + section .box {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  /* ----------------------------------------
+     SUPPORT HOME
+  */
+  
+  #main .support {
+    .circle {  
+      width: em(47);
+      height: em(45);
+      margin: 0;
+      @include rem ('font-size',13);
+      line-height: em(45);
+      background-image: asset-url('circle-small-blue.png', image);
+      
+      .circle-inner {        
+        width: auto;
+        @include rem ('font-size',30);
+      }
+    }   
+    
+    .grid-4 {
+      h3 {
+        margin-top: em(9,18);
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     HOMEPAGE
+  */
+  
+  #main.homepage {    
+    .main-sidebar .sign-up {
+      top: - em(430);
+    }
+  }
+  
+  /* ----------------------------------------
+     HOW IT WORKS
+  */
+  
+  #main .how-it-works {   
+  
+    .box-header {
+      text-align: center;
+      padding: em(18);
+      
+      .circle {
+        position: static;
+        margin-top: - em(75,36);
+        
+        &:before {
+          display: none;
+        }
+      }
+      
+      h3 {
+        text-align: left;
+        margin-left: 0;
+      }
+    }
+    
+    .box-content {
+      background: none;
+      padding:  0 em(18) em(18);
+      
+      section {
+        width: 47.8%;
+        
+        h4 {
+          padding-bottom: em(36,64);
+        }
+      }
+    }
+    
+    .tagline {
+      width: 100%;
+      text-align: center;
+      top: 0;
+      margin-bottom: em(80,34);
+    }
+    
+  }
+  
+  /* ----------------------------------------
+     MODAL
+  */
+  
+  .modal.open {
+    position: absolute;
+    top: -100%;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    max-height: none;
+    
+    &.open {
+      top: 36px;
+    }
+    
+    .box-header {
+      h3 {
+        width: 85%;
+        height: auto;
+      }
+    }
+  }
+  
+  /* ----------------------------------------
+     STEPS
+  */
+  
+  [data-cosmui="steps"] {
+    .pick-one {
+      li {        
+        float: none;
+        width: 100%;
+        height: em(120);
+        overflow: hidden;
+        
+        a {
+          border: 1px solid $borderGray;
+        }
+      }
+  
+      li:nth-child(odd) a {
+        border-right: 1px solid $borderGray;
+      }
+      
+      li + li a {
+        border-top: none;
+      }
+    }
+  
+    .form-steps-header {      
+      h3 {
+        line-height: 1.4em;
+        background: white !important;
+        margin-top: 0;
+        text-indent: 0;
+        padding-left: 0;
+        
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  /* ---------------------------------------
+     Curators Coffee Minimal
+  */
+
+  .slides-container {
+    display: none;
+  }
+}

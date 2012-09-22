@@ -1,0 +1,252 @@
+/* ----------------------------------------------------------------------------------------
+ 
+   GRAPH BUILDER
+ 
+*/
+
+#graphBuilder {
+  width: em(800);
+  max-height: em(600);
+  margin-top: - em(300);
+  margin-left: - em(400);
+  overflow: hidden;
+  
+  .box-content {
+    padding-bottom: 0;
+  }
+  
+  .grid-row {
+    min-width: 0;
+  }
+  
+  legend {
+    padding-top: 0;
+    border-top: none;
+  }
+  
+  
+  fieldset {
+    padding: em(5) 0 em(8);
+    
+    &.grid-4 {
+      border-right: 1px solid $borderGray;
+    }
+  }
+
+  .box-header {
+    padding: em(18,18) em(30,18);
+  
+    .box-header-title,
+    p {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    p {
+      position: relative;
+      top: em(6);
+      margin-left: em(18);
+      color: $grayLight;
+    }
+  }
+  
+  .field {
+    margin-bottom: em(2);
+    
+    input {
+      color: $base;
+    }
+  }
+  
+  .graph-width,
+  .graph-height,
+  .graph-min-value,
+  .graph-max-value {
+    float: left;
+  }
+  
+  .graph-width,
+  .graph-min-value {
+    margin-right: em(9);
+  }
+  
+  .graph-min-value label,
+  .graph-max-value label {
+    padding-top: 0;
+    @include rem ('font-size',11);
+  }
+  
+  .graph-scale {
+    margin-bottom: 0;
+    
+    .inputs-list {
+      padding-top: 0;
+    }
+    
+    li + li {
+      label {
+        padding-top: em(3);
+      }
+      
+      input[type="radio"] {
+        top: em(3);
+      }
+    }
+  }
+  
+  .graph-axis-labels,
+  .graph-detailed-grid {
+    padding-top: em(5);
+    margin-bottom: 0;
+    @include clearfix();
+  
+    label,
+    .input,
+    .inputs-list,
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      padding-top: 0;
+    }
+    
+    li + li input[type="radio"] {
+      top: 0;
+    }
+    
+    li label {
+      padding-left: em(18);
+      margin-left: em(9);
+    }
+    
+    & > label {
+      float: left;
+    }
+    
+    .input {
+      float: right;
+    }
+  }
+  
+  .graph-axis-labels {
+    padding-top: em(9);
+    margin-bottom: 0;
+  }
+  
+  .actions {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    margin-left: - em(30);
+    margin-right: - em(30);
+    padding: em(12) em(30) em(8);
+    border: none;
+    clear: both;
+    background: $background;
+    text-shadow: 0 1px 0 white;
+    border-top: 1px solid $borderGray;
+    @include border-radius(0 0 em(10) em(10));
+  
+    &:before { // just used for the shadow effect
+      content: " ";
+      position: absolute;
+      top: -10px;
+      left: 2.5%;
+      width: 95%;
+      height: 10px;
+      @include border-radius (50%);
+      @include box-shadow ('0 3px 5px rgba(0, 0, 0, 0.1)');
+      z-index: 1;
+    }
+    
+    & > p,
+    & > div {
+      display: inline-block;
+      vertical-align: middle;
+      float: left;
+      margin-bottom: 0;
+    }
+    
+    p {
+      @include rem ('font-size',11);
+      width: em(255,11);
+      color: $gray;
+    }
+    
+    .graph-field-container {
+      width: em(365);
+      @include clearfix();
+      
+      label,
+      input {
+        display: inline-block;
+        vertical-align: middle;
+        float: left;
+      }
+      
+      label {
+        padding: 0;
+        width: em(78);
+        text-align: right;
+        line-height: em(16);
+      }
+      
+      input {
+        width: em(250);
+        max-width: none;
+        margin-left: em(9);
+      }
+    }
+    
+    .secondary-action {
+      float: right;
+    }
+  }
+  
+  /* ----------------------------------------
+     IE ADJUSTMENTS
+  */
+  
+  .ie9 &,
+  .oldie & {
+    .grid-8 {
+      width: 64.2%;
+    }
+  }
+  
+  .ie7 & {
+    margin-top: - em(250);
+    max-height: em(620);
+  
+    .box-header {
+      @include clearfix();
+      
+      .box-header-title,
+      p {
+        float: left;
+      }
+      
+      .box-header-title {
+        line-height: 1em;
+      }
+      
+      p {
+        position: relative;
+        top: 18px;
+      }
+    }
+  
+    .graph-axis-labels,
+    .graph-detailed-grid {
+      li {
+        float: left;
+      }
+    }
+  }
+}
+
+#graph-img-container {
+  width: em(740);
+  height: em(255);
+  background: white asset-url('spinner-on-white.gif', image) no-repeat center center;
+}

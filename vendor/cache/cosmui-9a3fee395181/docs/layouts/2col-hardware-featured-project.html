@@ -1,0 +1,365 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Hardware - cosmUI</title>
+  <meta name="description" content="cosmUI is a UI toolkit">
+  <meta name="author" content="Cosm">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="../favicon.ico" rel="shortcut icon">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="../../vendor/assets/stylesheets/compiled/docs-cosmui.css">
+  <!--! end of stylesheets -->
+  
+  <!-- head scripts -->
+  <script src="../../vendor/assets/javascripts/libs/modernizr-2.0.6.min.js"></script>
+  <!--! end of head scripts -->
+</head>
+<body>
+
+  <!-- #container -->
+  <div class="container container-connected">
+
+    <!-- header -->
+    <header role="banner" class="main-header grid-row">
+      <nav class="content main-header-content grid-9 clearfix">
+        <hgroup class="branding">
+          <h1><a href="#">Cosm</a></h1>
+          <h2>Connect to your world</h2>
+        </hgroup>
+        <ul role="navigation" class="navigation unstyled clearfix">
+          <li><a href="#" title="Discover popular feeds, featured projects and more. Explore Cosm.">Explore</a></li>
+          <li class="active"><a href="#" title="Spruce up you knowledge and check the API documentation.">Support/API</a></li>
+          <li><a href="#" title="The Cosm official blog.">Blog</a></li>
+        </ul>
+        <form role="search" class="search" data-cosmui="searchbox">
+          <input type="text" class="input-medium leveled search-query" placeholder="Search" value="My search query">
+          <button type="submit" class="button icon icon-only icon-search ir">Search</button>
+        </form>
+      </nav>
+
+      <aside class="sidebar main-header-sidebar grid-3" role="complementary">
+        <article role="navigation" class="user-menu box">
+          <header class="user-menu-header box-header">
+            <a class="user-menu-button dark" href="#" title="Go to my profile" data-cosmui="toggler" data-target="next">
+              <img src="http://www.gravatar.com/avatar/d6dbaa3af3915fe3e06f46101ecbd1a7?s=24" alt="The user profile picture.">
+              petecorreia
+            </a>
+            <nav class="user-menu-links closed"> <!-- user login links -->
+              <ul class="unstyled">
+                <li><a href="#" title="Go to my Console" class="dark icon icon-user">Console</a></li>
+                <li><a href="#" title="Manage my Apps" class="dark icon icon-apps">Apps</a></li>
+                <li><a href="#" title="Manage and debug my Keys" class="dark icon icon-keys">Keys</a></li>
+                <li><a href="#" title="Edit my Settings" class="dark icon icon-settings">Settings</a></li>
+                <li><a href="#" title="Debug my Feeds" class="dark icon icon-debug">Debug</a></li>
+                <li><a href="#" title="Logout of Cosm" class="dark icon icon-logout">Logout</a></li>
+              </ul>            
+            </nav> <!--!  end of user login links -->
+          </header>
+          <div class="box-content user-menu-content">
+            <button class="user-notifications-button icon icon-only icon-activity" title="View your activity" data-badge="3" data-cosmui="dropdown" data-target="next"></button> 
+            <div class="user-notifications activity dropdown-menu aligned-right">          
+              <h5 class="user-notifications-header dropdown-menu-header">Notifications</h5> 
+              <ul class="user-notifications-list unstyled">
+                <li class="comment icon icon-comments">
+                  <a class="dark" href="#" title="Go to comment">
+                    Bob Anderson left a comment on a My Feed.
+                    <time class="timeago" datetime="2012-02-15T09:24:17Z">Feb 15 at 09:24</time>
+                  </a>
+                </li>
+                <li class="trigger icon icon-trigger">
+                  <a class="dark" href="#" title="View trigger">
+                    Datastream1 at My Feed is now &lt;100 &deg;F
+                    <time class="timeago" datetime="2012-02-15T03:47:17Z">Feb 15 at 03:47</time>
+                  </a>
+                </li>
+                <li class="people icon icon-followers">
+                  <a class="dark" href="#" title="View followers">
+                    Adam West is now following My Feed.
+                    <time class="timeago" datetime="2012-02-14T16:03:17Z">Feb 14 at 16:03</time>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </aside>
+    </header> <!--! end of header -->
+
+    <!-- #main -->
+    <div id="main" class="grid-row">
+      <section role="main" class="content main-content grid-9">
+
+        <!-- page header -->
+        <header class="page-header">
+          <h2 class="page-header-title">Support / API</h2>
+          
+        </header> <!--! end of page header -->
+        
+        <!-- main content -->
+        
+        <article class="support-page box list"> <!-- box -->
+          
+          <nav class="box-navigation">
+          
+            <ul>
+              <li class="icon icon-api-docs">
+                <a class="dark" href="#" title="Go to API Docs">API Docs</a>
+              </li>
+              <li class="selected icon icon-hardware">
+                <a class="dark" href="#" title="Go to Tutorials">Hardware</a>
+                <ul>
+                  <li>
+                    <a class="dark" href="#consumer" title="Go to Consumer products">Consumer products</a>
+                  </li>
+                  <li>
+                    <a class="dark" href="#development" title="Go to Development / Hackable Platforms">Development / Hackable Platforms</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="icon icon-examples">
+                <a class="dark" href="#" title="Go to Examples">Tutorials & Examples</a>
+              </li>
+              <li class="icon icon-libraries">
+                <a class="dark" href="#" title="Go to Libraries">Libraries</a>
+              </li>
+              <li class="icon icon-forum">
+                <a class="dark" href="#" title="Go to Forum">Forum</a>
+              </li>
+              <li class="icon icon-contact">
+                <a class="dark" href="#" title="Go to Contact Support">Contact Support</a>
+              </li>
+            </ul>
+            
+          </nav>
+          
+          <div class="box-content">
+            <h3 class="header icon icon-hardware">Hardware</h3>
+            
+            <p>****NEED TEXT HERE ABOUT ONBOARD ETC**** Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus.</p>
+         
+            <h4 class="header" id="featured">Featured Project</h4>
+        
+            <article class="hardware-item hardware-item-left hardware-item-featured"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://arduino.cc/en/Main/ArduinoBoardEthernet" title="Go to Arduino &amp; Arduino Ethernet">Arduino &amp; Arduino Ethernet</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://community.pachube.com/files/arduino.jpg">
+                </div>
+                <p class="hardware-item-content">Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software - with Cosm examples in the Arduino IDE it's the quickest and easiest way to get Cosm-connected!</p>
+              </div>
+            </article> <!--! end of item -->
+          
+            <h4 class="header" id="consumer">Consumer products</h4>        
+        
+            <article class="hardware-item hardware-item-left"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://www.currentcost.com/product-netsmart.html" title="Go to Current Cost NetSmart aka Bridge">Current Cost NetSmart aka Bridge</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://community.pachube.com/files/bridge.jpg">
+                </div>
+                <p class="hardware-item-content">Monitor energy usage from your home and/or individual appliances with one of Current Cost's monitors, then send the data to Pachube via the Bridge.</p>
+              </div>
+            </article> <!--! end of item -->
+         
+            <article class="hardware-item hardware-item-right"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://www.arexx.com/templogger/html/en/info.htm" title="Go to Arexx">Arexx</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://community.pachube.com/files/tl_500.jpg">
+                </div>
+                <p class="hardware-item-content">Wireless sensing system with remote sensors and LAN receiver.  <a href="http://community.pachube.com/node/725">Send direct to Pachube with a simple setup procedure</a>. <a href="http://www.conrad.com/websale7/?Ctx=%257bver%252f7%252fver%257d%257bst%252f417%252fst%257d%257bcmd%252f0%252fcmd%257d%257bm%252fwebsale%252fm%257d%257bs%252fconrad%252dint%252fs%257d%257bl%252fint%252fl%257d%257bp1%252f196a7212ef245a9c58739c0b74ed6eba%252fp1%257d%257bmd5%252fd3c630bd3a616480f236485e10cba13b%252fmd5%257d&amp;dummychar=%3F&amp;search_input=arexx">German Distributor (Conrad)</a> | <a href="http://www.littoclime.net/enregistreurs-sans-fil-de-temperature-et-d-humidite-multilog,fr,3,78.cfm">French Distributor (Littoclime)</a> | <a href="http://www.audon.co.uk/daq_wireless.html">UK Distributor (Audon)</a> | <a href="http://www.abacusinstruments.com/products/ABA-500-AB-1000">US Distributor (Abacus Instruments)</a></p>
+              </div>
+            </article> <!--! end of item -->
+                  
+            <h5>More coming soon!</h5>
+            <p>If you currently have or are building hardware that you would like to offer to the Cosm community, email biz@cosm.com!</p>
+         
+            <h4 class="header" id="development">Development / Hackable Platforms</h4>
+        
+            <article class="hardware-item hardware-item-left"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://arduino.cc/en/Main/ArduinoBoardEthernet" title="Go to Arduino &amp; Arduino Ethernet">Arduino &amp; Arduino Ethernet</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://community.pachube.com/files/arduino.jpg">
+                </div>
+                <p class="hardware-item-content">Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software - with Cosm examples in the Arduino IDE it's the quickest and easiest way to get Cosm-connected!</p>
+              </div>
+            </article> <!--! end of item -->
+        
+            <article class="hardware-item hardware-item-right"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://mbed.org/" title="Go to mBed microcontroller">mBed microcontroller</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://mbed.org/media/img/mbedMicrocontroller.jpg">
+                </div>
+                <p class="hardware-item-content">The mbed Microcontroller is made for prototyping, and comes in a 40-pin 0.1" pitch DIP form-factor so it's ideal for experimenting on breadboard, stripboard and PCBs.  It supports lots of interfaces, so you can connect it to all sorts of input and output circuits and modules. See <a href="http://mbed.org/cookbook/Pachube">this walkthrough explaining how to connect an mBed microcontroller to Cosm</a>.</p>
+              </div>
+            </article> <!--! end of item -->
+        
+            <article class="hardware-item hardware-item-left"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://www.nanode.eu/" title="Go to Nanode">Nanode</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://community.pachube.com/files/Rednode_complete_1.jpg">
+                </div>
+                <p class="hardware-item-content">Nanode is an open source Arduino-like board that has in-built web connectivity. It connects to a range of wireless, wired and ethernet interfaces. It allows you to develop web based sensor and control systems - giving you web access to six analogue sensor lines and six digital I/O lines. It costs under £20 as an easy build it yourself kit. Nanode was designed with Hacking in mind.</p>
+              </div>
+            </article> <!--! end of item -->
+        
+            <article class="hardware-item hardware-item-right"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://opengear.com/product-acm5000.html" title="Go to OpenGear ACM 5000 Console Server">OpenGear ACM 5000 Console Server</a>
+                </h5>         
+              </header>
+              
+              <div class="content">
+                <div class="hardware-item-graphic">
+                  <img src="http://community.pachube.com/files/acm5000-banner.jpg">
+                </div>
+                <p class="hardware-item-content">Low-power embedded Linux device server with USB, serial, data ports and Ethernet - optional wifi and 3G.  Rugged high temp and NEMA dust &amp; water tight models available.  Includes Custom Development Kit for rapid application bring up and kernel customisation. See <a href="http://community.pachube.com/node/690">this walkthrough explaining how to connect a USB weather station to Cosm using an OpenGear Console Server</a>.</p>
+              </div>
+            </article> <!--! end of item -->
+        
+            <article class="hardware-item hardware-item-left"> <!-- item -->
+              <header>
+                <h5>
+                  <a href="http://wiki.version6.net/pachube_currentcost" title="Go to ASUS WL-500G router with OpenWrt">ASUS WL-500G router with OpenWrt</a>
+                </h5>         
+              </header>
+              
+              <div class="content"> 
+                <div class="hardware-item-graphic">  
+                  <img src="http://wiki.version6.net/_media/asus.jpg?w=200">
+                </div>
+                <p class="hardware-item-content">Simple perl script can be used to feed Cosm with average power and temperature readings from CurrentCost Envi (CC128) which is connected with ASUS WL-500G router. No CurrentCost data cable necessary for this setup but some soldering is required.</p>
+              </div>
+            </article> <!--! end of item -->
+             
+          </div>        
+        </article> <!--! end of box -->
+        
+        <!--! end of main content -->
+      
+      </section>
+        
+      <!-- sidebar -->
+      <aside class="sidebar main-sidebar grid-3" role="complementary">
+      
+        <article class="box"> <!-- box -->
+          <header class="box-header">
+            <h3 class="box-header-title">Popular Tutorials</h3>
+          </header>
+          <div class="box-content">
+            <ul class="unstyled no-margin">
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+              <li>
+                <a href="#" title="Go to Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!--! end of box -->
+      
+      </aside> <!--! end of sidebar -->
+      
+    </div> <!--! end of #main -->
+    
+    <!-- footer -->
+    <footer class="main-footer grid-row" role="contentinfo">
+      <p class="copyright no-margin">
+        &copy; 2012 Cosm, a <span class="ir">LogMeIn</span> company
+      </p>
+      <nav>
+        <ul class="unstyled no-margin clearfix">
+          <li>
+            <a href="#" title="Go to About Us">About Us</a>
+          </li>
+          <li>
+            <a href="#" title="Go to How it works">How it works</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Press">Press</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Terms of Service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" title="Go to Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer> <!--! end of footer -->
+
+  </div> <!--! end of #container -->
+
+  <!-- scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../vendor/assets/javascripts/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.toggler.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.dropdown.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.alert.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.tabs.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.searchbox.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.adaptive.js"></script>
+  <script src="../../vendor/assets/javascripts/cosmui/cosmui.plugins.js"></script>
+  
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  <!--! end of scripts-->
+  
+</body>
+</html>
