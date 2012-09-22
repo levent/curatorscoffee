@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'thin'
 gem 'dalli'
+gem 'newrelic_rpm'
 # gem 'pg'
 
 # Gems used only for assets and not required
