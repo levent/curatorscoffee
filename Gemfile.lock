@@ -1,5 +1,5 @@
 GIT
-  remote: https://levent@github.com/levent/cosmui.git
+  remote: git@github.com:levent/cosmui.git
   revision: 9a3fee39518174b6d65e925f32e085c3cfe60731
   branch: curators
   specs:
