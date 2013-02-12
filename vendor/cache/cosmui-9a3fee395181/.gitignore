@@ -1,9 +1,0 @@
-build_artefacts
-*.swp
-*.gem
-.bundle
-Gemfile.lock
-pkg/*
-.DS_Store
-.sass-cache
-*.orig
