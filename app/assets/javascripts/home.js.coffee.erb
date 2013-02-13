@@ -30,39 +30,3 @@ anotherGeojsonLayer = new L.GeoJSON(geojsonFeature,
 
 
 map.addLayer(anotherGeojsonLayer)
-
-
-
-# popupContent = '<div class="row"><div class="five columns"><img style="width:110px;height:84px" alt="Curators Coffee Studio logo" src="<%= asset_path 'cc_studio_logo_black.png' %>"></div>'
-# 
-# popupContent += '<div class="seven columns">'
-# popupContent += '<h3>Curators Coffee Studio</h3>'
-# popupContent += '<strong>9a Cullum St<br>London EC3M 7JJ</strong><br><br>'
-# popupContent += 'Mon-Fri 7:30am-5:00pm'
-# popupContent += '</div></div>'
-
-# popup = new L.Popup(
-#   minWidth : 390
-#   maxWidth : 500
-#   closeButton : false
-# )
-# 
-# popup.setLatLng(centre)
-# popup.setContent(popupContent)
-# 
-# map.openPopup(popup)
-
-
-$ ->
-  $("#slides").slides
-    preload: true
-    preloadImage: "<%= asset_path 'spinner-on-white.gif' %>"
-    play: 5000
-    pause: 2500
-    hoverPause: true
-    generatePagination: false
-    effect: 'slide, fade'
-    crossfade: true
-    slideSpeed: 350
-    fadeSpeed: 500
-    randomize : true
