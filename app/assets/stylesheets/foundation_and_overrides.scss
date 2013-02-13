@@ -237,7 +237,7 @@ $tabHeight: 100px;
 // Modular Scale Settings
 
 // $ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
-$baseFontSize: 18px;
+$baseFontSize: 14px;
 // $importantModNum: 44px;
 // $base-size: $baseFontSize $importantModNum;
 // Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
@@ -246,19 +246,25 @@ $baseFontSize: 18px;
 @import 'foundation';
 
 body {
-  margin-top: 20px;
 }
 
-#leader-hero h3, #leader-hero h4 {
-  text-align: justify;
-  font-weight: 200;
-  line-height: 1.36em;
+#leader-hero {
+  h2, p {
+    text-align: justify;
+    font-weight: 200;
+  }
+  p {
+    line-height: 1.36em;
+    font-size: 1.36em;
+  }
 }
 
 .vcard  {
+  padding: 40px;
+  text-align: right;
   a,p {
     font-style: normal;
-    color: none;
+    color: $black;
   }
 }
 
@@ -267,5 +273,4 @@ body {
 }
 
 .cc-logo {
-  height: 100px;
 }

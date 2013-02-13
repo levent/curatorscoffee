@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Curators Coffee" %></title>
   
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
@@ -26,34 +26,52 @@
 <body>
   <!-- Header and Nav -->
 
-  <div class="row">
-    <div class="three columns">
-      <h1><%= image_tag "logo-studio-stamp.png", :class => 'cc-logo' %></h1>
-    </div>
-    <div class="nine columns">
-      <dl class="tabs right">
-        <dd class="active"><%= link_to "Our Drinks", coffee_path %></dd>
-        <dd><%= link_to "Curators Creations", "#creations" %></dd>
-        <dd><%= link_to "Design", "#design", :class => 'hide-for-small' %></dd>
-      </dl>
-    </div>
-  </div>
+  <nav class="top-bar">
+    <ul>
+      <!-- Title Area -->
+      <li class="name">
+        <h1><%= link_to "Curators Coffee", root_path %></h1>
+      </li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+
+    <section>
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <%= link_to "Our Food & Drink", coffee_path %>
+          <ul class="dropdown">
+            <li><label>Our Drinks</label></li>
+            <li><%= link_to "Coffee", coffee_path %></li>
+            <li><%= link_to "Tea", "#creations" %></li>
+            <li><%= link_to "Design", "#design", :class => 'hide-for-small' %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Our Food", food_path %></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Curators Creations</a>
+          <ul class="dropdown">
+            <li><%= link_to "February", creations_path %></li>
+            <li><%= link_to "January", creations_path %></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <!-- Header and Nav -->
 
   <div class="row">
     <div class="four columns">
-      <%= render :partial => 'vcard' %>
-      <%= link_to @map_url do %>
-        <div id="map" style="width: 100%; height: 220px"></div>
-      <% end %>
-      <br>
+      <h1><%= image_tag "logo-studio-stamp.png", :class => 'cc-logo' %></h1>
+      <%= yield :sub_logo_content %>
     </div>
     <div class="eight columns">
-      <div id="main-slides">
-        <%= render :partial => 'slides' %>
-      </div>
+      <%= yield :top_content %>
     </div>
   </div>
-
   <!-- End Header and Nav -->
   <%= yield %>
 

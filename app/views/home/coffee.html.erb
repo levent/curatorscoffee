@@ -1,87 +1,15 @@
-<div class="row">
-  <div class="twelve columns">
+<% content_for :top_content do %>
+  <div class="panel radius" id="leader-hero">
     <h2>Our Coffee</h2>
-    <div class="panel radius" id="leader-hero">
-      <div class="row">
-        <div class="four columns">
-          <%= image_tag "latte_art.jpg", :class => "" %>
-        </div>
-        <div class="eight columns">
-          <p>We take great pride in preparing our coffee and have the pleasure of working with local London roasteries who support direct trade methods of purchasing coffee, resulting in a  range of high quality of coffees on offer, all roasted to perfection using delicate roasting profiles.</p>
+    <p>We take great pride in preparing our coffee and have the pleasure of working with local London roasteries who support direct trade methods of purchasing coffee, resulting in a  range of high quality of coffees on offer, all roasted to perfection using delicate roasting profiles.</p>
 
-          <p>Our house espresso is the Rogue from <a href="http://www.unionroasted.com/">Union Hand-Roasted Coffees</a>. Developed with Andrew Tolley of Taylor St Baristas, the components of Rogue change on a seasonal basis which ensure a great tasting product at all times of the year.</p>
+    <p>Our house espresso is the Rogue from <a href="http://www.unionroasted.com/">Union Hand-Roasted Coffees</a>. Developed with Andrew Tolley of Taylor St Baristas, the components of Rogue change on a seasonal basis which ensure a great tasting product at all times of the year.</p>
 
-          <p>Our guest espresso, decaf and filter coffee is provided by <a href="http://shop.squaremilecoffee.com/">Square Mile Coffee Roasters</a>. What we offer in store will constantly change to showcase their stunning range of coffees.</p>
+    <p>Our guest espresso, decaf and filter coffee is provided by <a href="http://shop.squaremilecoffee.com/">Square Mile Coffee Roasters</a>. What we offer in store will constantly change to showcase their stunning range of coffees.</p>
 
-          <p>For more details ask our baristas what is currently being featured.</p>
-        </div>
-      </div>
-    </div>
-
+    <p>For more details ask our baristas what is currently being featured.</p>
   </div>
-</div>
-
-<article class="bordered-top info" id="coffee">
-</article>
-
-<article class="bordered-top info" id="tea">
-  <h2 class="title row">Our Tea</h2>
-  <div class="row">
-    <%= image_tag "tea.jpg", :class => "four columns" %>
-    <div class="eight columns">
-      <p>Our teas are supplied by tea traders <a href="http://www.lalaniandco.com/">Lalani &amp; Co</a> who spend time every year visiting tea farms around the world to source only the highest quality teas. We brew our teas in homemade <a href="http://en.wikipedia.org/wiki/Gaiwan">Gaiwans</a> using exact recipes to ensure we get the best out of the leaves.</p>
-
-      <p>We also make a fresh mint infusion made from our mint garden grown in store. We have a range of mint including Applemint and Black Peppermint so ask our staff what they can offer you.</p>
-    </div>
-  </div>
-</article>
-
-<article class="bordered-top info" id="food">
-  <h2 class="title row">Our Food</h2>
-  <div class="row">
-    <%= image_tag "sandwich.jpg", :class => "four columns" %>
-    <div class="eight columns">
-      <p>Our food menu is designed around the concept of having simple options made from good quality ingredients.</p>
-
-      <p>Our pastries are supplied by <a href="http://www.yeastbakery.com/">Yeast Bakery</a> who are uncompromising in their pursuit of creating the perfect croissant. Focusing solely on Butter croissants, Almond croissants and Pains au Chocolat, there isn't a single other bakery that could match the care, attention (and taste!) that Yeast put into their products.</p>
-
-      <p>Our delicious baked goods are courtesy of <a href="http://www.bittersweetbakers.com/">Bittersweet Bakers</a>. Established in 2009 by food genius <em>Arianna Halshaw</em> Bittersweet Bakers are responsible for the decadent pleasures we have on offer, such as Triple Chocolate Brownies, Everything Cookies and Orange, Honey and Polenta Loaf. With seasonality of ingredients featuring in Bittersweet Bakers recipes there is always something new and delicious to try.
-</p>
-
-      <p>Fresh bread is delivered daily from <a href="http://www.sallyclarke.com/">Sally Clarke's Bakery</a>. Served at breakfast as toast, and at lunch as a part of our freshly made toasted sandwiches. We also stock their extremely hard to resist Chocolate Truffles – a perfect accompaniment to a quick delicious cup of coffee.</p>
-
-      <p>For more information on our current food offering and enquiries for office catering please email <a href="mailto:food@curatorscoffee.com">food@curatorscoffee.com</a>.</p>
-    </div>
-
-  </div>
-</article>
-
-<article class="bordered-top info" id="creations">
-  <h2 class="title row">Curators Creations</h2>
-  <div class="row">
-    <%= image_tag "sandwich.jpg", :class => "four columns" %>
-    <div class="eight columns">
-      <p>February's Creation is called the <strong>East India Coffee</strong>. It is an
-espresso based drink, made with our house espresso which is the Rogue
-roasted by Union. We will be pulling the shots as ristrettos to obtain
-an intense sweet flavour to which we will then add 6 ounces of creamy
-steamed milk that has been infused for 48 hrs with warm spices of
-cardamon, cinnamon and star anise, along with vanilla, honey and
-ginger.</p>
-
-<p>Smooth, warm delicious and comforting. Perfect for February weather.</p>
-    </div>
-
-  </div>
-</article>
-
-<article class="bordered-top info" id="design">
-  <h2 class="title row">Design</h2>
-  <div class="row">
-    <%= image_tag "cabinet.jpg", :class => "four columns" %>
-    <div class="eight columns">
-      <p>The concept of Curators Coffee developed from our attempts to visualise the art of coffee and our desire to create a gallery space for our craft. A collaboration between talented furniture builder Jason, of madebyjason and designer extraordinaire Jen Archer led to Curators Coffee Studio, a space of free thought, where things are collected and recreated or reimagined. To reflect this we've used a mix of recycled, new and artisan materials to bring this to life.</p>
-    </div>
-
-  </div>
-</article>
+<% end %>
+<% content_for :sub_logo_content do %>
+  <%= image_tag "latte_art.jpg", :class => "" %>
+<% end %>

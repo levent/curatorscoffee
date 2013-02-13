@@ -48,7 +48,9 @@ CuratorscoffeeCom::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  
+
+  get '/creations' => 'home#creations'
+  get '/food' => 'home#food'
   get '/coffee' => 'home#coffee'
   root :to => 'home#index'
 
