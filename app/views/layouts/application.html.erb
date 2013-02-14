@@ -5,23 +5,42 @@
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8" />
-	
-	<!-- Uncomment to make IE8 render like IE7 -->
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
-	
-	<!-- Set the viewport width to device width for mobile -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	<title><%= content_for?(:title) ? yield(:title) : "Curators Coffee" %></title>
-  
-	<!-- Included CSS Files -->
-	<%= stylesheet_link_tag    "application" %>
-	
-	<!-- Included JS Files  -->
-	<%= javascript_include_tag "application" %>
-  
+  <meta charset="utf-8" />
+
+  <!-- Uncomment to make IE8 render like IE7 -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Curators Coffee" %></title>
+
+  <!-- Included CSS Files -->
+  <%= stylesheet_link_tag    "application" %>
+
+  <!--[if lte IE 8]>
+      <%= stylesheet_link_tag    "leaflet.ie" %>
+  <![endif]-->
+
+  <!-- Included JS Files  -->
+  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29743319-1']);
+    _gaq.push(['_setDomainName', 'curatorscoffee.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </head>
 <body>
   <!-- Header and Nav -->
@@ -44,8 +63,8 @@
           <ul class="dropdown">
             <li><label>Our Drinks</label></li>
             <li><%= link_to "Coffee", coffee_path %></li>
-            <li><%= link_to "Tea", "#creations" %></li>
-            <li><%= link_to "Design", "#design", :class => 'hide-for-small' %></li>
+            <li><%= link_to "Tea", tea_path %></li>
+            <li><%= link_to "Design", design_path, :class => 'hide-for-small' %></li>
             <li class="divider"></li>
             <li><%= link_to "Our Food", food_path %></li>
           </ul>
@@ -98,5 +117,11 @@
     <%= yield :custom_js %>
   </script>
   <%= javascript_include_tag "footer" %>
+    <script type="text/javascript">
+      setTimeout(function(){var a=document.createElement("script");
+      var b=document.getElementsByTagName('script')[0];
+      a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/8948.js?"+Math.floor(new Date().getTime()/3600000);
+      a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
 </body>
 </html>

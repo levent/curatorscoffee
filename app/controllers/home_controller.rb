@@ -8,6 +8,18 @@ class HomeController < ApplicationController
   def coffee
   end
 
+  def tea
+  end
+
+  def food
+  end
+
+  def design
+  end
+
+  def creations
+  end
+
   private
 
   def set_cache_control

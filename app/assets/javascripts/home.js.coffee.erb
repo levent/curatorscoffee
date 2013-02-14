@@ -1,5 +1,6 @@
-url = "http://a.tiles.mapbox.com/v3/lebreeze.map-yq4ttdwa.jsonp"
-centre = new L.LatLng(51.512109, -0.082581)
+L.Icon.Default.imagePath = "/assets/leaflet"
+url = "http://a.tiles.mapbox.com/v3/lebreeze.map-q7kfkf72.jsonp"
+centre = [51.512030, -0.082581]
 map = new L.Map("map",
   scrollWheelZoom : false
   dragging : false
@@ -8,25 +9,8 @@ map = new L.Map("map",
   closePopupOnClick : false
 
 ).setView(centre, 17)
+
 wax.tilejson url, (tilejson) ->
   map.addLayer new wax.leaf.connector(tilejson)
 
-geojsonFeature =
-  type : "Feature"
-  properties :
-    name : "Curators Coffee Studio"
-    amenity : "Specialty coffee shop"
-  geometry :
-    type : "Point"
-    coordinates : [-0.082581, 51.512109]
-
-anotherGeojsonLayer = new L.GeoJSON(geojsonFeature,
-  pointToLayer: (latlng) ->
-    new L.Marker(latlng,
-      icon: new L.DivIcon()
-    )
-  )
-
-
-
-map.addLayer(anotherGeojsonLayer)
+marker = new L.marker(centre).addTo(map)
