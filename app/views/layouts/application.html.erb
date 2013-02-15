@@ -22,9 +22,6 @@
       <%= stylesheet_link_tag    "leaflet.ie" %>
   <![endif]-->
 
-  <!-- Included JS Files  -->
-  <%= javascript_include_tag "application" %>
-
   <%= csrf_meta_tags %>
 
   <script type="text/javascript">
@@ -70,13 +67,7 @@
           </ul>
         </li>
         <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Curators Creations</a>
-          <ul class="dropdown">
-            <li><%= link_to "February", creations_path %></li>
-            <li><%= link_to "January", creations_path %></li>
-          </ul>
-        </li>
+        <li><%= link_to "Curators Creations", creations_path %></li>
       </ul>
     </section>
   </nav>
@@ -113,15 +104,11 @@
       </div>
     </div>
   </footer>
+
+  <%= javascript_include_tag "application" %>
+
   <script type="text/javascript" charset="utf-8">
     <%= yield :custom_js %>
   </script>
-  <%= javascript_include_tag "footer" %>
-    <script type="text/javascript">
-      setTimeout(function(){var a=document.createElement("script");
-      var b=document.getElementsByTagName('script')[0];
-      a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/8948.js?"+Math.floor(new Date().getTime()/3600000);
-      a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-    </script>
 </body>
 </html>

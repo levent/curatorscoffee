@@ -16,3 +16,4 @@
 //= require leaflet-src
 //= require wax.leaf
 //= require slides.jquery
+//= require custom.js
