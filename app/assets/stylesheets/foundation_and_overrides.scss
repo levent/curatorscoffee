@@ -244,6 +244,7 @@ $baseFontSize: 14px;
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale by scottkellum
 @import 'foundation';
+@import 'social_foundicons';
 
 body {
 }
@@ -260,17 +261,15 @@ body {
 }
 
 .vcard  {
-  padding: 40px;
-  text-align: right;
+  padding-left: 8px;
   a,p {
+  font-size: 1.1em;
     font-style: normal;
     color: $black;
+    font-weight: 200;
   }
 }
 
 .tabs dd.active a, .tabs li.active a {
   background: $white;
-}
-
-.cc-logo {
 }

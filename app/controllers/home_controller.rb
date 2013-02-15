@@ -20,6 +20,9 @@ class HomeController < ApplicationController
   def creations
   end
 
+  def contact_us
+  end
+
   private
 
   def set_cache_control

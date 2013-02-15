@@ -68,6 +68,8 @@
         </li>
         <li class="divider"></li>
         <li><%= link_to "Curators Creations", creations_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Contact Us", contact_us_path %></li>
       </ul>
     </section>
   </nav>
@@ -75,7 +77,7 @@
 
   <div class="row">
     <div class="four columns">
-      <h1><%= image_tag "logo-studio-stamp.png", :class => 'cc-logo' %></h1>
+      <h1><%= link_to image_tag("logo-studio-stamp.png", :class => 'cc-logo'), root_path %></h1>
       <%= yield :sub_logo_content %>
     </div>
     <div class="eight columns">

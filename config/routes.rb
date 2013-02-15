@@ -51,6 +51,7 @@ CuratorscoffeeCom::Application.routes.draw do
 
   get '/design' => 'home#design'
   get '/creations' => 'home#creations'
+  get '/contact_us' => 'home#contact_us'
   get '/food' => 'home#food'
   get '/tea' => 'home#tea'
   get '/coffee' => 'home#coffee'
