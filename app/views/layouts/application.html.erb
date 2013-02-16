@@ -55,17 +55,9 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li class="divider"></li>
-        <li class="has-dropdown">
-          <%= link_to "Our Food & Drink", coffee_path %>
-          <ul class="dropdown">
-            <li><label>Our Drinks</label></li>
-            <li><%= link_to "Coffee", coffee_path %></li>
-            <li><%= link_to "Tea", tea_path %></li>
-            <li><%= link_to "Design", design_path, :class => 'hide-for-small' %></li>
-            <li class="divider"></li>
-            <li><%= link_to "Our Food", food_path %></li>
-          </ul>
-        </li>
+        <li><%= link_to "About Us", about_us_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Our Food & Drink", food_drink_path %></li>
         <li class="divider"></li>
         <li><%= link_to "Curators Creations", creations_path %></li>
         <li class="divider"></li>

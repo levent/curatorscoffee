@@ -5,22 +5,16 @@ class HomeController < ApplicationController
   def index
   end
 
-  def coffee
-  end
-
-  def tea
-  end
-
-  def food
-  end
-
-  def design
+  def about_us
   end
 
   def creations
   end
 
   def contact_us
+  end
+
+  def food_and_drink
   end
 
   private
