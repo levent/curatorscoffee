@@ -54,6 +54,7 @@ CuratorscoffeeCom::Application.routes.draw do
   get '/contact_us' => 'home#contact_us'
   get '/food_drink' => 'home#food_and_drink'
   get '/design' => 'home#design'
+  get '/classes' => 'home#classes'
   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"

@@ -17,6 +17,9 @@ class HomeController < ApplicationController
   def food_and_drink
   end
 
+  def classes
+  end
+
   private
 
   def set_cache_control
