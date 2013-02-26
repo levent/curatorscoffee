@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def index
   end
 
-  def about_us
+  def design
   end
 
   def creations

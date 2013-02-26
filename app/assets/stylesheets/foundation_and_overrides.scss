@@ -96,7 +96,7 @@ $tabHeight: 100px;
 // Top Bar Settings
 
 // $topBarBgColor: #222;
-// $topBarHeight: 45px;
+$topBarHeight: 55px;
 // $topBarHeightMobile: 45px;
 // $topBarBtmMargin: 30px;
 // $topBarTitleWeight: bold;
@@ -249,7 +249,7 @@ $baseFontSize: 14px;
 body {
 }
 
-#leader-hero {
+.leader-hero {
   h2, h3, p {
     text-align: justify;
     font-weight: 200;
@@ -262,7 +262,7 @@ body {
 
 .vcard  {
   padding-left: 8px;
-  a,p {
+  a,a:visited,p {
   font-size: 1.1em;
     font-style: normal;
     color: $black;
@@ -272,4 +272,25 @@ body {
 
 .tabs dd.active a, .tabs li.active a {
   background: $white;
+}
+
+.creation {
+  margin-top: 30px;
+}
+
+.home-panel {
+  padding: 40px 30px;
+}
+
+.top-bar {
+  h1 {
+    img {
+
+    }
+  }
+}
+
+a, a:visited {font-weight:bold}
+.leaflet-container {
+  a, a:visited {font-weight: normal}
 }

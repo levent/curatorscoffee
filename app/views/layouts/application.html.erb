@@ -46,7 +46,7 @@
     <ul>
       <!-- Title Area -->
       <li class="name">
-        <h1><%= link_to "Curators Coffee", root_path %></h1>
+        <h1><%= link_to image_tag('logos/cc-mini-typography.png'), root_path %></h1>
       </li>
       <li class="toggle-topbar"><a href="#"></a></li>
     </ul>
@@ -55,27 +55,18 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li class="divider"></li>
-        <li><%= link_to "About Us", about_us_path %></li>
+        <li><%= link_to "About Us", root_path %></li>
         <li class="divider"></li>
-        <li><%= link_to "Our Food & Drink", food_drink_path %></li>
+        <li><%= link_to "Drink & Eat", food_drink_path %></li>
         <li class="divider"></li>
-        <li><%= link_to "Curators Creations", creations_path %></li>
+        <li><%= link_to "Our Creations", creations_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Our Design", design_path %></li>
         <li class="divider"></li>
         <li><%= link_to "Contact Us", contact_us_path %></li>
       </ul>
     </section>
   </nav>
-  <!-- Header and Nav -->
-
-  <div class="row">
-    <div class="four columns">
-      <h1><%= link_to image_tag("logo-studio-stamp.png", :class => 'cc-logo'), root_path %></h1>
-      <%= yield :sub_logo_content %>
-    </div>
-    <div class="eight columns">
-      <%= yield :top_content %>
-    </div>
-  </div>
   <!-- End Header and Nav -->
   <%= yield %>
 
