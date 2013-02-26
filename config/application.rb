@@ -61,8 +61,8 @@ module CuratorscoffeeCom
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.initialize_on_precompile = false
-    config.assets.precompile += %w( leaflet.ie.css footer.js )
+    config.assets.initialize_on_precompile = true
+    config.assets.precompile += %w( leaflet.ie.css )
 
     config.cache_store = :dalli_store
   end
