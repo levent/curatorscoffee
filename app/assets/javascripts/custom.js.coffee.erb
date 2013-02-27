@@ -1,16 +1,17 @@
-L.Icon.Default.imagePath = "/assets/leaflet"
-url = "http://a.tiles.mapbox.com/v3/lebreeze.map-q7kfkf72.jsonp"
-centre = [51.512030, -0.082581]
-map = new L.Map("map",
-  scrollWheelZoom : false
-  dragging : false
-  zoomControl : false
-  doubleClickZoom : false
-  closePopupOnClick : false
+if ($('#map').length > 0)
+  L.Icon.Default.imagePath = "/assets/leaflet"
+  url = "http://a.tiles.mapbox.com/v3/lebreeze.map-q7kfkf72.jsonp"
+  centre = [51.512030, -0.082581]
+  map = new L.Map("map",
+    scrollWheelZoom : false
+    dragging : false
+    zoomControl : false
+    doubleClickZoom : false
+    closePopupOnClick : false
 
-).setView(centre, 17)
+  ).setView(centre, 17)
 
-wax.tilejson url, (tilejson) ->
-  map.addLayer new wax.leaf.connector(tilejson)
+  wax.tilejson url, (tilejson) ->
+    map.addLayer new wax.leaf.connector(tilejson)
 
-marker = new L.marker(centre).addTo(map)
+  marker = new L.marker(centre).addTo(map)
