@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
+//= require foundation/modernizr.foundation
+//= require foundation/jquery.placeholder
+//= require foundation/jquery.foundation.orbit
+//= require foundation/app
 //= require leaflet-src
 //= require wax.leaf
 //= require custom.js
