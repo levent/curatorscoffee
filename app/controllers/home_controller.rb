@@ -20,6 +20,10 @@ class HomeController < ApplicationController
   def classes
   end
 
+  def loaderio
+    render :layout => false
+  end
+
   private
 
   def set_cache_control
