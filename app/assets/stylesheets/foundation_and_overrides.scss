@@ -25,7 +25,7 @@ $white: #f2f4f5;
 
 // Font Settings
 
-// $fontSmoothing: antialiased;
+$fontSmoothing: antialiased;
 // $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $headerFontWeight: bold;
 // $headerFontStyle: normal;
@@ -299,4 +299,8 @@ a, a:visited {font-weight:bold}
     font-weight:bold;
     font-size: 1.1em;
   }
+}
+
+a {
+  color: #2f2f2f;
 }
