@@ -15,3 +15,14 @@ if ($('#map').length > 0)
     map.addLayer new wax.leaf.connector(tilejson)
 
   marker = new L.marker(centre).addTo(map)
+
+trackOutboundLink = (link, category, action) ->
+  try
+    _gaq.push ["_trackEvent", category, action]
+  setTimeout (->
+    document.location.href = link.href
+  ), 100
+
+$("#js-mailing-list-link").click ->
+  trackOutboundLink this, "Outbound Links", "mailchimp.com"
+  false
