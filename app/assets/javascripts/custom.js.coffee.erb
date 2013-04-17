@@ -16,13 +16,13 @@ if ($('#map').length > 0)
 
   marker = new L.marker(centre).addTo(map)
 
-trackOutboundLink = (link, category, action) ->
+trackOutboundLink = (link, category, action, label) ->
   try
-    _gaq.push ["_trackEvent", category, action]
+    _gaq.push ["_trackEvent", category, action, label]
   setTimeout (->
     document.location.href = link.href
   ), 100
 
 $("#js-mailing-list-link").click ->
-  trackOutboundLink this, "Outbound Links", "mailchimp.com"
+  trackOutboundLink this, "Outbound Links", "Click", "mailchimp.com"
   false
