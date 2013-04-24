@@ -5,6 +5,7 @@ gem 'rails', '3.2.13'
 gem 'thin'
 gem 'dalli'
 gem 'newrelic_rpm'
+gem 'zurb-foundation', '3.2.5'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -16,6 +17,5 @@ group :assets do
   gem 'compass-rails'
   gem 'asset_sync'
 end
-gem 'zurb-foundation', '3.2.5'
 
 gem 'jquery-rails'

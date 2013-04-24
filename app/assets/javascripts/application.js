@@ -15,6 +15,7 @@
 //= require foundation/modernizr.foundation
 //= require foundation/jquery.placeholder
 //= require foundation/jquery.foundation.orbit
+//= require foundation/jquery.foundation.topbar
 //= require foundation/app
 //= require leaflet-src
 //= require wax.leaf
