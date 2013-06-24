@@ -24,7 +24,7 @@
       <h3>Next Classes</h3>
       <ul class="square">
         <% @brew_classes.each do |klass| %>
-          <li><%= klass.to_time.strftime('%A %e %B, %l:%M%P') %></li>
+          <li><%= class_time(klass) %></li>
         <% end %>
       </ul>
     </div>
@@ -45,7 +45,7 @@
       <h3>Next Classes</h3>
       <ul class="square">
         <% @latte_classes.each do |klass| %>
-          <li><%= klass.to_time.strftime('%A %e %B, %l:%M%P') %></li>
+          <li><%= class_time(klass) %></li>
         <% end %>
       </ul>
     </div>
