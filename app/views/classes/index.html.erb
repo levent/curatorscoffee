@@ -1,7 +1,7 @@
 <% content_for :title, "Our Classes" %>
 
 <div class="row">
-  <div class="eight columns">
+  <div class="seven columns">
     <div class="leader-hero coffee-class">
       <h2>Brewed Coffee Class</h2>
 
@@ -19,22 +19,20 @@
         class</strong>. For more info or details of upcoming classes contact Krysty on: <a href="mailto:classes@curatorscoffee.com">classes@curatorscoffee.com</a></p>
     </div>
   </div>
-  <div class="four columns">
-    <div class="right leader-hero coffee-class">
+  <div class="offset-by-one four columns">
+    <div class="leader-hero coffee-class">
       <h3>Next Classes</h3>
       <ul class="square">
-        <li><strike>Wednesday 22nd May, 6:15pm</strike></li>
-        <li><strike>Wednesday 5th June, 6:15pm</strike></li>
-        <li>Thursday 13th June, 6:15pm</li>
-        <li>Monday 1st July, 6:15pm</li>
-
+        <% @brew_classes.each do |klass| %>
+          <li><%= klass.to_time.strftime('%A %e %B, %l:%M%P') %></li>
+        <% end %>
       </ul>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="eight columns">
+  <div class="seven columns">
     <div class="leader-hero coffee-class">
       <h2>Latte Art Class</h2>
       <p>Attempt to pour your own amazing latte art images and then marvel at how terrible you are. Don't worry, we will be there to guide you and provide words of encouragement.</p>
@@ -42,13 +40,13 @@
       <p>Latte Art Classes cost <strong>£25 per person</strong> and go for <strong>1.5 hours</strong> and are limited to a maximum of <strong>4 people per class</strong> to ensure everyone gets plenty of practice. For more info or details of upcoming classes contact Krysty on: <a href="mailto:classes@curatorscoffee.com">classes@curatorscoffee.com</a></p>
     </div>
   </div>
-  <div class="four columns">
-    <div class="right leader-hero coffee-class">
+  <div class="offset-by-one four columns">
+    <div class="leader-hero coffee-class">
       <h3>Next Classes</h3>
       <ul class="square">
-        <li>Wednesday 12th June, 6:15pm</li>
-        <li>Wednesday 19th June, 6:15pm</li>
-        <li>Thursday 27th June, 6:15pm</li>
+        <% @latte_classes.each do |klass| %>
+          <li><%= klass.to_time.strftime('%A %e %B, %l:%M%P') %></li>
+        <% end %>
       </ul>
     </div>
   </div>
