@@ -23,6 +23,7 @@
       <%= stylesheet_link_tag    "leaflet.ie" %>
   <![endif]-->
 
+  <%= javascript_include_tag "vendor/custom.modernizr" %>
   <%= csrf_meta_tags %>
 
   <script type="text/javascript">
@@ -42,54 +43,36 @@
   </script>
 </head>
 <body>
-  <!-- Header and Nav -->
 
-  <nav class="top-bar">
-    <ul>
-      <!-- Title Area -->
-      <li class="name">
-        <h1><%= link_to image_tag('logos/cc-mini-typography.png'), root_path %></h1>
-      </li>
-      <li class="toggle-topbar"><a href="#"></a></li>
-    </ul>
+  <div class="curators-menu">
+    <div class="row">
+      <div class="large-3 columns">
+        <h1><%= link_to image_tag("logos/logo-studio-stamp-black.png", :class => 'cc-logo'), root_path %></h1>
+      </div>
+      <div class="large-9 columns">
+        <%= link_to "Drink & Eat", food_drink_path, :class => "menu-link" %>
+        <%= link_to "Catering", catering_path, :class => "menu-link" %>
+        <%= link_to "Creations", creations_path, :class => "menu-link" %>
+        <%= link_to "Classes", classes_path, :class => "menu-link" %>
+        <%= link_to "Design", design_path, :class => "menu-link" %>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li><%= link_to "Drink & Eat", food_drink_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to "Catering", catering_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to "Creations", creations_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to "Classes", classes_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to "Design", design_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to "Contact Us", contact_us_path %></li>
-        <li class="divider"></li>
-        <li><a href="http://eepurl.com/ybpyn" id="js-mailing-list-link">Mailing List</a></li>
-      </ul>
-    </section>
-  </nav>
-  <!-- End Header and Nav -->
   <%= yield %>
 
   <!-- Footer -->
 
   <footer class="row">
-    <div class="twelve columns">
+    <div class="large-12 columns">
       <hr />
       <div class="row">
-        <div class="four columns">
+        <div class="large-4 columns">
           <p>&copy; 2013 Curators Coffee</p>
         </div>
-        <div class="eight columns">
+        <div class="large-8 columns">
           <ul class="inline-list right">
-            <li><a href="http://maps.google.co.uk/maps?q=curators+coffee&amp;hl=en&amp;ll=51.512108,-0.082591&amp;spn=0.016279,0.036736&amp;sll=53.800651,-4.064941&amp;sspn=31.939111,75.234375&amp;hq=curators+coffee&amp;t=m&amp;z=16&amp;iwloc=A" class="dark adr">9a Cullum St London EC3M 7JJ</a></li>
-            <li>Mon-Fri 7:30am-5:00pm</li>
-            <li>020 7283 4642</li>
+            <li><a href="http://eepurl.com/ybpyn" id="js-mailing-list-link">Join Our Mailing List</a></li>
           </ul>
         </div>
       </div>

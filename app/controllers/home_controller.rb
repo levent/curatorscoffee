@@ -11,9 +11,6 @@ class HomeController < ApplicationController
   def creations
   end
 
-  def contact_us
-  end
-
   def food_and_drink
   end
 

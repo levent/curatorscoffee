@@ -1,8 +1,3 @@
 <% 1.upto(15) do |count| %>
-  <%= image_tag "slides/slide#{count}.jpg", :class => "slide" %>
-<% end %>
-<% content_for :custom_js do %>
-  $(window).load(function() {
-    $("#main-slides").orbit();
-  });
+  <li><%= image_tag "slides/slide#{count}.jpg", :class => "slide" %></li>
 <% end %>
