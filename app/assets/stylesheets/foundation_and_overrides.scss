@@ -1340,9 +1340,11 @@ a.symbol:before {
   display: block;
   float: left;
   text-transform: uppercase;
+  font-weight: bold;
   &:hover {
     text-decoration: none;
-    background-color: $body-font-color;
+    color: black;
+    background-color: white;
   }
 }
 
