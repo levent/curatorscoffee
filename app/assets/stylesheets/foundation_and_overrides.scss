@@ -1275,6 +1275,7 @@ $topbar-link-font-size: emCalc(14px);
 .curators-menu {
   background: black;
   color: white;
+  margin-bottom: 1.25em;
 }
 
 .leader-hero {
@@ -1305,6 +1306,10 @@ $topbar-link-font-size: emCalc(14px);
   display: block;
   float: left;
   text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+    background-color: $body-font-color;
+  }
 }
 
 a {
