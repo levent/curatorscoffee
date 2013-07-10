@@ -58,7 +58,5 @@ module CuratorscoffeeCom
 
     config.assets.initialize_on_precompile = true
     config.assets.precompile += %w( leaflet.ie.css )
-
-    config.cache_store = :dalli_store
   end
 end

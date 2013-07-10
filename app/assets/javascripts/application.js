@@ -13,8 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require leaflet-src
-//= require wax.leaf
 //= require custom.js
+//= require turbolinks
 
 $(function(){ $(document).foundation(); });
