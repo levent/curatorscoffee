@@ -48,7 +48,7 @@ CuratorscoffeeCom::Application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   if ENV['STAGING'] == 'yes'
-    config.action_controller.asset_host = "//d1l4y0v712sto9.cloudfront.net"
+    config.action_controller.asset_host = "//dl4uaat6h64dw.cloudfront.net"
   else
     config.action_controller.asset_host = "//dh2gjjtg5ju5o.cloudfront.net"
   end
