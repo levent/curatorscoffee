@@ -1274,12 +1274,12 @@ $topbar-link-font-size: emCalc(14px);
 
 @font-face {
     font-family: 'Mono Social Icons Font';
-    src: asset-url('LMonoSocialIconsFont-1.10.eot');
-    src: asset-url('LMonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         asset-url('LMonoSocialIconsFont-1.10.woff') format('woff'),
-         asset-url('LMonoSocialIconsFont-1.10.ttf') format('truetype'),
-         asset-url('LMonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: asset-url('LMonoSocialIconsFont-1.10.ttf') format('truetype');
+    src: asset-url('MonoSocialIconsFont-1.10.eot');
+    src: asset-url('MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         asset-url('MonoSocialIconsFont-1.10.woff') format('woff'),
+         asset-url('MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         asset-url('MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: asset-url('MonoSocialIconsFont-1.10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
