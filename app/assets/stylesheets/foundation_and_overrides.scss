@@ -1331,23 +1331,6 @@ a.symbol:before {
 }
 
 
-.menu-link {
-  margin: 1em 0;
-  color: white;
-  width: 20%;
-  text-align: center;
-  padding: 5em 0;
-  display: block;
-  float: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  &:hover {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-  }
-}
-
 a {
   font-weight: 200;
   color: $body-font-color;
@@ -1376,4 +1359,31 @@ a.social-media-link {
   font-size: 3em;
   text-align: center;
   text-decoration: none;
+}
+
+.menu-link {
+    margin: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    display: block;
+    float: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+    }
+  }
+
+@media #{$small} {
+.menu-link {
+  margin: 1em 0;
+  width: 20%;
+  padding: 5em 0;
+  float: left;
+}
+
 }
