@@ -1,8 +1,9 @@
 module ApplicationHelper
-  def class_time(timestamp)
+  def class_time(timestamp, free)
+    puts timestamp
     time = timestamp.to_time
     time_string = time.strftime('%A %e %B, %l:%M%P')
-    if time < 1.hours.ago
+    if time < 1.hours.ago || !free
       content_tag :strike do
         time_string
       end

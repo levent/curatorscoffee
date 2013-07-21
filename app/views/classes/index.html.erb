@@ -23,8 +23,8 @@
     <div class="leader-hero coffee-class">
       <h2>Dates</h2>
       <ul class="no-bullet">
-        <% @brew_classes.each do |klass| %>
-          <li><%= class_time(klass) %></li>
+        <% @brew_classes.each do |klass, free| %>
+          <li><%= class_time(klass, free == :free) %></li>
         <% end %>
       </ul>
     </div>
@@ -44,8 +44,8 @@
     <div class="leader-hero coffee-class">
       <h2>Dates</h2>
       <ul class="no-bullet">
-        <% @latte_classes.each do |klass| %>
-          <li><%= class_time(klass) %></li>
+        <% @latte_classes.each do |klass, free| %>
+          <li><%= class_time(klass, free == :free) %></li>
         <% end %>
       </ul>
     </div>
