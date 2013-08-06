@@ -1,0 +1,2 @@
+class LatteArtClass < CoffeeClass
+end

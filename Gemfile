@@ -7,6 +7,8 @@ gem 'thin'
 gem 'newrelic_rpm'
 gem 'turbolinks'
 
+gem 'couchrest_model', git: 'https://github.com/couchrest/couchrest_model.git'
+
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 

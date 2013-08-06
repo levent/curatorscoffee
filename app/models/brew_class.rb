@@ -1,0 +1,2 @@
+class BrewClass < CoffeeClass
+end
