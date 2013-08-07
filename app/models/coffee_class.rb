@@ -1,10 +1,8 @@
-class CoffeeClass < CouchRest::Model::Base
-  property :scheduled_at, Time
-  property :free, TrueClass, :default => true
+class CoffeeClass
+  include CouchPotato::Persistence
+  property :scheduled_at, :type => Time
+  property :free, :type => :boolean, :default => true
+  validates_presence_of :scheduled_at
 
-  timestamps!
-
-  design do
-    view :by_scheduled_at, :descending => true
-  end
+  view :all, :key => :scheduled_at
 end

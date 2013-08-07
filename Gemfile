@@ -7,7 +7,7 @@ gem 'thin'
 gem 'newrelic_rpm'
 gem 'turbolinks'
 
-gem 'couchrest_model', git: 'https://github.com/couchrest/couchrest_model.git'
+gem 'couch_potato'
 
 gem 'memcachier'
 gem 'dalli'
@@ -24,3 +24,7 @@ gem 'zurb-foundation'
 gem 'asset_sync'
 
 gem 'jquery-rails'
+
+group :development do
+  gem 'debugger'
+end

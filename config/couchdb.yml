@@ -1,0 +1,10 @@
+default: &default
+development:
+  <<: *default
+  database: curators_development
+test:
+  <<: *default
+  database: curators_test
+production:
+  <<: *default
+  database: <%= ENV['CLOUDANT_URL'] %>
