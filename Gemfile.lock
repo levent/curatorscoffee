@@ -60,6 +60,7 @@ GEM
       multi_json (~> 1.0)
       rest-client (~> 1.6.1)
     daemons (1.1.9)
+    dalli (2.6.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
     excon (0.25.3)
@@ -85,6 +86,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.23)
     mini_portile (0.5.1)
     minitest (4.7.5)
@@ -159,7 +161,9 @@ DEPENDENCIES
   compass
   compass-rails
   couchrest_model!
+  dalli
   jquery-rails
+  memcachier
   newrelic_rpm
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
