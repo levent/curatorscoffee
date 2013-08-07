@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="large-4 columns">
+    <%= form.label :scheduled_at %>
+    <%= form.datetime_local_field :scheduled_at %>
+  </div>
+
+  <div class="large-2 columns end">
+    <%= form.label :free %>
+    <%= form.check_box :free %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-4 columns">
+    <%= form.button %>
+  </div>
+</div>

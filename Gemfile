@@ -12,6 +12,8 @@ gem 'couch_potato'
 gem 'memcachier'
 gem 'dalli'
 
+gem 'bcrypt-ruby', '~> 3.0.0'
+
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 

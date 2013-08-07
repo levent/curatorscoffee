@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h3>Edit Class</h3>
+    <%= form_for [:admin, @klass], url: admin_class_path do |f| %>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :scheduled_at %>
+          <%= f.datetime_local_field :scheduled_at %>
+        </div>
+
+        <div class="large-2 columns end">
+          <%= f.label :free %>
+          <%= f.check_box :scheduled_at %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.button %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
