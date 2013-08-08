@@ -4,6 +4,7 @@ CuratorscoffeeCom::Application.routes.draw do
     resources :classes, :only => [:index]
     resources :brew_classes
     resources :latte_art_classes
+    resources :blog_posts
   end
   get '/login' => 'sessions#new'
   get '/logout' => 'sessions#destroy'
