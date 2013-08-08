@@ -27,6 +27,6 @@ gem 'asset_sync'
 
 gem 'jquery-rails'
 
-group :development do
-  gem 'debugger'
-end
+gem 'debugger', group: :development
+
+gem 'rails_12factor', group: :production
