@@ -1,4 +1,4 @@
-class Admin::LatteArtClassesController < ApplicationController
+class Admin::LatteArtClassesController < AdminController
   def new
     @latte_art_class = LatteArtClass.new
   end
