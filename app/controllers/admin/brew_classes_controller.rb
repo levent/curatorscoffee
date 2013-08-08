@@ -6,6 +6,7 @@ class Admin::BrewClassesController < AdminController
   def create
     @brew_class = BrewClass.new(brew_class_params)
     if CouchPotato.database.save_document(@brew_class)
+      Rails.cache.delete 'brew_classes'
       redirect_to admin_classes_path
     else
       render :new
@@ -21,6 +22,7 @@ class Admin::BrewClassesController < AdminController
     @brew_class.scheduled_at = brew_class_params[:scheduled_at]
     @brew_class.free = brew_class_params[:free]
     if CouchPotato.database.save_document(@brew_class)
+      Rails.cache.delete 'brew_classes'
       redirect_to admin_classes_path
     else
       render :edit
@@ -30,6 +32,7 @@ class Admin::BrewClassesController < AdminController
   def destroy
     @brew_class = CouchPotato.database.load_document(params[:id])
     CouchPotato.database.destroy_document @brew_class
+    Rails.cache.delete 'brew_classes'
     redirect_to admin_classes_path
   end
 

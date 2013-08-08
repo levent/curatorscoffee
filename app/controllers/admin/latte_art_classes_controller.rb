@@ -6,6 +6,7 @@ class Admin::LatteArtClassesController < AdminController
   def create
     @latte_art_class = LatteArtClass.new(latte_art_class_params)
     if CouchPotato.database.save_document(@latte_art_class)
+      Rails.cache.delete 'latte_classes'
       redirect_to admin_classes_path
     else
       render :new
@@ -21,6 +22,7 @@ class Admin::LatteArtClassesController < AdminController
     @latte_art_class.scheduled_at = latte_art_class_params[:scheduled_at]
     @latte_art_class.free = latte_art_class_params[:free]
     if CouchPotato.database.save_document(@latte_art_class)
+      Rails.cache.delete 'latte_classes'
       redirect_to admin_classes_path
     else
       render :edit
@@ -30,6 +32,7 @@ class Admin::LatteArtClassesController < AdminController
   def destroy
     @brew_class = CouchPotato.database.load_document(params[:id])
     CouchPotato.database.destroy_document @brew_class
+    Rails.cache.delete 'latte_classes'
     redirect_to admin_classes_path
   end
 
