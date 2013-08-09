@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
-</head>
+  <meta charset="utf-8" />
 
+  <!-- Uncomment to make IE8 render like IE7 -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Curators Coffee</title>
+  <meta name="description" content="Specialty coffees, teas and quality local food in the City of London">
+
+  <!-- Included CSS Files -->
+  <link href="//dh2gjjtg5ju5o.cloudfront.net/assets/application-fa5e199c9c57e9297e7b4983cfe8f571.css" media="screen" rel="stylesheet" />
+
+  <script src="//dh2gjjtg5ju5o.cloudfront.net/assets/vendor/custom.modernizr-d48e29f222fb9feafa45e0cf9dab7cc7.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29743319-1']);
+    _gaq.push(['_setDomainName', 'curatorscoffee.com']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
+
+  <div class="curators-menu">
+    <div class="row">
+      <div class="large-3 small-6 columns">
+        <h1><a href="/"><img alt="Logo studio stamp black" class="cc-logo" src="//dh2gjjtg5ju5o.cloudfront.net/assets/logos/logo-studio-stamp-black-d2371d8465fb5f172b769abd0a844017.png" /></a></h1>
+      </div>
+      <div class="large-9 small-6 columns">
+        <a class="menu-link" href="/food_drink">Drink &amp; Eat</a>
+        <a class="menu-link" href="/catering">Catering</a>
+        <a class="menu-link" href="/creations">Creations</a>
+        <a class="menu-link" href="/classes">Classes</a>
+        <a class="menu-link" href="/design">Design</a>
+      </div>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>We're sorry, but something went wrong.</h1>
+    </div>
+  </div>
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-4 small-6 columns">
+          <p>&copy; 2013 Curators Coffee</p>
+        </div>
+        <div class="large-8 small-6 columns">
+          <ul class="inline-list right">
+            <li><a href="http://eepurl.com/ybpyn" id="js-mailing-list-link">Join Our Mailing List</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
