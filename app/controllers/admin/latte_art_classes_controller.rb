@@ -20,7 +20,6 @@ class Admin::LatteArtClassesController < AdminController
   def update
     @latte_art_class = CouchPotato.database.load_document(params[:id])
     @latte_art_class.scheduled_at = latte_art_class_params[:scheduled_at]
-    @latte_art_class.free = latte_art_class_params[:free]
     @latte_art_class.available = latte_art_class_params[:available]
     if CouchPotato.database.save_document(@latte_art_class)
       Rails.cache.delete 'latte_classes'
@@ -40,6 +39,6 @@ class Admin::LatteArtClassesController < AdminController
   private
 
   def latte_art_class_params
-    params.require(:latte_art_class).permit(:scheduled_at, :free, :available)
+    params.require(:latte_art_class).permit(:scheduled_at, :available)
   end
 end

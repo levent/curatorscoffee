@@ -20,7 +20,6 @@ class Admin::BrewClassesController < AdminController
   def update
     @brew_class = CouchPotato.database.load_document(params[:id])
     @brew_class.scheduled_at = brew_class_params[:scheduled_at]
-    @brew_class.free = brew_class_params[:free]
     @brew_class.available = brew_class_params[:available]
     if CouchPotato.database.save_document(@brew_class)
       Rails.cache.delete 'brew_classes'
@@ -40,6 +39,6 @@ class Admin::BrewClassesController < AdminController
   private
 
   def brew_class_params
-    params.require(:brew_class).permit(:scheduled_at, :free, :available)
+    params.require(:brew_class).permit(:scheduled_at, :available)
   end
 end
