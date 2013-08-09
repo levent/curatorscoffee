@@ -27,6 +27,9 @@ gem 'asset_sync'
 
 gem 'jquery-rails'
 
-gem 'debugger', group: :development
+group :development do
+  gem 'debugger'
+  gem 'brakeman', require: false
+end
 
 gem 'rails_12factor', group: :production
