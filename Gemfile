@@ -11,6 +11,7 @@ gem 'couch_potato'
 
 gem 'memcachier'
 gem 'dalli'
+gem 'redcarpet'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 

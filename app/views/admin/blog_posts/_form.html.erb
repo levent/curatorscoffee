@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="large-4 columns">
+    <%= form.label :published_at %>
+    <%= form.datetime_local_field :published_at %>
+  </div>
+
+  <div class="large-8 columns end">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <%= form.label :body %>
+    <%= form.text_area :body, :style => 'height:200px' %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-4 columns">
+    <%= form.button %>
+  </div>
+</div>

@@ -1393,3 +1393,7 @@ a.social-media-link {
     float: left;
   }
 }
+
+.field_with_errors input, .field_with_errors textarea {
+  border: 1px solid red;
+  }
