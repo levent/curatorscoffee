@@ -12,7 +12,7 @@
         <% @blog_posts.each do |post| %>
           <tr>
             <td><%= link_to post.title, edit_admin_blog_post_path(post) %></td>
-            <td><%= link_to 'view', admin_blog_post_path(post), class: 'label tiny secondary' %></td>
+            <td><%= link_to 'view', admin_blog_post_path(post.slug), class: 'label tiny secondary' %></td>
             <td><%= post.published_at.try(:strftime, '%A %e %B %Y, %l:%M%P') %></td>
           </tr>
         <% end %>

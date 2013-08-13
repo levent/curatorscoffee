@@ -30,6 +30,7 @@ GEM
       activemodel
       fog
     atomic (1.1.10)
+    babosa (0.3.11)
     bcrypt-ruby (3.0.1)
     brakeman (2.1.0)
       erubis (~> 2.6)
@@ -192,6 +193,7 @@ PLATFORMS
 
 DEPENDENCIES
   asset_sync
+  babosa
   bcrypt-ruby (~> 3.0.0)
   brakeman
   coffee-rails (~> 4.0.0)

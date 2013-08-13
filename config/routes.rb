@@ -6,6 +6,9 @@ CuratorscoffeeCom::Application.routes.draw do
     resources :latte_art_classes
     resources :blog_posts
   end
+
+  get '/blog' => 'blog#index'
+  get '/posts/:id' => 'blog#show'
   get '/login' => 'sessions#new'
   get '/logout' => 'sessions#destroy'
   get '/design' => 'home#design'

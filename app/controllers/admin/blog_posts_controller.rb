@@ -33,7 +33,7 @@ class Admin::BlogPostsController < AdminController
   end
 
   def show
-    @blog_post = CouchPotato.database.load_document(params[:id])
+    @blog_post = CouchPotato.database.view(BlogPost.by_slug(params[:id])).first
   end
 
   private
