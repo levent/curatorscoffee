@@ -3,9 +3,11 @@
     <% @blog_posts.each do |post| %>
       <div class="row">
         <div class="large-12 columns">
-          <h2><%= link_to post.title, "/posts/#{post.slug}" %> <small><%= format_date(post.published_at) %></small></h2>
-          <%= truncate_html(MARKDOWN.render(post.body), break_token: '<!-- truncate -->', length: 5000) %>
-          <%= link_to '...read more', "/posts/#{post.slug}" %>
+          <div class="blog-post">
+            <h2><%= link_to post.title, "/posts/#{post.slug}" %> <small><%= format_date(post.published_at) %></small></h2>
+            <%= truncate_html(MARKDOWN.render(post.body), break_token: '<!-- truncate -->', length: 5000) %>
+            <%= link_to '...read more', "/posts/#{post.slug}" %>
+          </div>
         </div>
       </div>
       <% unless @blog_posts.last == post %><hr><% end %>
