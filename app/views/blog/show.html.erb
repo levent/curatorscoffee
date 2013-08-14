@@ -3,7 +3,7 @@
 <% end %>
 <div class="row">
   <div class="large-12 columns">
-    <h2><%= @blog_post.title %></h2>
+    <h2><%= @blog_post.title %> <small><%= format_date(@blog_post.published_at) %></small></h2>
     <%= MARKDOWN.render(@blog_post.body).html_safe %>
   </div>
 </div>

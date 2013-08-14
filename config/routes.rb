@@ -1,6 +1,7 @@
 CuratorscoffeeCom::Application.routes.draw do
   resources :sessions, :only => [:create]
   namespace :admin do
+    root :to => redirect('/admin/classes')
     resources :classes, :only => [:index]
     resources :brew_classes
     resources :latte_art_classes

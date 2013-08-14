@@ -1,7 +1,6 @@
 class BlogController < ApplicationController
   def index
-    @blog_posts = CouchPotato.database.view BlogPost.all(10.years.ago..Time.now)
-    redirect_to "/posts/#{@blog_posts.first.slug}"
+    @blog_posts = CouchPotato.database.view BlogPost.all(key: (Time.now)..(10.years.ago), descending: true)
   end
 
   def show
