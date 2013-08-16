@@ -8,8 +8,9 @@ CuratorscoffeeCom::Application.routes.draw do
     resources :blog_posts
   end
 
-  get '/blog' => 'blog#index'
-  get '/posts/:id' => 'blog#show'
+  resources :blog, :only => [:index, :show]
+  get '/posts/:id', to: redirect('/blog/%{id}')
+
   get '/login' => 'sessions#new'
   get '/logout' => 'sessions#destroy'
   get '/design' => 'home#design'

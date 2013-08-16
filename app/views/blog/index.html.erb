@@ -4,9 +4,9 @@
       <div class="row">
         <div class="large-12 columns">
           <div class="blog-post">
-            <h2><%= link_to post.title, "/posts/#{post.slug}" %> <small><%= format_date(post.published_at) %></small></h2>
+            <h2><%= link_to post.title, blog_path(post.slug) %> <small><%= format_date(post.published_at) %></small></h2>
             <%= truncate_html(MARKDOWN.render(post.body), break_token: '<!-- truncate -->', length: 5000) %>
-            <%= link_to '...read more', "/posts/#{post.slug}" %>
+            <%= link_to '...read more', blog_path(post.slug) %>
           </div>
         </div>
       </div>
