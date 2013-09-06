@@ -31,6 +31,7 @@ $default-float: left;
 // $body-bg: #f2f4f5;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "futura-pt", sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -1313,11 +1314,11 @@ a.symbol:before {
 
 .leader-hero {
   h2, h3, h4 {
-    font-weight: 200;
+    font-weight: 300;
   }
   p {
     text-align: justify;
-    font-weight: 200;
+    font-weight: 300;
   }
   p {
     line-height: 1.36em;
@@ -1327,7 +1328,7 @@ a.symbol:before {
 
 
 a {
-  font-weight: 200;
+  font-weight: 300;
   color: $body-font-color;
   &:hover {
     color: $primary-color;
@@ -1374,7 +1375,7 @@ a.social-media-link {
 }
 
 .home-panel p {
-  font-weight: 200;
+  font-weight: 300;
   font-size: emCalc(18px);
 }
 
@@ -1382,7 +1383,7 @@ a.social-media-link {
 @media #{$small} {
 
   .home-panel p {
-    font-weight: 200;
+    font-weight: 300;
     font-size: emCalc(24px);
   }
 
