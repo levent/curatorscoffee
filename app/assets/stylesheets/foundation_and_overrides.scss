@@ -1399,4 +1399,10 @@ a.social-media-link {
   border: 1px solid red;
 }
 
-.blog-post ul {list-style-position: inside;}
+.blog-post {
+  font-size: 1.1em;
+  p { text-align: justify; font-weight: 300; }
+  ul { list-style-position: inside;}
+}
+
+
