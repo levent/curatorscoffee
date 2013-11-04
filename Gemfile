@@ -15,10 +15,10 @@ gem 'redcarpet'
 gem 'babosa'
 gem 'truncate_html'
 
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
-gem 'sass-rails',   '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails',   '~> 4.0.1'
+gem 'coffee-rails', '~> 4.0.1'
 
 gem 'compass-rails'
 gem 'compass'
