@@ -57,6 +57,6 @@ module CuratorscoffeeCom
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = true
-    config.assets.precompile += %w( jquery-2.0.3.min.map )
+    config.assets.precompile += %w( jquery-2.0.3.min.map vendor/modernizr.js )
   end
 end
