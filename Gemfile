@@ -22,10 +22,8 @@ gem 'coffee-rails', '~> 4.0.1'
 
 gem 'compass-rails'
 gem 'compass'
-gem 'zurb-foundation'
+gem 'foundation-rails'
 gem 'asset_sync'
-
-gem 'jquery-rails'
 
 gem 'uglifier', '>= 2.1.1'
 

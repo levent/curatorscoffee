@@ -19,7 +19,7 @@
   <!-- Included CSS Files -->
   <%= stylesheet_link_tag    "application" %>
 
-  <%= javascript_include_tag "vendor/custom.modernizr" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="//use.typekit.net/mbu3uul.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -78,6 +78,7 @@
 
   <%= javascript_include_tag "application" %>
 
+  <%= javascript_include_tag "vendor/jquery.js" %>
   <script type="text/javascript" charset="utf-8">
     <%= yield :custom_js %>
   </script>
