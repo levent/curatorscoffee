@@ -58,17 +58,6 @@
     </div>
   </div>
 
-  <% if Time.now < Time.parse('2014-01-06') %>
-    <div class="row">
-      <div class="large-12 columns">
-        <div data-alert class="alert-box radius">
-          <h5>We are closed over the holidays and will reopen on 6th January 2014.</h5>
-          <a href="#" class="close">&times;</a>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
   <%= yield %>
 
   <!-- Footer -->
