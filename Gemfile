@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 
 gem 'thin'
 gem 'newrelic_rpm'
+gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'couch_potato'
