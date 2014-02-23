@@ -24,7 +24,6 @@ gem 'coffee-rails', '~> 4.0.1'
 gem 'compass-rails'
 gem 'compass'
 gem 'foundation-rails'
-gem 'asset_sync'
 
 gem 'uglifier', '>= 2.1.1'
 
