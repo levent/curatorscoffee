@@ -32,4 +32,7 @@ group :development do
   gem 'brakeman', require: false
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'heroku-deflater'
+end

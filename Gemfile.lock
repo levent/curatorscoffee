@@ -82,6 +82,8 @@ GEM
     fssm (0.2.10)
     haml (4.0.5)
       tilt
+    heroku-deflater (0.5.3)
+      rack (>= 1.4.5)
     highline (1.6.20)
     hike (1.2.3)
     i18n (0.6.9)
@@ -181,6 +183,7 @@ DEPENDENCIES
   dalli
   debugger
   foundation-rails
+  heroku-deflater
   jquery-rails
   memcachier
   newrelic_rpm
