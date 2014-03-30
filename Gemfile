@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.0.0"
 
-gem 'rails', '4.0.3'
+gem 'rails', '4.0.4'
 
 gem 'thin'
 gem 'newrelic_rpm'
@@ -18,7 +18,7 @@ gem 'truncate_html'
 
 gem 'bcrypt-ruby', '~> 3.1.2'
 
-gem 'sass-rails',   '~> 4.0.1'
+gem 'sass-rails',   '~> 4.0.2'
 gem 'coffee-rails', '~> 4.0.1'
 
 gem 'compass-rails'
@@ -29,7 +29,7 @@ gem 'uglifier', '>= 2.1.1'
 
 group :development do
   gem 'debugger'
-  gem 'brakeman', require: false
+  gem 'brakeman', :require => false
 end
 
 group :production do
