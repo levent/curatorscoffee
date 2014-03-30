@@ -9,6 +9,8 @@ CuratorscoffeeCom::Application.routes.draw do
   end
 
   resources :blog, :only => [:index, :show]
+  get '/list/join', to: 'mailing_list#join'
+  get '/list/wait', to: 'mailing_list#wait'
   get '/posts/:id', to: redirect('/blog/%{id}')
 
   get '/login' => 'sessions#new'
