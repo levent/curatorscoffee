@@ -19,7 +19,7 @@ gem 'redcarpet'
 gem 'babosa'
 gem 'truncate_html'
 
-gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt', '~> 3.1.2'
 
 gem 'compass-rails'
 gem 'compass'
