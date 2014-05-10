@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :set_map_url
+  before_filter :set_map_urls
 
   def index
   end
@@ -16,14 +16,18 @@ class HomeController < ApplicationController
   def classes
   end
 
+  def locations
+  end
+
   def loaderio
     render :layout => false
   end
 
   private
 
-  def set_map_url
-    @map_url = "http://maps.google.co.uk/maps?q=curators+coffee&amp;hl=en&amp;ll=51.512108,-0.082591&amp;spn=0.016279,0.036736&amp;sll=53.800651,-4.064941&amp;sspn=31.939111,75.234375&amp;hq=curators+coffee&amp;t=m&amp;z=16&amp;iwloc=A"
+  def set_map_urls
+    @studio_map_url = "https://goo.gl/maps/bZdoz"
+    @gallery_map_url = "https://goo.gl/maps/MPDSv"
   end
 
 end

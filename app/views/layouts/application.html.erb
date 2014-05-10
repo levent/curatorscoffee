@@ -53,7 +53,7 @@
         <%= link_to "Creations", creations_path, :class => "menu-link" %>
         <%= link_to "Classes", classes_path, :class => "menu-link" %>
         <%= link_to "Design", design_path, :class => "menu-link" %>
-        <%= link_to "Blog", blog_index_path, class: 'menu-link' %>
+        <%= link_to "Locations", locations_path, class: 'menu-link' %>
       </div>
     </div>
   </div>
@@ -62,21 +62,7 @@
 
   <!-- Footer -->
 
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-4 small-6 columns">
-          <p>&copy; 2014 Curators Coffee</p>
-        </div>
-        <div class="large-8 small-6 columns">
-          <ul class="inline-list right">
-            <li><%= link_to 'Join Our Mailing List', list_join_path %></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <%= render partial: 'partials/footer' %>
 
   <%= javascript_include_tag "application" %>
 

@@ -1025,12 +1025,22 @@ $topbar-link-font-size: emCalc(14px);
     font-smoothing: antialiased;
 }
 
+h1 {
+  font-weight: 700;
+}
+
+h2, h3, h4 {
+  font-weight: 500;
+  &.subheader {
+    font-weight: 300;
+  }
+}
+
 a.symbol:before {
     content: attr(title);
     margin-right: 0.3em;
     font-size: 130%;
 }
-
 
 .curators-menu {
   background: black;
@@ -1038,24 +1048,16 @@ a.symbol:before {
   margin-bottom: 1.25em;
 }
 
-.leader-hero {
-  h2, h3, h4 {
-    font-weight: 300;
-  }
   p {
     text-align: justify;
     font-weight: 300;
-  }
-  p {
     line-height: 1.36em;
     font-size: 1.36em;
   }
-}
 
 
 a {
-  font-weight: 300;
-  color: $body-font-color;
+  font-weight: 500;
   &:hover {
     color: $primary-color;
     text-decoration: underline;
@@ -1064,12 +1066,6 @@ a {
 
 .vcard {
   border: none;
-  a {
-    color: $body-font-color;
-    &:hover {
-      color: $primary-color;
-    }
-  }
 }
 
 ul.catering-terms {
@@ -1078,6 +1074,7 @@ ul.catering-terms {
 }
 
 a.social-media-link {
+  color: white;
   font-size: 3em;
   text-align: center;
   text-decoration: none;
@@ -1129,4 +1126,26 @@ a.social-media-link {
   font-size: 1.1em;
   p { text-align: justify; font-weight: 300; }
   ul { list-style-position: inside;}
+}
+
+.footer-container {
+  margin-top: 40px;
+  padding-top: 40px;
+  color: white;
+  h4 {
+  color: white;
+  }
+  background-color: $body-font-color;
+}
+
+.footer {
+  font-size: 0.8em;
+  margin-top: 40px;
+}
+
+.locations-list {
+  font-weight: 300;
+  strong {
+    font-weight: 500;
+  }
 }
