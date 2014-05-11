@@ -35,7 +35,7 @@ $base-font-size: 100%;
 // $total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: #222;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-family: "futura-pt", sans-serif;
@@ -1025,6 +1025,12 @@ $topbar-link-font-size: emCalc(14px);
     font-smoothing: antialiased;
 }
 
+.body-container {
+  background-color: white;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
 h1 {
   font-weight: 700;
 }
@@ -1045,16 +1051,14 @@ a.symbol:before {
 .curators-menu {
   background: black;
   color: white;
-  margin-bottom: 1.25em;
 }
 
-  p {
-    text-align: justify;
-    font-weight: 300;
-    line-height: 1.36em;
-    font-size: 1.36em;
-  }
-
+p {
+  text-align: justify;
+  font-weight: 300;
+  line-height: 1.36em;
+  font-size: 1.36em;
+}
 
 a {
   font-weight: 500;
@@ -1078,6 +1082,9 @@ a.social-media-link {
   font-size: 3em;
   text-align: center;
   text-decoration: none;
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .menu-link {
@@ -1129,8 +1136,7 @@ a.social-media-link {
 }
 
 .footer-container {
-  margin-top: 40px;
-  padding-top: 40px;
+  padding-top: 30px;
   color: white;
   h4 {
   color: white;
