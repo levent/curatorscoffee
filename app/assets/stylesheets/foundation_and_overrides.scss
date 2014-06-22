@@ -1093,8 +1093,8 @@ a.social-media-link {
   margin: 0;
   color: white;
   width: 100%;
-  text-align: center;
-  padding: 1em 0;
+  text-align:right;
+  padding: .1em 0;
   text-transform: uppercase;
   font-weight: bold;
   &:hover {
@@ -1110,7 +1110,22 @@ a.social-media-link {
 }
 
 
-@media #{$small} {
+@media #{$medium-only} {
+  .home-panel p {
+    font-weight: 300;
+    font-size: emCalc(24px);
+  }
+
+  .menu-link {
+    text-align: center;
+    margin: 1em 0;
+    width: 16%;
+    padding: 2em 0;
+    float: left;
+  }
+}
+
+@media #{$large-up} {
 
   .home-panel p {
     font-weight: 300;
@@ -1118,9 +1133,10 @@ a.social-media-link {
   }
 
   .menu-link {
+    text-align:center;
     margin: 1em 0;
     width: 16%;
-    padding: 5em 0;
+    padding: 2em 0;
     float: left;
   }
 }
@@ -1154,4 +1170,8 @@ a.social-media-link {
   strong {
     font-weight: 500;
   }
+}
+
+img.cc-logo {
+  height: 100px;
 }
