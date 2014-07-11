@@ -1104,14 +1104,18 @@ a.social-media-link {
   }
 }
 
-.home-panel p {
-  font-weight: 300;
-  font-size: emCalc(18px);
+.cc-panel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  p {
+    font-weight: 300;
+    font-size: emCalc(18px);
+  }
 }
 
 
 @media #{$medium-only} {
-  .home-panel p {
+  .cc-panel p {
     font-weight: 300;
     font-size: emCalc(24px);
   }
@@ -1127,7 +1131,7 @@ a.social-media-link {
 
 @media #{$large-up} {
 
-  .home-panel p {
+  .cc-panel p {
     font-weight: 300;
     font-size: emCalc(24px);
   }

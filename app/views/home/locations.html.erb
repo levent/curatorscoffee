@@ -7,7 +7,7 @@
 </div>
 <div class="row">
   <div class="large-6 columns">
-    <div class="panel radius">
+    <div class="cc-panel">
       <a name="studio" />
       <%= link_to @studio_map_url do %>
         <img src="http://maps.googleapis.com/maps/api/staticmap?sensor=false&center=51.512030,-0.082581&zoom=16&size=500x500&markers=color:0xadccd1|label:S|51.512030,-0.082581<%= "&key=#{GOOGLE_API_KEY}" if Rails.env == 'production' %>" />
@@ -20,7 +20,7 @@
 </div>
 <div class="row">
   <div class="large-6 columns">
-    <div class="panel radius">
+    <div class="cc-panel">
       <a name="gallery" />
       <%= link_to @gallery_map_url do %>
         <img src="http://maps.googleapis.com/maps/api/staticmap?sensor=false&center=51.516574,-0.141677&zoom=16&size=500x500&markers=color:0xadccd1|label:G|51.516574,-0.141677<%= "&key=#{GOOGLE_API_KEY}" if Rails.env == 'production' %>" />
