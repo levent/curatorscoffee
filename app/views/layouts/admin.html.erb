@@ -12,12 +12,15 @@
 
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#adccd1">
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png">
 
   <title><%= content_for?(:title) ? "#{yield(:title)} - Curators Coffee" : "Curators Coffee" %></title>
   <meta name="description" content="Specialty coffees, teas and quality local food in the City of London">
 
   <!-- Included CSS Files -->
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "application" %>
 
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
@@ -40,8 +43,8 @@
 
   </script>
 </head>
-<body>
 
+<body>
   <div class="curators-menu">
     <div class="row">
       <div class="large-3 small-6 columns">
@@ -56,30 +59,14 @@
     </div>
   </div>
 
-  <%= yield %>
+  <div class="body-container">
+    <%= yield %>
+  </div>
 
   <!-- Footer -->
 
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-4 small-6 columns">
-          <p>&copy; 2014 Curators Coffee</p>
-        </div>
-        <div class="large-8 small-6 columns">
-          <ul class="inline-list right">
-            <li><a href="http://eepurl.com/ybpyn" id="js-mailing-list-link">Join Our Mailing List</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <%= render partial: 'partials/footer' %>
 
   <%= javascript_include_tag "application" %>
-
-  <script type="text/javascript" charset="utf-8">
-    <%= yield :custom_js %>
-  </script>
 </body>
 </html>

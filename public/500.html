@@ -8,18 +8,27 @@
   <meta charset="utf-8" />
 
   <!-- Uncomment to make IE8 render like IE7 -->
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"4504411bf9","applicationID":"993496","transactionName":"c1sMEUtaCV5QRxtQVl1RTQxXUQBK","queueTime":6,"applicationTime":26,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script> -->
 
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#adccd1">
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png">
 
   <title>Curators Coffee</title>
   <meta name="description" content="Specialty coffees, teas and quality local food in the City of London">
 
   <!-- Included CSS Files -->
-  <link href="//dh2gjjtg5ju5o.cloudfront.net/assets/application-fa5e199c9c57e9297e7b4983cfe8f571.css" media="screen" rel="stylesheet" />
+  <link href="//d1gwf67d7f4xgr.cloudfront.net/assets/application-3dba6c160b8c96386943edeb53455f96.css" media="screen" rel="stylesheet" />
 
-  <script src="//dh2gjjtg5ju5o.cloudfront.net/assets/vendor/custom.modernizr-d48e29f222fb9feafa45e0cf9dab7cc7.js"></script>
+  <script src="//d1gwf67d7f4xgr.cloudfront.net/assets/vendor/modernizr-e290e9de222da7634a5b271273a381f9.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="idpQ/92bVOyZLRw7Q32hnGQQl2XyHiA3t1UGjJAVJ4E=" name="csrf-token" />
+  <script type="text/javascript" src="//use.typekit.net/mbu3uul.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <script type="text/javascript">
 
@@ -36,44 +45,105 @@
     })();
 
   </script>
-<body>
+</head>
 
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1594454537447073',
+        xfbml      : true,
+        version    : 'v2.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=1594454537447073&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
   <div class="curators-menu">
     <div class="row">
-      <div class="large-3 small-6 columns">
-        <h1><a href="/"><img alt="Logo studio stamp black" class="cc-logo" src="//dh2gjjtg5ju5o.cloudfront.net/assets/logos/logo-studio-stamp-black-d2371d8465fb5f172b769abd0a844017.png" /></a></h1>
+      <div class="large-3 small-6 medium-3 columns">
+        <h1><a href="/"><img alt="Cc master logo" class="cc-logo" src="//d1gwf67d7f4xgr.cloudfront.net/assets/logos/cc-master-logo-9cbb189478eb1cae5da413fc1aa2ad51.png" /></a></h1>
       </div>
-      <div class="large-9 small-6 columns">
+      <div class="large-9 small-6 medium-9 columns">
         <a class="menu-link" href="/food_drink">Drink &amp; Eat</a>
         <a class="menu-link" href="/catering">Catering</a>
         <a class="menu-link" href="/creations">Creations</a>
         <a class="menu-link" href="/classes">Classes</a>
         <a class="menu-link" href="/design">Design</a>
+        <a class="menu-link" href="/locations">Locations</a>
       </div>
     </div>
   </div>
 
+  <div class="body-container">
+    <div class="row">
+      <div class="large-12 columns">
+        <h2>We're sorry, but something went wrong.</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <div class="footer-container">
   <div class="row">
-    <div class="large-12 columns">
-      <h2>We're sorry, but something went wrong.</h2>
+    <div class="large-4 columns">
+      <h4>Join Our Mailing List</h4>
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="http://curatorscoffee.us4.list-manage.com/subscribe/post?u=b8ada79ae7ae90478bf9a0593&amp;id=d742678d90" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div class="row collapse">
+            <div class="small-9 columns">
+
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <input type="hidden" value="2" name="group[16445][2]" id="mce-group[16445]-16445-1">
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_b8ada79ae7ae90478bf9a0593_d742678d90" tabindex="-1" value=""></div>
+            </div>
+            <div class="small-3 columns">
+              <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button postfix small radius">
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+      <div class="fb-like" data-href="https://www.facebook.com/curatorscoffee" data-layout="standard" data-action="like" data-share="true" data-width="380px" data-color-scheme="dark"></div>
+    </div>
+    <div class="large-6 large-offset-2 columns">
+      <h4>Locations</h4>
+      <ul class="no-bullet locations-list">
+        <li><a href="https://goo.gl/maps/bZdoz">Curators Coffee Studio</a>, 9a Cullum Street, London EC3M 7JJ<li>
+        <li><a href="https://goo.gl/maps/MPDSv">Curators Coffee Gallery</a>, 51 Margaret Street, London W1W 8SG<li>
+      </ul>
+      <a class="social-media-link" href="http://twitter.com/Curators_Coffee"><span class="symbol">twitterbird</span></a>
+      <a class="social-media-link" href="https://www.facebook.com/curatorscoffee"><span class="symbol">facebook</span></a>
+      <a class="social-media-link" href="http://instagram.com/curators_coffee"><span class="symbol">instagram</span></a>
+      <a class="social-media-link" href="https://plus.google.com/+CuratorsCoffee/about"><span class="symbol">googleplus</span></a>
     </div>
   </div>
 
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-4 small-6 columns">
-          <p>&copy; 2013 Curators Coffee</p>
-        </div>
-        <div class="large-8 small-6 columns">
-          <ul class="inline-list right">
-            <li><a href="http://eepurl.com/ybpyn" id="js-mailing-list-link">Join Our Mailing List</a></li>
-          </ul>
+
+  <div class="footer">
+    <footer class="row">
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="large-12 small-12 columns">
+            <p>&copy; 2014 Curators Coffee</p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
+</div>
+
+
+  <script src="//d1gwf67d7f4xgr.cloudfront.net/assets/application-8906dc52746c09bea3d3f48234ba73c5.js"></script>
 
 </body>
 </html>
