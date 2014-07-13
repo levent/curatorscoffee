@@ -3,6 +3,7 @@ CuratorscoffeeCom::Application.routes.draw do
   namespace :admin do
     root :to => redirect('/admin/classes')
     resources :classes, :only => [:index]
+    resources :documents
     resources :brew_classes
     resources :latte_art_classes
     resources :blog_posts
