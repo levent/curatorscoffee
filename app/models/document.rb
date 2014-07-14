@@ -5,5 +5,5 @@ class Document
   validates_presence_of :title
   validates_presence_of :body
 
-  view :by_name, :key => :name
+  view :by_title, :key => :title
 end

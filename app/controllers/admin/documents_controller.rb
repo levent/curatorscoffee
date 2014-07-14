@@ -1,6 +1,6 @@
 class Admin::DocumentsController < AdminController
   def index
-    @documents = CouchPotato.database.view Document.by_name
+    @documents = CouchPotato.database.view(Document.by_title)
   end
 
   def new
