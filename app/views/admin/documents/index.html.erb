@@ -5,8 +5,8 @@
     <% end %>
     <dl>
       <% @documents.each do |post| %>
-        <dt><%= post.title %> <%= post.created_at.try(:strftime, '%A %e %B %Y, %l:%M%P') %></dt>
-        <dd><%= post.body %></dd>
+        <dt><%= post.title %> (created: <%= post.created_at.try(:strftime, '%A %e %B %Y, %l:%M%P') %>)</dt>
+        <dd><%= MARKDOWN.render(post.body).html_safe %><hr></dd>
       <% end %>
     </dl>
     <%= link_to "Add a document", new_admin_document_path, class: 'button' %>
