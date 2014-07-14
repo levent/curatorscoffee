@@ -23,7 +23,7 @@
     <div class="cc-panel">
       <a name="gallery" />
       <%= link_to @gallery_map_url do %>
-        <img src="http://maps.googleapis.com/maps/api/staticmap?sensor=false&center=51.516574,-0.141677&zoom=16&size=400x400&markers=color:0xadccd1|label:G|51.516574,-0.141677<%= "&key=#{GOOGLE_API_KEY}" if Rails.env == 'production' %>" />
+        <img src="http://maps.googleapis.com/maps/api/staticmap?sensor=false&center=51.516574,-0.141677&zoom=16&size=400x400&markers=color:0x5a395c|label:G|51.516574,-0.141677<%= "&key=#{GOOGLE_API_KEY}" if Rails.env == 'production' %>" />
       <% end %>
     </div>
   </div>
