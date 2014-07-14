@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = (CouchPotato.database.view User.by_email(params[:email])).first
     if user.try(:authenticate, params[:password])
       session[:user_id] = user.id
-      redirect_to admin_classes_path
+      redirect_to admin_documents_path
     else
       session[:user_id] = nil
       render :new
