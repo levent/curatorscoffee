@@ -1,5 +1,8 @@
 <div class="row">
   <div class="large-12 columns">
+    <% if @documents.empty? %>
+      <p>Add FAQ's, documents, tutorials, staff guides etc. here.</p>
+    <% end %>
     <dl>
       <% @documents.each do |post| %>
         <dt><%= post.title %> <%= post.created_at.try(:strftime, '%A %e %B %Y, %l:%M%P') %></dt>
