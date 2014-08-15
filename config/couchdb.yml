@@ -7,4 +7,4 @@ test:
   database: curators_test
 production:
   <<: *default
-  database: <%= ENV['CLOUDANT_URL'] %>/curators_production
+  database: <%= ENV['CLOUDANT_URL_BACKUP'] %>/curators_production
