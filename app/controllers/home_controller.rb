@@ -24,10 +24,6 @@ class HomeController < ApplicationController
   def locations
   end
 
-  def loaderio
-    render :layout => false
-  end
-
   private
 
   def set_map_urls

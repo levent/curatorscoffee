@@ -21,6 +21,5 @@ CuratorscoffeeCom::Application.routes.draw do
   get '/catering' => 'home#catering'
   get '/locations' => 'home#locations'
   resources :classes, only: ['index']
-  get '/loaderio-6459a9c1257bafee295d3ea05082da3a' => 'home#loaderio'
   root :to => 'home#index'
 end
