@@ -12,6 +12,7 @@ gem 'newrelic_rpm'
 
 gem 'couch_potato'
 
+gem 'actionpack-action_caching'
 gem 'memcachier'
 gem 'dalli'
 gem 'redcarpet'

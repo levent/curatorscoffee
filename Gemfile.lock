@@ -10,6 +10,8 @@ GEM
       activesupport (= 4.1.5)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
+    actionpack-action_caching (1.1.1)
+      actionpack (>= 4.0.0, < 5.0)
     actionview (4.1.5)
       activesupport (= 4.1.5)
       builder (~> 3.1)
@@ -172,6 +174,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-action_caching
   babosa
   bcrypt (~> 3.1.2)
   brakeman

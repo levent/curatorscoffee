@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   before_filter :set_map_urls
+  caches_action :index
+  caches_action :locations
+  caches_action :design
+  caches_action :creations
+  caches_action :food_and_drink
 
   def index
   end
