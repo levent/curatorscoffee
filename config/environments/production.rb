@@ -52,7 +52,7 @@ CuratorscoffeeCom::Application.configure do
   if ENV['STAGING'] == 'yes'
     config.action_controller.asset_host = "//dl4uaat6h64dw.cloudfront.net"
   else
-    config.action_controller.asset_host = "//d1gwf67d7f4xgr.cloudfront.net"
+    config.action_controller.asset_host = "//dzluq7550z0mt.cloudfront.net"
   end
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
