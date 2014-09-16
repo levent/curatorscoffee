@@ -27,6 +27,8 @@ gem 'foundation-rails'
 
 gem 'uglifier', '>= 2.1.1'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 group :development do
   gem 'brakeman', :require => false
 end
