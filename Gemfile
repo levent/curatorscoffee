@@ -28,9 +28,11 @@ gem 'foundation-rails'
 gem 'uglifier', '>= 2.1.1'
 
 gem 'rack-cors', :require => 'rack/cors'
+gem 'rollbar', '~> 1.2.4'
 
 group :development do
   gem 'brakeman', :require => false
+  gem 'dotenv-rails'
 end
 
 group :production do
