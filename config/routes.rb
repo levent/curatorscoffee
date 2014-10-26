@@ -5,6 +5,7 @@ CuratorscoffeeCom::Application.routes.draw do
     resources :classes, :only => [:index]
     resources :brew_classes
     resources :latte_art_classes
+    resources :tea_classes
     resources :blog_posts
   end
 

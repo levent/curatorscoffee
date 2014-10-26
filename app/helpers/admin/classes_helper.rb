@@ -1,7 +1,7 @@
 module Admin::ClassesHelper
   def show_class_details(klass)
     typeofclass = klass.class.to_s.underscore
-    return unless ['brew_class', 'latte_art_class'].include?(typeofclass)
+    return unless ['tea_class', 'brew_class', 'latte_art_class'].include?(typeofclass)
     content_tag(:tr) do
       content_tag(:td, klass.scheduled_at.strftime('%A %e %B %Y, %l:%M%P')) +
         content_tag(:td, klass.available) +
