@@ -1,7 +1,7 @@
 <% content_for :title, "Our Classes" %>
 
 <div class="row">
-  <div class="large-7 columns">
+  <div class="large-12 columns">
     <div class="coffee-class">
       <h2>Brewed Coffee Class</h2>
 
@@ -19,52 +19,33 @@
         class</strong>. For details of upcoming classes <%= link_to 'join our waiting list', list_wait_path %>.</p>
 
       <p><em>All of our classes are held at <%= link_to "Curators Coffee Gallery", locations_path %>.</em><br>
-      <strong>To book, email <a href="mailto:classes@curatorscoffee.com" class="mailto-classes" data-classtype="brew">classes@curatorscoffee.com</a></p>
     </div>
-  </div>
-  <div class="large-offset-1 large-4 columns">
-    <div class="coffee-class">
-      <h2>Dates</h2>
-      <ul class="no-bullet">
-        <% @brew_classes.each do |klass| %>
-          <li><%= class_time(klass) %></li>
-        <% end %>
-      </ul>
-      <% if @brew_classes.empty? %>
-        <p>There are no scheduled brew classes currently, please <%= link_to 'join our waiting list', list_wait_path %> to find out more.</p>
-      <% end %>
+    <div style="width:100%; text-align:left;" >
+      <iframe src="http://www.eventbrite.com/tickets-external?eid=14045892643&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="large-7 columns">
+  <div class="large-12 columns">
+    <hr>
     <div class="coffee-class">
       <h2>Latte Art Class</h2>
       <p>Attempt to pour your own amazing latte art images and then marvel at how terrible you are. Don't worry, we will be there to guide you and provide words of encouragement.</p>
       <p>The class will cover basic milk chemistry and milk texturing but will focus mainly on Latte art pouring.</p>
       <p>Latte Art Classes cost <strong>£30 per person</strong> and go for <strong>1.5 hours</strong> and are limited to a maximum of <strong>4 people per class</strong> to ensure everyone gets plenty of practice. For details of upcoming classes <%= link_to 'join our waiting list', list_wait_path %>.</p>
       <p><em>All of our classes are held at <%= link_to "Curators Coffee Gallery", locations_path %>.</em><br>
-      <strong>To book, email <a href="mailto:classes@curatorscoffee.com" class="mailto-classes" data-classtype="latteart">classes@curatorscoffee.com</a></p>
     </div>
-  </div>
-  <div class="large-offset-1 large-4 columns">
-    <div class="coffee-class">
-      <h2>Dates</h2>
-      <ul class="no-bullet">
-        <% @latte_classes.each do |klass| %>
-          <li><%= class_time(klass) %></li>
-        <% end %>
-      </ul>
-      <% if @latte_classes.empty? %>
-        <p>There are no scheduled latte art classes currently, please <%= link_to 'join our waiting list', list_wait_path %> to find out more.</p>
-      <% end %>
+    <div style="width:100%; text-align:left;" >
+      <iframe src="http://www.eventbrite.com/tickets-external?eid=14046041087&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
 </div>
 
+
 <div class="row">
-  <div class="large-7 columns">
+  <div class="large-12 columns">
+    <hr>
     <div class="coffee-class">
       <h2>Tea Masterclass</h2>
       <p>A tasting of five single batch teas hosted by <a href="http://www.lalaniandco.com/">Lalani &amp; Co</a>. Each tea is sourced from prime seasons from small family owned gardens. This shows unique expression of the terroir.</p>
@@ -72,20 +53,9 @@
       <p>The Masterclass will include a tasting of these unique teas and an introduction to the world of single batch tea.
       The class is <strong>&pound;15 per person</strong> for <strong>1.5 hours</strong> tasting of some of the most exquisite teas in the world from Darjeeling to Kyoto.</p>
       <p><em>All of our classes are held at <%= link_to "Curators Coffee Gallery", locations_path %>.</em><br>
-      <strong>To book, email <a href="mailto:classes@curatorscoffee.com" class="mailto-classes" data-classtype="tea">classes@curatorscoffee.com</a></p>
     </div>
-  </div>
-  <div class="large-offset-1 large-4 columns">
-    <div class="coffee-class">
-      <h2>Dates</h2>
-      <ul class="no-bullet">
-        <% @tea_classes.each do |klass| %>
-          <li><%= class_time(klass) %></li>
-        <% end %>
-      </ul>
-      <% if @tea_classes.empty? %>
-        <p>There are no scheduled tea classes currently, please <%= link_to 'join our waiting list', list_wait_path %> to find out more.</p>
-      <% end %>
+    <div style="width:100%; text-align:left;" >
+      <iframe src="http://www.eventbrite.com/tickets-external?eid=14046087225&ref=etckt&v=2" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
 </div>
