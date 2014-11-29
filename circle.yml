@@ -1,0 +1,9 @@
+test:
+  post:
+    - bundle exec cane
+    - bundle exec rails_best_practices
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: curatorscoffee

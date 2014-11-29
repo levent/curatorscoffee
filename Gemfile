@@ -33,6 +33,8 @@ gem 'rollbar', '~> 1.2.4'
 group :development do
   gem 'brakeman', :require => false
   gem 'dotenv-rails'
+  gem 'rails_best_practices'
+  gem 'cane'
 end
 
 group :production do
