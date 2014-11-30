@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf coverage
+./bin/rake test
+./bin/bundle exec cane
+./bin/bundle exec rails_best_practices
