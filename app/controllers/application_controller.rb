@@ -10,14 +10,4 @@ class ApplicationController < ActionController::Base
       redirect_to "http://#{TheDomain}"
     end
   end
-
-  private
-
-  def current_user
-    @current_user ||= CouchPotato.database.load_document(session[:user_id]) if session[:user_id]
-  end
-
-  def login_required
-    redirect_to logout_path unless current_user
-  end
 end

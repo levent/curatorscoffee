@@ -18,9 +18,6 @@ class HomeController < ApplicationController
   def food_and_drink
   end
 
-  def classes
-  end
-
   def locations
   end
 
