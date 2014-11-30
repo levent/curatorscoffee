@@ -86,7 +86,7 @@
 
   <!-- Footer -->
 
-  <%= render partial: 'partials/footer' %>
+  <%= render partial: 'partials/footer', locals: {gallery_map_url: @gallery_map_url, studio_map_url: @studio_map_url} %>
 
   <%= javascript_include_tag "application" %>
 
