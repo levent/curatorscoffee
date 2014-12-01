@@ -7,7 +7,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'spring',        group: :development
 
-gem 'thin'
 gem 'newrelic_rpm'
 
 gem 'actionpack-action_caching'
@@ -38,4 +37,6 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'heroku-deflater'
+  gem 'unicorn'
+  gem 'rack-timeout'
 end
