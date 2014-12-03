@@ -12,9 +12,6 @@ gem 'newrelic_rpm'
 gem 'actionpack-action_caching'
 gem 'memcachier'
 gem 'dalli'
-gem 'redcarpet'
-gem 'babosa'
-gem 'truncate_html'
 
 gem 'bcrypt', '~> 3.1.2'
 
