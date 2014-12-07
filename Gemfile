@@ -17,7 +17,8 @@ gem 'bcrypt', '~> 3.1.2'
 
 gem 'compass-rails'
 gem 'compass'
-gem 'foundation-rails'
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass'
 
 gem 'uglifier', '>= 2.1.1'
 

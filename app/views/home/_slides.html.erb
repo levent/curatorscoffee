@@ -1,3 +1,10 @@
-<% 1.upto(17) do |count| %>
-  <li><%= image_tag "slides/slide#{count}.jpg", :class => "slide" %></li>
-<% end %>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <% 1.upto(17) do |count| %>
+      <div class="item<%= ' active' if count == 1 %>">
+        <%= image_tag "slides/slide#{count}.jpg" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

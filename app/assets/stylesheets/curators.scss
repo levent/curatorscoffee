@@ -1,3 +1,11 @@
+$primary-color: #222222;
+.navbar-brand {
+max-height: 40px;
+overflow: visible;
+padding-top: 10px;
+padding-bottom: 0;
+}
+
 @font-face {
     font-family: 'Mono Social Icons Font';
     src: asset-url('MonoSocialIconsFont-1.10.eot');
@@ -24,10 +32,10 @@
     font-smoothing: antialiased;
 }
 
-.body-container {
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
-}
+// .body-container {
+//   padding-top: 1.25em;
+//   padding-bottom: 1.25em;
+// }
 
 h1 {
   font-weight: 700;
@@ -111,36 +119,36 @@ a.social-media-link {
 }
 
 
-@media #{$medium-only} {
-  .cc-panel p {
-    font-weight: 300;
-    font-size: emCalc(24px);
-  }
+// @media #{$medium-only} {
+//   .cc-panel p {
+//     font-weight: 300;
+//     font-size: emCalc(24px);
+//   }
+// 
+//   .menu-link {
+//     text-align: center;
+//     margin: 1em 0;
+//     width: 16%;
+//     padding: 2em 0;
+//     float: left;
+//   }
+// }
 
-  .menu-link {
-    text-align: center;
-    margin: 1em 0;
-    width: 16%;
-    padding: 2em 0;
-    float: left;
-  }
-}
-
-@media #{$large-up} {
-
-  .cc-panel p {
-    font-weight: 300;
-    font-size: emCalc(24px);
-  }
-
-  .menu-link {
-    text-align:center;
-    margin: 1em 0;
-    width: 16%;
-    padding: 2em 0;
-    float: left;
-  }
-}
+// @media #{$large-up} {
+// 
+//   .cc-panel p {
+//     font-weight: 300;
+//     font-size: emCalc(24px);
+//   }
+// 
+//   .menu-link {
+//     text-align:center;
+//     margin: 1em 0;
+//     width: 16%;
+//     padding: 2em 0;
+//     float: left;
+//   }
+// }
 
 .field_with_errors input, .field_with_errors textarea {
   border: 1px solid red;
@@ -153,7 +161,8 @@ a.social-media-link {
 }
 
 .footer-container {
-  padding-top: 30px;
+  margin-top: 30px;
+  padding: 30px;
   background-color: #f6f6f9;
 }
 
@@ -172,4 +181,3 @@ a.social-media-link {
 img.cc-logo {
   height: 100px;
 }
-

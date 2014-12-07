@@ -1,12 +1,12 @@
 <% content_for :title, "Locations" %>
 
 <div class="row">
-  <div class="large-8 columns">
+  <div class="col-md-8">
     <h2>Locations</h2>
   </div>
 </div>
 <div class="row">
-  <div class="large-5 medium-4 hide-for-small columns">
+  <div class="col-md-5 medium-4 hidden-xs">
     <div class="cc-panel">
       <a name="studio" />
       <%= link_to @studio_map_url do %>
@@ -14,12 +14,12 @@
       <% end %>
     </div>
   </div>
-  <div class="large-7 medium-8 small-12 columns">
+  <div class="col-md-7 medium-8 small-12">
     <%= render 'studio_vcard' %>
   </div>
 </div>
 <div class="row">
-  <div class="large-5 medium-4 hide-for-small columns">
+  <div class="col-md-5 medium-4 hidden-xs">
     <div class="cc-panel">
       <a name="gallery" />
       <%= link_to @gallery_map_url do %>
@@ -27,7 +27,7 @@
       <% end %>
     </div>
   </div>
-  <div class="large-7 medium-8 small-12 columns">
+  <div class="col-md-7 medium-8 small-12">
     <%= render 'gallery_vcard' %>
   </div>
 </div>

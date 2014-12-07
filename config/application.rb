@@ -57,7 +57,7 @@ module CuratorscoffeeCom
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = true
-    config.assets.precompile += %w( jquery-2.1.1.min.map vendor/modernizr.js )
+    config.assets.precompile += %w( jquery-2.1.1.min.map )
 
     config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
       allow do

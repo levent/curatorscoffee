@@ -30,8 +30,12 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (4.0.1.1)
+      execjs
     awesome_print (1.2.0)
     bcrypt (3.1.7)
+    bootstrap-sass (3.3.1.0)
+      sass (~> 3.2)
     brakeman (2.6.1)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -73,9 +77,6 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     fastercsv (1.5.5)
-    foundation-rails (5.4.5.0)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -182,7 +183,9 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack-action_caching
+  autoprefixer-rails
   bcrypt (~> 3.1.2)
+  bootstrap-sass
   brakeman
   cane
   coffee-rails (~> 4.0.0)
@@ -190,7 +193,6 @@ DEPENDENCIES
   compass-rails
   dalli
   dotenv-rails
-  foundation-rails
   heroku-deflater
   memcachier
   newrelic_rpm
