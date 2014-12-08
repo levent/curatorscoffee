@@ -73,37 +73,27 @@
   </script>
 
 
-<!-- Static navbar -->
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to image_tag("logos/cc-master-logo.png", :class => 'cc-logo navbar-brand'), root_path %>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Drink & Eat", food_drink_path, :class => "menu-link" %></li>
-            <li><%= link_to "Catering", catering_path, :class => "menu-link" %></li>
-            <li><%= link_to "Creations", creations_path, :class => "menu-link" %></li>
-            <li><%= link_to "Classes", classes_path, :class => "menu-link" %></li>
-            <li><%= link_to "Design", design_path, :class => "menu-link" %></li>
-            <li><%= link_to "Locations", locations_path, class: 'menu-link' %></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
+  <!-- Static navbar -->
   <div class="container">
+    <div class="header">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><%= link_to "Home", root_path, :class => "menu-link" %></li>
+          <li role="presentation"><%= link_to "Drink & Eat", food_drink_path, :class => "menu-link" %></li>
+          <li role="presentation"><%= link_to "Catering", catering_path, :class => "menu-link" %></li>
+          <li role="presentation"><%= link_to "Creations", creations_path, :class => "menu-link" %></li>
+          <li role="presentation"><%= link_to "Classes", classes_path, :class => "menu-link" %></li>
+          <li role="presentation"><%= link_to "Design", design_path, :class => "menu-link" %></li>
+          <li role="presentation"><%= link_to "Locations", locations_path, class: 'menu-link' %></li>
+        </ul>
+      </nav>
+      <%= link_to image_tag("logos/cc-stamp.png", class: 'cc-logo'), root_path %>
+    </div><!--/.nav-collapse -->
+
     <%= yield %>
-  </div>
 
-  <div class="container">
     <%= render partial: 'partials/footer', locals: {gallery_map_url: @gallery_map_url, studio_map_url: @studio_map_url} %>
+
   </div>
 
   <%= javascript_include_tag "application" %>
