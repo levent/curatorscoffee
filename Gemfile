@@ -13,8 +13,6 @@ gem 'actionpack-action_caching'
 gem 'memcachier'
 gem 'dalli'
 
-gem 'bcrypt', '~> 3.1.2'
-
 gem 'compass-rails'
 gem 'compass'
 gem 'foundation-rails'
