@@ -187,7 +187,7 @@ DEPENDENCIES
   compass-rails
   dalli
   dotenv-rails
-  foundation-rails
+  foundation-rails (= 5.4.5.0)
   heroku-deflater
   memcachier
   newrelic_rpm

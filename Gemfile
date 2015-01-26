@@ -15,7 +15,7 @@ gem 'dalli'
 
 gem 'compass-rails'
 gem 'compass'
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.5.0'
 
 gem 'uglifier', '>= 2.1.1'
 
