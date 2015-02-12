@@ -6,6 +6,11 @@ CuratorscoffeeCom::Application.routes.draw do
   get '/design' => 'home#design'
   get '/creations' => 'home#creations'
   get '/food_drink' => 'home#food_and_drink'
+  resources :menu, only: [] do
+    collection do
+      get 'weekend'
+    end
+  end
   get '/catering' => 'home#catering'
   get '/locations' => 'home#locations'
   resources :classes, only: ['index']
