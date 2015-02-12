@@ -173,3 +173,14 @@ img.cc-logo {
   height: 100px;
 }
 
+.menu {
+  p,dt {
+    text-align: left;
+    line-height: 1.36em;
+    font-size: 1.36em;
+  }
+  dd {
+    font-weight: 300;
+    font-size:1.1em;
+  }
+}
