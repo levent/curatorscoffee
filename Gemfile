@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.1.2"
 
-gem 'rails', '4.1.9'
+gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 4.0.5'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'turbolinks'
@@ -23,6 +23,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'rollbar', '~> 1.2.4'
 
 group :development do
+  gem 'web-console', '~> 2.0'
   gem 'brakeman', :require => false
   gem 'dotenv-rails'
   gem 'rails_best_practices'
