@@ -58,7 +58,7 @@ p {
   font-size: 1.36em;
 }
 
-a {
+a, dl dt {
   font-weight: 500;
   &:hover {
     color: $primary-color;
