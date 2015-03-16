@@ -73,7 +73,7 @@ GEM
       sass (~> 3.2.19)
     compass-rails (2.0.0)
       compass (>= 0.12.2)
-    dalli (2.7.2)
+    dalli (2.7.3)
     debug_inspector (0.0.2)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
