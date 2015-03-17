@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="">
+    <title>{{ page.title }} - {{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
@@ -29,7 +29,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- build:css({app,.tmp}) /css/main.css -->
-    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
@@ -46,9 +45,16 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    {{ content }}
+    {% include facebook.html %}
+
+    {% include header.html %}
+
+    <div class="body-container">
+      {{ content }}
+    </div>
 
     {% include googleanalytics.html %}
+    {% include scripts.html %}
 
   </body>
 </html>

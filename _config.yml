@@ -3,11 +3,11 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: londonmediadirect
-description: London Media Direct LLP
+name: Curators Coffee
+description: Specialty coffees, teas and quality local food in the City of London.
 author:
   name: Levent Ali
-  email: lebreeze@gmail.com
+  email: levent@curatorscoffee.com
 
 # Grunt handles images and assets.
 exclude: ['vendor',

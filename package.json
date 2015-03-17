@@ -1,8 +1,8 @@
 {
-  "name": "londonmediadirect",
+  "name": "curatorscoffee",
   "private": true,
   "version": "0.0.0",
-  "description": "Yeoman workflow for londonmediadirect",
+  "description": "Yeoman workflow for curatorscoffee",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
