@@ -1,6 +1,14 @@
-[![Dependency Status](https://gemnasium.com/0b0dc292d90973ab7a9317064643a23a.svg)](https://gemnasium.com/levent/curatorscoffee)
+## About this site
 
-Curators Coffee Website
-=======================
+This site was built using [Generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb)
 
-WIP
+## Prerequisites
+
+* Ruby
+* Node.js
+
+## Getting Started
+
+1. bundle install
+2. npm install
+3. bundle exec grunt serve
