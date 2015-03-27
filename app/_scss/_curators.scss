@@ -169,9 +169,11 @@ img.cc-logo {
   height: 100px;
 }
 
-.menu {
-  p,dt {
-    text-align: left;
+#menu {
+  margin-bottom: 40px;
+  text-align: center;
+  p, dt {
+    text-align: center;
     line-height: 1.36em;
     font-size: 1.36em;
   }
