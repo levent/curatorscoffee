@@ -1,6 +1,10 @@
+[![Build Status](https://travis-ci.org/levent/curatorscoffee.svg?branch=master)](https://travis-ci.org/levent/curatorscoffee)
+
+# Curators Coffee
+
 ## About this site
 
-This site was built using [Generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb)
+This site is powered by [Jekyll](http://gruntjs.com/), [Grunt](http://gruntjs.com/) and [coffee](http://www.curatorscoffee.com).
 
 ## Prerequisites
 
