@@ -4,7 +4,7 @@
 
 ## About this site
 
-This site is powered by [Jekyll](http://gruntjs.com/), [Grunt](http://gruntjs.com/) and [coffee](http://www.curatorscoffee.com).
+This site is powered by [Jekyll](http://jekyllrb.com/), [Grunt](http://gruntjs.com/) and [coffee](http://www.curatorscoffee.com).
 
 ## Prerequisites
 
