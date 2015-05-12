@@ -36,5 +36,6 @@ markdown: kramdown
 highlighter: null
 permalink: pretty
 google_api_key: AIzaSyAa_Co2CAy9HFbCgA3A8teQabO8K8EeCPg
+url: "http://www.curatorscoffee.com"
 gems:
   - jekyll-sitemap
