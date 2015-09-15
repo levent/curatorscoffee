@@ -119,11 +119,6 @@ p {
     font-size: emCalc(24px);
   }
 
-  .sample-sunday {
-    height: 300px;
-    margin-bottom: 0;
-  }
-
   .menu-link {
     text-align: left;
     float: left;
@@ -131,11 +126,6 @@ p {
 }
 
 @media #{$large-up} {
-
-  .sample-sunday {
-    height: 300px;
-    margin-bottom: 0;
-  }
 
   p {
     font-weight: 300;
@@ -193,8 +183,6 @@ img.cc-logo {
   }
 }
 
-.sample-sunday {
-  background-color: $silverColor;
-  margin-bottom: 10px;
-  padding: 1em;
+.whats-on {
+  img { margin-bottom: 9px; }
 }
