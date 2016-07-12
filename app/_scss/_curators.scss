@@ -186,10 +186,15 @@ img.cc-logo {
 .whats-on {
   img { margin-bottom: 9px; }
 }
+.whats-on-info {
+  p { font-size: 1em; text-align: justify; font-weight: 300; }
+}
+
 
 .panel.standout {
   border: none;
-  background-color: $silverColor;
+  color: $silverColor;
+  background-color: black;
   text-align: justify;
   font-size: 1.2em;
 }
