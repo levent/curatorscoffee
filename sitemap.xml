@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://www.curatorscoffee.com/catering/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/creations/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/design/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/food_drink/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/whats_on/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/list/join/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/locations/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/food_drink/menu/</loc>
-  </url>
-  <url>
-    <loc>http://www.curatorscoffee.com/list/wait/</loc>
-  </url>
+<url>
+<loc>http://www.curatorscoffee.com/catering/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/creations/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/design/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/food_drink/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/whats_on/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/list/join/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/locations/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/food_drink/menu/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/list/wait/</loc>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/downloads/CuratorsCoffee-catering_account_sign_up_form.pdf</loc>
+<lastmod>2015-07-19T18:32:33+01:00</lastmod>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/downloads/CuratorsCoffeeGallery_catering_menu.pdf</loc>
+<lastmod>2016-05-28T15:17:37+01:00</lastmod>
+</url>
+<url>
+<loc>http://www.curatorscoffee.com/downloads/CuratorsCoffeeStudio_catering_menu.pdf</loc>
+<lastmod>2015-07-19T18:04:06+01:00</lastmod>
+</url>
 </urlset>
