@@ -1,7 +1,8 @@
 sudo: false
 language: node_js
 node_js:
-  - "0.12"
+  - "v0.12.15"
+  - "v6.3.0"
 before_install:
   - "npm install -g grunt-cli"
   - "bundle install"

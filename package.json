@@ -1,7 +1,7 @@
 {
   "name": "curatorscoffee",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman workflow for curatorscoffee",
   "dependencies": {},
   "devDependencies": {
@@ -18,7 +18,7 @@
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-htmlmin": "~0.3.0",
     "grunt-contrib-imagemin": "~0.8.1",
-    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~0.5.1",
     "grunt-contrib-watch": "0.6.1",
     "grunt-filerev": "~0.2.1",
